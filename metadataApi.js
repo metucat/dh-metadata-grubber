@@ -1,4 +1,4 @@
-//const { metadata, findByPath } = require('./example_metadata.js');
+const { metadata, findByPath } = require('./example_metadata.js');
 //const { metadata_apdax } = require('./metadata_apdax.js');
 
 const defaultLocale = { "Locale Name": "English - United States", "Locale id": "en-us", "Locale Code": "1033", "Language Code": "en" };
