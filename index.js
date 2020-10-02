@@ -35,8 +35,8 @@ var metadata = {};
 function cloneRepo () {
 
     try {
-        childProcess.execSync('git clone --local ' + flags.repo + ' .mdtmp');
-		childProcess.execSync('cd .mdtmp && git checkout master && cd ..');
+    	  childProcess.execSync('git clone --local ' + flags.repo + ' .mdtmp');
+    	  childProcess.execSync('cd .mdtmp && git checkout -b test && cd ..');
         return true;
     } catch (err) {
         return false;
