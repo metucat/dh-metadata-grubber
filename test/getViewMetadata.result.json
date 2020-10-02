@@ -1,0 +1,144 @@
+{
+  "identity": {
+    "id": "91512f95-b098-4ad5-9098-a72b458eaa63",
+    "name": "Application color",
+    "description": "Color and arrow"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 1
+  },
+  "object": {
+    "parent": {
+      "id": "3e98f10f-f2e4-4e59-9531-210110bb93be",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Interface"
+    },
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "Color Application.png"
+        },
+        "uri": "/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Color Application.png"
+      }
+    ],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2019-06-24T14:39:51.547",
+      "createdBy": "darapolishchuk@gmail.com",
+      "updated": "2019-06-26T06:15:06.997",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2019-06-09T20:12:24.163",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-06-24T15:12:39.083",
+          "completedBy": "orzhan057",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Interface/views/View color/issues/3885/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-06-26T06:15:06.687",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Interface/views/View color/issues/3885/messages/14"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 1
+    }
+  },
+  "definitions": [
+    {
+      "locale": "en-us",
+      "elements": [
+        {
+          "identity": {
+            "id": "9a6ac1ff-9ede-4eef-80f2-d20f6fbfc165",
+            "name": "Arrow left"
+          },
+          "order": 4,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow left"
+        },
+        {
+          "identity": {
+            "id": "899008cc-1003-407e-ad8c-2c5954c540d8",
+            "name": "Arrow left 2x"
+          },
+          "order": 5,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow left 2x"
+        },
+        {
+          "identity": {
+            "id": "88f4f724-6ce9-4a58-8249-ff3e55755f28",
+            "name": "Arrow left 2x bold"
+          },
+          "order": 8,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow left 2x bold"
+        },
+        {
+          "identity": {
+            "id": "a5dd9e38-4209-466f-9e7c-3466cd5f6b86",
+            "name": "Arrow left bold"
+          },
+          "order": 9,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow left bold"
+        },
+        {
+          "identity": {
+            "id": "b45b428c-6d40-446d-a0f0-e1628286fd44",
+            "name": "Arrow right"
+          },
+          "order": 2,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow right"
+        },
+        {
+          "identity": {
+            "id": "03fbf71b-3327-4e7e-aaf1-9a763162c193",
+            "name": "arrow right 2x"
+          },
+          "order": 3,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/arrow right 2x"
+        },
+        {
+          "identity": {
+            "id": "90657512-4050-4e11-96eb-3bdbbad5df0c",
+            "name": "Arrow right 2x bold"
+          },
+          "order": 7,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow right 2x bold"
+        },
+        {
+          "identity": {
+            "id": "577ef988-18d0-4b3b-a61a-93e9b2b59403",
+            "name": "Arrow right bold"
+          },
+          "order": 6,
+          "parent": {},
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Apdax/systems/DifHub/applications/Interface/views/Application color/Arrow right bold"
+        },
+        {
+          "identity": {
+            "id": "c921d6ae-8d93-46ba-9345-508e68514261",
+            "name": "Color",
+            "description": "#FFC107- application color\n#EBEBEB - grey"
+          },
+          "order": 1,
+          "parent": {}
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

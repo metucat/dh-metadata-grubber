@@ -8,3 +8,6 @@ fs.writeFileSync('./test/getDatasetMetadata.result.json', JSON.stringify(accessD
 
 const accessData = getDatasetData(accessDataset, 'en-us', false);
 fs.writeFileSync('./test/getDatasetData.result.json', JSON.stringify(accessData, null, 2));
+
+const applicationView = getViewMetadata('/Apdax/systems/Difhub/applications/Interface/views/Application color');
+fs.writeFileSync('./test/getViewMetadata.result.json', JSON.stringify(applicationView, null, 2));
