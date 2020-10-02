@@ -3,14 +3,15 @@ const fs = require('fs');
 const { metadata, findByPath } = require('../example_metadata.js');
 const { getDatasetData, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
 
-const accessDataset = getDatasetMetadata('/organizations/Apdax/systems/Difhub/applications/System/datasets/Access');
+const accessDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
 fs.writeFileSync('./test/getDatasetMetadata.result.json', JSON.stringify(accessDataset, null, 2));
 
 const accessData = getDatasetData(accessDataset, 'en-us', false);
 fs.writeFileSync('./test/getDatasetData.result.json', JSON.stringify(accessData, null, 2));
 
-const applicationView = getViewMetadata('/Apdax/systems/Difhub/applications/Interface/views/Application color');
-fs.writeFileSync('./test/getViewMetadata.result.json', JSON.stringify(applicationView, null, 2));
 
-const color = getElementMetadata(applicationView, 'Color', 'en-us');
+const metadataView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
+fs.writeFileSync('./test/getViewMetadata.result.json', JSON.stringify(metadataView, null, 2));
+
+const color = getElementMetadata(metadataView, null, '1049');
 fs.writeFileSync('./test/getElementMetadata.result.json', JSON.stringify(color, null, 2));
