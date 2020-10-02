@@ -16,3 +16,10 @@ test('test getViewMetadata', () => {
   const applicationView = getViewMetadata('/Apdax/systems/Difhub/applications/Interface/views/Application color');
   expect(applicationView).toStrictEqual(JSON.parse(fs.readFileSync(`./test/getViewMetadata.result.json`)));
 });
+
+
+test('test applicationView', () => {
+  const applicationView = getViewMetadata('/Apdax/systems/Difhub/applications/Interface/views/Application color');
+  const color = getElementMetadata(applicationView, 'Color', 'en-us');
+  expect(color).toStrictEqual(JSON.parse(fs.readFileSync(`./test/getElementMetadata.result.json`)));
+});

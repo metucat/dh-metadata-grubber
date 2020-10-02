@@ -11,3 +11,6 @@ fs.writeFileSync('./test/getDatasetData.result.json', JSON.stringify(accessData,
 
 const applicationView = getViewMetadata('/Apdax/systems/Difhub/applications/Interface/views/Application color');
 fs.writeFileSync('./test/getViewMetadata.result.json', JSON.stringify(applicationView, null, 2));
+
+const color = getElementMetadata(applicationView, 'Color', 'en-us');
+fs.writeFileSync('./test/getElementMetadata.result.json', JSON.stringify(color, null, 2));

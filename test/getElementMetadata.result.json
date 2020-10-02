@@ -1,0 +1,9 @@
+{
+  "identity": {
+    "id": "c921d6ae-8d93-46ba-9345-508e68514261",
+    "name": "Color",
+    "description": "#FFC107- application color\n#EBEBEB - grey"
+  },
+  "order": 1,
+  "parent": {}
+}
