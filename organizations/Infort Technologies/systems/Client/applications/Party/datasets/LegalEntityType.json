@@ -1,0 +1,126 @@
+{
+  "identity": {
+    "id": "f6c03675-54f9-4913-86d8-c73c0368532f",
+    "name": "LegalEntityType",
+    "description": "Type of legal entity. Legal entity can represent Person or Business."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":804,"top":237,"width":0,"height":0}},"style":{"border":{"left":{"color":"#04C1B4"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-411,"top":589,"width":216,"height":114}},"style":{"border":{"left":{"color":"#04C1B4"}}}}],
+    "history": {
+      "created": "2018-10-08T00:29:23.853",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.52",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:30:12.41",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": false,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "522680f3-9b2f-4735-b250-13fbe3bbdbc3",
+          "name": "Display",
+          "description": "Type of the LagalEntity"
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "f6a1cdde-c842-4a09-a388-8c0dfeb3ba3a",
+          "name": "Definition",
+          "description": "Description of the Entity Type"
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8b571bf3-6799-4a55-91bf-7537af121077",
+          "name": "Code",
+          "description": "Code for the Entity Type."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Personal",
+          "Legal entity contains personal legal information.",
+          "PERSONAL"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Business",
+          "Legal entity contains legal information about not personal entity recognized by government under jurisdiction it operates. ",
+          "BUSINESS"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

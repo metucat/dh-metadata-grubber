@@ -1,0 +1,138 @@
+{
+  "identity": {
+    "id": "99c7e3f6-8ffe-49b4-9cdc-23c0ede430e6",
+    "name": "SubstanceCode",
+    "description": "This value set contains concept codes for specific substances. It includes codes from SNOMED  where concept is-a 105590001 (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical / biologic product (product))\nhttp://hl7.org/fhir/ValueSet/route-codes v3.6.0\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-03T08:18:59.18",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T06:59:39.53",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T06:59:08.04",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/issues/3374/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T06:59:39.32",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/issues/3374/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "5cf334ab-b7dc-4eea-bf7a-85455b5a9df3",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "281c99e0-2b66-4d01-83f0-7cdd7ecbab50",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "5b2a7e4b-4e77-41cd-8f0f-d7f0c4e55541",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "90c08aac-44cb-4ff6-9aa5-f30fb4edd0d8",
+          "name": "Translations",
+          "description": "Translations of records to other languages."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Translation/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "102002",
+          "Hemoglobin Okaloosa",
+          "",
+          "{\"Locale\":\"ru\",\"Name\":\"\",\"Description\":\"\"}"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

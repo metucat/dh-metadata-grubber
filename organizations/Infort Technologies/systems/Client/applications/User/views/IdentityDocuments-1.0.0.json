@@ -1,0 +1,517 @@
+{
+  "identity": {
+    "id": "b8ca77d5-4458-49a6-98a1-0e01939363fd",
+    "name": "IdentityDocuments",
+    "description": "View to introduce information about identity documents users have."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "full_1.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/IdentityDocuments/full_1.png"
+      },
+      {
+        "identity": {
+          "name": "full_2(id).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/IdentityDocuments/full_2(id).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(id).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/IdentityDocuments/full_3(id).png"
+      }
+    ],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-08-29T08:07:16.4",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-08-29T08:07:16.323",
+      "updatedBy": "orzhan057@gmail.com",
+      "completions": []
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "8fc407c7-c89d-4956-8ae1-664be8d8048b",
+            "name": "buttonAddPhoto",
+            "description": "Control: contained button\nColor: #E7E0D0\nFont color: #5F6366\n\nIcon (https://material.io/tools/icons/?icon=photo_camera&style=baseline)\nWidth: 32\nColor:  #ABAAA5"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Загрузить фото",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "b47d9fad-c09f-437b-a1d8-ab8e678cc90d",
+            "name": "commonStyleEdit",
+            "description": "This is common style for all fields."
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Font style: Open Sans\n\nFont size (big): 20\nFont color (big): #5F6366\n\nFont size (small): 13\nFont color (small): #999999\n\nFont color (star *): #FF4C00\n\nLine color: #E7E0D0\n\nList Arrow (https://material.io/tools/icons/?icon=arrow_drop_down&style=baseline)\nColor: #D1C5AA\nWidth: 16\n\nCancel Button (https://material.io/tools/icons/?icon=cancel&style=baseline)\n\nFont size (button): 18\nColor (button): #AB9871\nFont color (button): #AB9871\n\nSave Button (https://material.io/tools/icons/?icon=save_alt&style=baseline)\n\nFont size (button): 18\nColor (button): #FF4D00\nFont color (button): #FF4D00\n\nArchive icon (https://material.io/tools/icons/?icon=archive&style=baseline)\nWidth: 32\nColor: #D1C5AA\n\nAdd icon (https://material.io/tools/icons/?icon=add&style=baseline)\nWidth: 24\nColor: #D1C5AA\n\nAdd link\nFont size (big): 20\nColor: #D1C5AA",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "8ae55885-cb58-4e92-825f-3c8de015c24b",
+            "name": "commonStyleExpansion",
+            "description": "This is common style for all fields."
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Font style: Open Sans\n\nFont size (big): 20\nFont color (big): #000000\n\nFont size (small): 13\nFont color (small): #999999\n\nExpansion arrow (https://material.io/tools/icons/?icon=expand_less&style=baseline)\nColor: #D1C5AA\nWidth: 20\n\nНезаполненные поля НЕ отображаются вообще",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "cc83da5b-a56c-4f66-b4b8-e84c23e3296e",
+            "name": "commonStyleStandart",
+            "description": "This is common style for all fields."
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Font style: Open Sans\n\nFont size (big): 20\nFont color (big): #000000\n\nFont size (small): 13\nFont color (small): #999999\n\nExpansion arrow (https://material.io/tools/icons/?icon=expand_more&style=baseline)\nColor: #D1C5AA\nWidth: 20\n",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "0bf330dc-4f9a-4458-a1d9-0b11b7a0966f",
+            "name": "identifierPeriodEnd",
+            "description": "Field: Identifier.period.end\nControl: date picker"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Дата окончания действия",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "8ae7ccc8-03ad-4c38-bda6-17a32c8842cb",
+            "name": "identifierPeriodStart",
+            "description": "Field: Identifier.period.start\nControl: date picker"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Дата выдачи",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "69682833-0011-42c3-995c-a904a860f8fd",
+            "name": "identifierType",
+            "description": "Field: identifier.type\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Тип документа",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "86efc7b4-4f53-49e8-bc31-8082e8eb14a3",
+            "name": "identifierValue",
+            "description": "Field: identifier.value\nControl: text field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Номер документа",
+          "align": "",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

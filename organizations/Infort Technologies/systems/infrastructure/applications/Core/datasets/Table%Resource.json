@@ -1,0 +1,256 @@
+{
+  "identity": {
+    "id": "7d7cbd8e-27bd-41cd-96a5-4614b01284e0",
+    "name": "Table:Resource",
+    "description": "Table for resource of the entity, which contains properties associated with resource for \n HL7."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Table",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-1,"top":1833,"width":0,"height":0}},"style":{"border":{"left":{"color":"#4CAF6D"}}}},{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":396,"top":1833,"width":0,"height":0}},"style":{"border":{"left":{"color":"#4CAF6D"}}}}],
+    "history": {
+      "created": "2018-10-07T23:16:50.67",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.95",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-14T22:40:34.743",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:17:01.877",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "d867c33e-ea77-458e-89af-7033b9643bc6",
+          "name": "EntityId",
+          "description": "Global id of entity identifier defined for."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "fa4eb572-6f00-493b-81e3-c6bb9337a430",
+          "name": "Id",
+          "description": "Global id of the resource which same as global id of actual object."
+        },
+        "order": 2,
+        "usage": "Key",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8bd475da-b012-473a-88e3-59e5e482be5f",
+          "name": "Type",
+          "description": "Type of the entity."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/EntityType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "format": "",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3109ef06-8bb9-45b1-9efc-c4867fdfc166",
+          "name": "VersionId",
+          "description": "Id specific for version from meta."
+        },
+        "order": 3,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 64,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a850f7e4-f5b1-4cd4-8024-aa7a2e1e0a32",
+          "name": "LastUpdated",
+          "description": "Meta property for last updated time for resource."
+        },
+        "order": 4,
+        "usage": "Column",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9d7e37b6-5df4-4a15-af4c-58906a9f4635",
+          "name": "Profile",
+          "description": "URI to specification of the resource. This is DifHub reference for definition of the resource."
+        },
+        "order": 5,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "261be891-cabe-4d92-8d58-668fb1568800",
+          "name": "Security",
+          "description": "String with array of properties with security tags for the resource. "
+        },
+        "order": 6,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6736c52e-c7b3-45dd-9126-90c6f238f43f",
+          "name": "Language",
+          "description": "Language primary for this resource."
+        },
+        "order": 7,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/datasets/Locale/versions/1.2.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d55050c3-6fcc-4f70-84c0-77793fb8d8f3",
+          "name": "Extension",
+          "description": "String with array of extensions for the resource"
+        },
+        "order": 8,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "90377825-15c4-497d-bbc2-893804a92936",
+          "name": "ModifierExtension",
+          "description": "String with array of extension, required for this resource."
+        },
+        "order": 9,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": [
+      {
+        "identity": {
+          "id": "b1b04981-2a1b-4f53-8da2-abde7d909611",
+          "name": "Entity",
+          "description": "Join key to actual entity id"
+        },
+        "fields": [
+          "EntityId"
+        ],
+        "primary": false,
+        "cardinality": "One-To-One",
+        "constraint": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Entity"
+      },
+      {
+        "identity": {
+          "id": "ed2045f3-9a3c-44bb-b196-7c51cb3a4a68",
+          "name": "Global Key",
+          "description": "This is GUID for resource identification global across all systems"
+        },
+        "fields": [
+          "Id"
+        ],
+        "primary": true
+      }
+    ]
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

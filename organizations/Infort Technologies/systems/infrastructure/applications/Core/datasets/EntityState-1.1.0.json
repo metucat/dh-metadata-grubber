@@ -1,0 +1,146 @@
+{
+  "identity": {
+    "id": "ffaeb441-1ae3-4d90-8f0a-d803b21e353a",
+    "name": "EntityState",
+    "description": "Enumerator of the entity state."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":56,"top":425,"width":0,"height":0}},"style":{"border":{"left":{"color":"#B63455"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-665,"top":422,"width":0,"height":0}},"style":{"border":{"left":{"color":"#6CD2DC"}}}}],
+    "history": {
+      "created": "2018-10-07T22:56:59.66",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.53",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-14T21:01:23.613",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:57:12.907",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "6053702a-8a5d-4c48-bedf-10ec18745ddb",
+          "name": "Display",
+          "description": "Name of the status"
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6d956b01-e71c-4247-82d0-4aeac03c0526",
+          "name": "Definition",
+          "description": "Description of Status"
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a89cf5ab-0424-470d-8fcb-0bf51a99652d",
+          "name": "Code",
+          "description": "Status Codes"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Draft",
+          "Entity in draft state and not ready yet for approval.",
+          "DRAFT"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Pending",
+          "Entity pending approval and can't be used.",
+          "PENDING"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Active",
+          "Entity in active state and can be used.",
+          "ACTIVE"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "Retired",
+          "Entity retired and cannot be executed any more.",
+          "RETIRED"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "Error",
+          "Entity in have error and can't be used.",
+          "ERROR"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

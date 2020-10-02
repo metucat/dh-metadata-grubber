@@ -1,0 +1,340 @@
+{
+  "identity": {
+    "id": "18a9a0e7-c8f1-4cab-af2a-093908325c19",
+    "name": "From:Hive",
+    "description": "Conversion from Apache Hive data types to DifHub data types.Map used to import data from Apache Hive DDL to DifHub Dataset specification."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2019-05-03T07:05:50.41",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-05-03T07:41:20.073",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-05-03T07:41:07.69",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/3744/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-05-03T07:41:19.95",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/3744/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "13d5ceee-9a44-49ec-918c-26f803dc0e53",
+          "name": "Platform",
+          "description": "Data type of source platform."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 32,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b2b5456b-4161-4ac9-befb-fcc7d49146c5",
+          "name": "Attribute",
+          "description": "Additional attribute of the the type. "
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a3335b74-2e73-4afd-b19f-b698d53065ed",
+          "name": "Description",
+          "description": "Destination type of DifHub Dataset specification."
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e4d95c50-5788-46ad-8395-0633aa9d5b76",
+          "name": "Type",
+          "description": "DifHub type for Dataset specification."
+        },
+        "order": 4,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4f663fa6-1617-414a-8e4d-79fbd700ad6d",
+          "name": "Length",
+          "description": "Length of field based on source type."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Integer",
+        "optional": true,
+        "value": "Read",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "fe4be690-7d3d-4bca-9208-78f32afcf63c",
+          "name": "Format",
+          "description": "Format for DifHub specification based on source type."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "BOOLEAN",
+          "",
+          "MySQL does not have built-in Boolean type. However, it uses TINYINT(1) instead. To make it more convenient, MySQL provides BOOLEAN or BOOL as the synonym of TINYINT(1).",
+          "Boolean",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "TINYINT",
+          "",
+          "1-byte signed integer, from -128 to 127",
+          "Small",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "SMALLINT",
+          "",
+          "2-byte signed integer, from -32,768 to 32,767",
+          "Short",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "INT",
+          "",
+          "4-byte signed integer, from -2,147,483,648 to 2,147,483,647",
+          "Integer",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "BIGINT",
+          "",
+          "8-byte signed integer, from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807",
+          "Long",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "DECIMAL",
+          "",
+          "ntroduced in Hive 0.11.0 with a precision of 38 digits\nHive 0.13.0 introduced user-definable precision and scale",
+          "Decimal",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "NUMERIC",
+          "",
+          "ntroduced in Hive 0.11.0 with a precision of 38 digits\nHive 0.13.0 introduced user-definable precision and scale",
+          "Decimal",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "FLOAT",
+          "",
+          "4-byte single precision floating point number",
+          "Float",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "DOUBLE",
+          "",
+          "8-byte double precision floating point number",
+          "Double",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "BIT",
+          "",
+          "The BIT data type is used to store bit values. A type of BIT(M) enables storage of M-bit values. M can range from 1 to 64.",
+          "Bit",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "DATE",
+          "",
+          "Note: Only available starting with Hive 0.12.0",
+          "Date",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "TIMESTAMP",
+          "",
+          "The TIMESTAMP data type is used for values that contain both date and time parts. TIMESTAMP has a range of '1970-01-01 00:00:01' UTC to '2038-01-19 03:14:07' UTC.",
+          "DateTime",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "INTERVAL",
+          "",
+          "Note: Only available starting with Hive 1.2.0",
+          "TimeSpan",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "CHAR",
+          "",
+          "vChar types are similar to Varchar but they are fixed-length meaning that values shorter than the specified length value are padded with spaces but trailing spaces are not important during comparisons. The maximum length is fixed at 255.",
+          "String",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "VARCHAR",
+          "",
+          "TVarchar types are created with a length specifier (between 1 and 65535), which defines the maximum number of characters allowed in the character string. If a string value being converted/assigned to a varchar value exceeds the length specifier, the string is silently truncated. Character length is determined by the number of code points contained by the character string.\nLike string, trailing whitespace is significant in varchar and will affect comparison results.",
+          "String",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "BINARY",
+          "",
+          "Note: Only available starting with Hive 0.8.0",
+          "Binary",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "STRING",
+          "",
+          "String literals can be expressed with either single quotes (') or double quotes (\"). Hive uses C-style escaping within the strings.",
+          "String",
+          "0",
+          ""
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

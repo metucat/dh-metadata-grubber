@@ -1,0 +1,650 @@
+{
+  "identity": {
+    "id": "db3ca9dd-255b-44ee-bdb7-5affb9a0e7a5",
+    "name": "Persons",
+    "description": "Interface to access person information."
+  },
+  "version": {
+    "major": 1,
+    "minor": 3,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "Interface",
+    "usage": "RESTful API",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-07T22:33:13.293",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T22:38:58.397",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-09-07T06:56:21.89",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:33:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T22:38:57.993",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 3,
+      "revision": 0
+    }
+  },
+  "servers": [],
+  "path": "/persons/{personId}",
+  "parameters": [
+    {
+      "location": "Header",
+      "field": {
+        "identity": {
+          "id": "9734e899-468f-43c2-b814-cd49914c40ea",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "format": "Base64 JWT token",
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "67cd00a6-fd2b-4b8a-8ff5-5952fe7c23d9",
+          "name": "endTime",
+          "description": "End of time window specified to limit objects with last updated in this time window."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "cba4953a-bb4e-4e3f-9d98-f900b2f09b1d",
+          "name": "options",
+          "description": "Options specified additional requirements for returned entity. For example reconcile option will require to send events to data lake and mark as reconciliation. "
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "5009ce78-0956-4503-85e2-33bb41680c96",
+          "name": "search",
+          "description": "Expression to limit number of entities in response."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "59bbc9a5-99a6-4102-9cd7-99b2d3b3d682",
+          "name": "startTime",
+          "description": "Beginning of time window specified to limit objects with last updated in this time window."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Path",
+      "field": {
+        "identity": {
+          "id": "91f0632b-97c3-4472-80f4-21d0baf70226",
+          "name": "personId",
+          "description": "Person Id to fetch and put records"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Body",
+      "field": {
+        "identity": {
+          "id": "f07f48d7-54db-40b6-816b-8e340dbdafaf",
+          "name": "person",
+          "description": "Person data specification for update."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    }
+  ],
+  "responses": [
+    {
+      "code": "404",
+      "field": {
+        "identity": {
+          "id": "baafae3c-d9b6-4b14-b0d2-cad7aad29a04",
+          "name": "FailureNotFound",
+          "description": "Object is not found"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "200",
+      "field": {
+        "identity": {
+          "id": "aa280455-0d62-4822-b28f-e91d5859b151",
+          "name": "Success",
+          "description": "Person is found and returned."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person/versions/1.0.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "409",
+      "field": {
+        "identity": {
+          "id": "2528b20e-7850-41f4-a769-8cfeb12ab7b7",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "401",
+      "field": {
+        "identity": {
+          "id": "7b57237a-90dd-4eff-a073-707b30257d33",
+          "name": "FailureAlreadyExist",
+          "description": "Object is already exist."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "400",
+      "field": {
+        "identity": {
+          "id": "898e1633-ceed-42b1-b4d3-b5ac07421595",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "204",
+      "field": {
+        "identity": {
+          "id": "a878c8c5-decb-4333-a8d1-6a4ae1b7300d",
+          "name": "SuccessCompleted",
+          "description": "Operation completed successfully."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "201",
+      "field": {
+        "identity": {
+          "id": "cb0e43a1-40b1-4acd-98bc-33838e61f7e8",
+          "name": "SuccessCreated",
+          "description": "Object created successfully."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "identity": {
+        "id": "7c0939e9-40ad-4df7-822d-4d7e6bbd928b",
+        "name": "CreatePerson",
+        "description": "Create new Person. Validate Person not yet exist."
+      },
+      "deprecated": false,
+      "action": "POST",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "f07f48d7-54db-40b6-816b-8e340dbdafaf",
+          "name": "person",
+          "description": "Person data specification for update."
+        }
+      ],
+      "responses": [
+        {
+          "id": "a17768d8-bb9d-4059-bf19-753d6a38bee8",
+          "name": "SuccessCreated",
+          "description": "Operation completed successfully."
+        },
+        {
+          "id": "0ba6d590-cda4-486e-9e21-56daf29d26ab",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "f944e7be-e24b-4944-86d7-03b883db9a01",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "d986f719-29b0-4af4-b610-475bc6160ceb",
+          "name": "FailureAlreadyExist",
+          "description": "Client is already exist."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "id": "e90f34d3-fb34-4183-be6f-ffc9bb073367",
+        "name": "GetPerson",
+        "description": "Get person or list of persons from service."
+      },
+      "deprecated": false,
+      "action": "GET",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "066c37c5-36cb-4bd2-af92-262ac924b86c",
+          "name": "options",
+          "description": "Options specified additional requirements for returned entity. For example reconcile option will require to send events to data lake and mark as reconciliation. "
+        },
+        {
+          "id": "c6252f3f-6b67-488d-a5ce-b483ae68e081",
+          "name": "startTime",
+          "description": "Beginning of time window specified to limit objects with last updated in this time window."
+        },
+        {
+          "id": "901a9211-b574-4633-9ec2-ea1d303f51b1",
+          "name": "endTime",
+          "description": "End of time window specified to limit objects with last updated in this time window."
+        },
+        {
+          "id": "0954a8e7-bb82-4d3b-85b2-8e0af31df943",
+          "name": "search",
+          "description": "Expression to limit number of entities in response."
+        },
+        {
+          "id": "91f0632b-97c3-4472-80f4-21d0baf70226",
+          "name": "personId",
+          "description": "Person Id to fetch and put records"
+        }
+      ],
+      "responses": [
+        {
+          "id": "c9802606-3924-4a76-99b2-a1cdf705ac98",
+          "name": "Success",
+          "description": "Client is found and returned."
+        },
+        {
+          "id": "cd1e3fbe-4f02-4395-8f71-495b94596fb8",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "f944e7be-e24b-4944-86d7-03b883db9a01",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "4c65cd31-7b48-42ad-9638-18806aacdafb",
+          "name": "FailureNotFound",
+          "description": "Client is not found"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "id": "116543de-24b1-49e2-8b3b-74cd780e9749",
+        "name": "ModifyPerson",
+        "description": "Change Person properties to values specified in request. Property not specified will remain same. No element of any collection will be deleted. "
+      },
+      "deprecated": false,
+      "action": "PATCH",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "91f0632b-97c3-4472-80f4-21d0baf70226",
+          "name": "personId",
+          "description": "Person Id to fetch and put records"
+        },
+        {
+          "id": "f07f48d7-54db-40b6-816b-8e340dbdafaf",
+          "name": "person",
+          "description": "Person data specification for update."
+        }
+      ],
+      "responses": [
+        {
+          "id": "e0ddc03f-0a78-48d8-b1d3-4726cb0fd1b7",
+          "name": "SuccessCompleted",
+          "description": "Operation completed successfully."
+        },
+        {
+          "id": "0ba6d590-cda4-486e-9e21-56daf29d26ab",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "f944e7be-e24b-4944-86d7-03b883db9a01",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "4c65cd31-7b48-42ad-9638-18806aacdafb",
+          "name": "FailureNotFound",
+          "description": "Client is not found"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "id": "60bac986-4516-4fe1-9b6c-616a267d414f",
+        "name": "UpdatePerson",
+        "description": "Change person specification. Person will be created if not exist."
+      },
+      "deprecated": false,
+      "action": "PUT",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "91f0632b-97c3-4472-80f4-21d0baf70226",
+          "name": "personId",
+          "description": "Person Id to fetch and put records"
+        },
+        {
+          "id": "f07f48d7-54db-40b6-816b-8e340dbdafaf",
+          "name": "person",
+          "description": "Person data specification for update."
+        }
+      ],
+      "responses": [
+        {
+          "id": "e0ddc03f-0a78-48d8-b1d3-4726cb0fd1b7",
+          "name": "SuccessCompleted",
+          "description": "Operation completed successfully."
+        },
+        {
+          "id": "0ba6d590-cda4-486e-9e21-56daf29d26ab",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "f944e7be-e24b-4944-86d7-03b883db9a01",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "identity": {
+        "id": "60c1fdf7-2da0-4230-a4ee-d14f3dd1ded3",
+        "name": "Microservice",
+        "description": "User micro service"
+      },
+      "platform": "RESTfull-API",
+      "unit": "User",
+      "location": {},
+      "schedule": {}
+    }
+  ],
+  "examples": [
+    {
+      "identity": {
+        "id": "109ba9c5-9619-47e7-9fba-34d200f37e65",
+        "name": "GetEmptyPersonOfUser",
+        "description": "After user created person inside user is empty."
+      },
+      "format": "JSON",
+      "operation": {
+        "id": "e90f34d3-fb34-4183-be6f-ffc9bb073367",
+        "name": "GetPerson"
+      },
+      "parameters": [
+        {
+          "identity": {
+            "name": "bearer"
+          },
+          "type": "String",
+          "value": ""
+        },
+        {
+          "identity": {
+            "name": "options"
+          },
+          "type": "String",
+          "value": ""
+        },
+        {
+          "identity": {
+            "name": "startTime"
+          },
+          "type": "DateTime",
+          "value": ""
+        },
+        {
+          "identity": {
+            "name": "endTime"
+          },
+          "type": "DateTime",
+          "value": ""
+        },
+        {
+          "identity": {
+            "name": "search"
+          },
+          "type": "String",
+          "value": ""
+        },
+        {
+          "identity": {
+            "name": "personId"
+          },
+          "type": "String",
+          "value": "sashaberger@hotmail.com"
+        }
+      ],
+      "response": {
+        "identity": {
+          "name": "Success"
+        },
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person/versions/1.0.0",
+        "value": "{\"identity\":{},\"entity\":{\"parent\":{},\"type\":\"\",\"state\":\"DRAFT\",\"resource\":{\"resourceType\":\"\",\"id\":\"\",\"meta\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"versionId \":\"\",\"lastUpdated\":\"\",\"source\":\"\",\"profile\":[\"\"],\"security\":[\"\"],\"tag\":[\"\"]},\"implicitRules\":\"\",\"language\":\"\",\"text\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"status\":\"\",\"div\":\"\"},\"contained\":[{\"resourceType\":\"\",\"id\":\"\",\"meta\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"versionId \":\"\",\"lastUpdated\":\"\",\"source\":\"\",\"profile\":[\"\"],\"security\":[\"\"],\"tag\":[\"\"]},\"implicitRules\":\"\",\"language\":\"\"}],\"extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"modifierExtension \":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}]},\"identifier \":[{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"use\":\"\",\"type\":\"\",\"system\":\"\",\"value\":\"\",\"period\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"start\":\"\",\"end\":\"\"},\" assigner\":{\"Id\":\"\",\"Name\":\"\",\"Description\":\"\",\"Translations\":[{\"Locale\":\"\",\"Name\":\"\",\"Description\":\"\",\"Value\":\"\"}]}}],\"active\":\"\",\"managingOrganization\":{\"Id\":\"\",\"Name\":\"\",\"Description\":\"\",\"Translations\":[{\"Locale\":\"\",\"Name\":\"\",\"Description\":\"\",\"Value\":\"\"}]},\"source\":\"\",\"bindings\":[{\"identity\":{},\"type\":\"\",\"code\":\"\"}],\"tags\":[{\"Id\":\"\",\"Name\":\"\",\"Description\":\"\",\"Translations\":[{\"Locale\":\"\",\"Name\":\"\",\"Description\":\"\",\"Value\":\"\"}]}],\"properties\":[{\"Identity\":{},\"Type\":\"String\",\"Reference\":\"\",\"Value\":\"\",\"gg\":\"\"}],\"history\":{\"createdAt\":\"\",\"createdBy\":\"\",\"updatedAt\":\"\",\"updatedBy\":\"\",\"updatedNote\":\"\",\"updatedMessage\":\"\",\"retiredAt\":\"\",\"retiredBy\":\"\",\"completions\":[{\"status\":\"\",\"completedAt\":\"\",\"completedBy\":\"\",\"completedNote\":\"\",\"completedMessage\":\"\"}]}},\"name\":[{\"id\":\"\",\" extension\\t\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"use\":\"\",\"text\":\"\",\"family\":\"\",\"given\":[\"\"],\"prefix\":[\"\"],\"suffix\":[\"\"],\"period\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"start\":\"\",\"end\":\"\"}}],\"telecom\":[{\"id\":\"\",\" extension\\t\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"system\":\"\",\"value\":\"\",\"use\":\"\",\"rank\":\"\",\"period\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"start\":\"\",\"end\":\"\"}}],\"gender\":\"\",\"birthDate\":\"\",\"address\":[{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"use\":\"\",\"type\":\"\",\"text\":\"\",\"line\":[\"\"],\"city\":\"\",\"district\":\"\",\"state\":\"\",\"postalCode\":\"\",\"country\":\"\",\"period\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"start\":\"\",\"end\":\"\"}}],\"photo\":{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"contentType\":\"\",\"language\":\"\",\"data\":\"\",\"url\":\"\",\"size\":\"\",\"hash\":\"\",\"title\":\"\",\"creation\":\"\"},\"link\":[{\"id\":\"\",\" extension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"modifierExtension\":[{\"id\":\"\",\"url\":\"\",\"value\":\"\"}],\"target\":{\"Id\":\"\",\"Name\":\"\",\"Description\":\"\",\"Translations\":[{\"Locale\":\"\",\"Name\":\"\",\"Description\":\"\",\"Value\":\"\"}]},\"assurance\":\"\",\"type\":\"\"}]}"
+      }
+    },
+    {
+      "identity": {
+        "id": "139408f4-1fb9-4331-9d04-84064f46e48a",
+        "name": "ModefyPersonName",
+        "description": "Use patch operation to modify name of the person."
+      },
+      "format": "JSON",
+      "operation": {
+        "id": "116543de-24b1-49e2-8b3b-74cd780e9749",
+        "name": "ModifyPerson"
+      },
+      "parameters": [
+        {
+          "identity": {
+            "name": "bearer"
+          },
+          "type": "String",
+          "value": ""
+        },
+        {
+          "identity": {
+            "name": "personId"
+          },
+          "type": "String",
+          "value": "sashaberger@hotmail.com"
+        },
+        {
+          "identity": {
+            "name": "person"
+          },
+          "type": "Structure",
+          "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person/versions/1.0.0",
+          "value": "{\"identity\":{\"Name\":\"sashaberger@hotmail.com\"},\"entity\":{\"type\":\"Person\",\"state\":\"Active\",\"history\":{\"updatedBy\":\"sashaberger@hotmail.com\",\"updatedAt\":\"1/12/2018 17:55\"}},\"name\":[{\"text\":\"Саша\",\"family\":\"Бергер\",\"given\":[\"Александр\",\"Борисович\"],\"prefix\":[\"Г-дн\"]}],\"address\":[{\"postalCode\":\"000111\",\"state\":\"State\",\"city\":\"City\"}]}"
+        }
+      ],
+      "response": {
+        "identity": {
+          "name": "SuccessCompleted"
+        },
+        "type": "String",
+        "value": ""
+      }
+    }
+  ]
+}

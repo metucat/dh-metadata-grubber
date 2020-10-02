@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "id": "3d29cc22-95a6-4bc3-9a9e-78f98c877925",
+    "name": "State",
+    "description": "Enumerator of countries states."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "1e79a1b9-e817-45bb-a37a-19f3666cae74",
+      "name": "/organizations/Apdax/systems/DifHub/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "388"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "12"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-30T08:04:49.807",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/User/datasets/Address/issues/2320/messages/7"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-30T08:08:22.98",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/User/datasets/Address/issues/2320/messages/7"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "df709102-38ef-4f86-86ab-517ce9a3cbae",
+          "name": "State",
+          "description": "Name of Country."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "77882087-ad3a-4f3d-a169-a74b9e6c25de",
+          "name": "Code",
+          "description": "Phone code for country."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Short",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "413b2304-340a-4a86-9bda-eef6b5a10406",
+          "name": "Country",
+          "description": "Code for country for the state."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Short",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Washington",
+          "1",
+          "1"
+        ]
+      }
+    ]
+  }
+}

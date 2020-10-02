@@ -1,0 +1,446 @@
+{
+  "identity": {
+    "id": "36276c7d-b550-4e68-948a-87dd85266ec6",
+    "name": "From:DB2",
+    "description": "Conversion from MySQL data types to DifHub data types.Map used to import data from MySQL DDL to DifHub Dataset specification."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-12-26T01:22:03.567",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-12-26T09:09:00.93",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-12-26T09:08:24.587",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/To:MySQL/issues/3495/messages/5"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-12-26T09:09:00.73",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/To:MySQL/issues/3495/messages/5"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "d93b82ee-9303-4744-ad15-0184985cabd2",
+          "name": "Platform",
+          "description": "Data type of source platform."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 32,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6ec2772e-c8b9-40b9-afb9-c192873edccf",
+          "name": "Attribute",
+          "description": "Additional attribute of the the type. "
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4825fac1-1382-4f09-9599-c302d4fe6eaa",
+          "name": "Description",
+          "description": "Destination type of DifHub Dataset specification."
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e2ce3472-049b-4ec0-91b0-1fb5de612796",
+          "name": "Type",
+          "description": "DifHub type for Dataset specification."
+        },
+        "order": 4,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cf25efdc-29c3-439f-a201-bb6d8e03d25f",
+          "name": "Length",
+          "description": "Length of field based on source type."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Integer",
+        "optional": true,
+        "value": "Read",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "aa2f25f0-f7b3-4931-abd9-59aea5a7b0af",
+          "name": "Format",
+          "description": "Format for DifHub specification based on source type."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "BOOLEAN",
+          "",
+          "In the form of 0 and 1.",
+          "Boolean",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "SMALLINT",
+          "",
+          "Small integers. A small integer is binary integer with a precision of 15 bits. The range is -32768 to +32767.",
+          "Short",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "INTEGER",
+          "",
+          "Large integers. A large integer is binary integer with a precision of 31 bits. The range is -2147483648 to +2147483647.",
+          "Integer",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "INT",
+          "",
+          "Large integers. A large integer is binary integer with a precision of 31 bits. The range is -2147483648 to +2147483647.",
+          "Integer",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "BIGINT",
+          "",
+          "Big integers. A big integer is a binary integer with a precision of 63 bits. The range of big integers is -9223372036854775808 to +9223372036854775807.",
+          "Long",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "DECIMAL",
+          "",
+          "A decimal number is a packed decimal number with an implicit decimal point. The position of the decimal point is determined by the precision and the scale of the number. The scale, which is the number of digits in the fractional part of the number, cannot be negative or greater than the precision. The maximum precision is 31 digits.\nAll values of a decimal column have the same precision and scale. The range of a decimal variable or the numbers in a decimal column is -n to +n, where n is the largest positive number that can be represented with the applicable precision and scale. The maximum range is 1 - 10³¹ to 10³¹ - 1.",
+          "Decimal",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "NUMERIC",
+          "",
+          "A decimal number is a packed decimal number with an implicit decimal point. The position of the decimal point is determined by the precision and the scale of the number. The scale, which is the number of digits in the fractional part of the number, cannot be negative or greater than the precision. The maximum precision is 31 digits.\nAll values of a decimal column have the same precision and scale. The range of a decimal variable or the numbers in a decimal column is -n to +n, where n is the largest positive number that can be represented with the applicable precision and scale. The maximum range is 1 - 10³¹ to 10³¹ - 1.",
+          "Decimal",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "DECFLOAT",
+          "",
+          "A decimal floating-point value is an IEEE 754r number with a decimal point. The position of the decimal point is stored in each decimal floating-point value. The maximum precision is 34 digits.\nThe range of a decimal floating-point number is either 16 or 34 digits of precision; the exponent range is respectively 10-383 to 10+384 or 10-6143 to 10+6144.",
+          "Decimal",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "REAL",
+          "",
+          "A single-precision floating-point number is a short floating-point number of 32 bits. The range of single-precision floating-point numbers is approximately -7.2E+75 to 7.2E+75. In this range, the largest negative value is about -5.4E-79, and the smallest positive value is about 5.4E-079.",
+          "Float",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "DOUBLE",
+          "",
+          "A double-precision floating-point number is a long floating-point number of 64-bits. The range of double-precision floating-point numbers is approximately -7.2E+75 to 7.2E+75. In this range, the largest negative value is about -5.4E-79, and the smallest positive value is about 5.4E-79.",
+          "Double",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "Float",
+          "",
+          "A double-precision floating-point number is a long floating-point number of 64-bits. The range of double-precision floating-point numbers is approximately -7.2E+75 to 7.2E+75. In this range, the largest negative value is about -5.4E-79, and the smallest positive value is about 5.4E-79.",
+          "Double",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "BIT",
+          "",
+          "Does not represent characters.",
+          "Binary",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "DATE",
+          "",
+          "A time is a three-part value representing a time of day in hours, minutes, and seconds, in the range of 00.00.00 to 24.00.00.",
+          "Date",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "TIME",
+          "",
+          "MySQL retrieves and displays TIME values in 'HH:MM:SS' format (or 'HHH:MM:SS' format for large hours values). TIME values may range from '-838:59:59' to '838:59:59'. The hours part may be so large because the TIME type can be used not only to represent a time of day (which must be less than 24 hours), but also elapsed time or a time interval between two events (which may be much greater than 24 hours, or even negative).",
+          "Time",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "TIMESTAMP",
+          "",
+          "A timestamp is a seven-part value representing a date and time by year, month, day, hour, minute, second, and microsecond, in the range of 0001-01-01-00.00.00.000000000 to 9999-12-31-24.00.00.000000000 with nanosecond precision. Timestamps can also hold timezone information.",
+          "DateTime",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "CHAR",
+          "",
+          "Fixed-length character strings with a length of n bytes. n must be greater than 0 and not greater than 255. The default length is 1.",
+          "Text",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "CHARECTER",
+          "",
+          "Fixed-length character strings with a length of n bytes. n must be greater than 0 and not greater than 255. The default length is 1.",
+          "Text",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "VARCHAR",
+          "",
+          "The CHAR and VARCHAR types are similar, but differ in the way they are stored and retrieved. They also differ in maximum length and in whether trailing spaces are retained.",
+          "Text",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "NCHAR",
+          "",
+          "Fixed-length character strings with a length of 2n bytes. n must be greater than 0 and not greater than 255. The default length is 1.",
+          "String",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "NVARCHAR",
+          "",
+          "The NCHAR and NVARCHAR types are similar, but differ in the way they are stored and retrieved. They also differ in maximum length and in whether trailing spaces are retained.",
+          "String",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "BINARY",
+          "",
+          "Fixed-length or varying-length binary strings with a length of n bytes. n must be greater than 0 and not greater than 255. The default length is 1.",
+          "Binary",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "VARBINARY",
+          "",
+          "Varying-length binary strings with a length of n bytes. The length of n must be greater than 0 and less than a number that depends on the page size of the table space. The maximum length is 32704.",
+          "Binary",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "CLOB",
+          "",
+          "Varying-length character strings with a maximum of n characters. n cannot exceed 2,147,483,647. The default length is 1M.",
+          "Binary",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "BLOB",
+          "",
+          "Varying-length binary strings with a length of n bytes. n cannot exceed 2,147,483,647. The default length is 1M.",
+          "Binary",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "DBCLOB",
+          "",
+          "Varying-length strings of double-byte characters with a maximum of n double-byte characters. n cannot exceed 1,073,741,824. The default length is 1M.",
+          "Binary",
+          "0",
+          ""
+        ]
+      },
+      {
+        "index": 26,
+        "values": [
+          "XML",
+          "",
+          "For an XML document. Only well-formed XML documents can be inserted into an XML column.",
+          "String",
+          "0",
+          "XML"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

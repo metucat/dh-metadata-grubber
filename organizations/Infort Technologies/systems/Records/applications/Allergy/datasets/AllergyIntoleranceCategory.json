@@ -1,0 +1,165 @@
+{
+  "identity": {
+    "id": "d7ce9d63-356d-4112-90cb-a272433abb36",
+    "name": "AllergyIntoleranceCategory",
+    "description": "Category of an identified substance.\nhttp://hl7.org/fhir/ValueSet/allergy-intolerance-category v3.6.0\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-02T06:32:47.143",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T06:56:09.877",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T06:54:37.307",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceType/issues/3374/messages/7"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T06:56:09.847",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceType/issues/3374/messages/7"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "37cd0050-6e75-4a8f-ad88-48a2c6919020",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4fd4a9be-98e4-4c4a-bc8a-8ddfeefd777d",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6ddc674d-176f-4760-a033-4d0d88899680",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e6c3faca-d0f2-4528-bcd8-7d2209905440",
+          "name": "Translations",
+          "description": "Translations of records to other languages."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Translation/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "food",
+          "Food",
+          "Any substance consumed to provide nutritional support for the body.",
+          "{\"Locale\":\"ru\",\"Name\":\"Пищевая\",\"Description\":\"Любая субстанция для обеспечения питания.\"}"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "medication",
+          "Medication",
+          "Substances administered to achieve a physiological effect.",
+          "{\"Locale\":\"ru\",\"Name\":\"Медикоментозная\",\"Description\":\"Субстанция применяемая для получения физиологичесеого эффекта\"}"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "environment",
+          "Environment",
+          "Any substances that are encountered in the environment, including any substance not already classified as food, medication, or biologic.",
+          "{\"Locale\":\"ru\",\"Name\":\"Экологическая\",\"Description\":\"Субстанция встречающаяся в окружнии.\"}"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "biologic",
+          "Biologic",
+          "A preparation that is synthesized from living organisms or their products, especially a human or animal protein, such as a hormone or antitoxin, that is used as a diagnostic, preventive, or therapeutic agent. Examples of biologic medications include: vaccines; allergenic extracts, which are used for both diagnosis and treatment (for example, allergy shots); gene therapies; cellular therapies. There are other biologic products, such as tissues, that are not typically associated with allergies.",
+          "{\"Locale\":\"ru\",\"Name\":\"Биологическая\",\"Description\":\"Препарат синтезированный из живого организма или продукты человеческих или животных протеинов, таких как гармоны или антитоксины, которые применяются как диагностические, превинтивные или терапевтические материалы.\"}"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

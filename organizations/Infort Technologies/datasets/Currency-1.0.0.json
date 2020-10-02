@@ -1,0 +1,131 @@
+{
+  "identity": {
+    "id": "62a81393-3196-40b7-93a7-d995b035c224",
+    "name": "Currency",
+    "description": "Enumerator of currencies supported by the system."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "942"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "732"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-17T06:28:49.267",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2259/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-17T06:29:24.353",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2259/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": false,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "fa036551-2b6e-45b7-82a2-7ccc0c391a04",
+          "name": "Currency",
+          "description": "Name of the currency."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "60d6527a-880a-4c5a-8c4f-da24f3bc0c01",
+          "name": "Description",
+          "description": "Currency description."
+        },
+        "order": 2,
+        "usage": "Description",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "7dda1d01-10ff-4486-90f5-b1edd5402008",
+          "name": "Currency code",
+          "description": "Numeric code for currency reference."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Small",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "USD",
+          "United States Dollar",
+          "1"
+        ]
+      }
+    ]
+  }
+}

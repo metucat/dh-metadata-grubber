@@ -1,0 +1,102 @@
+{
+  "identity": {
+    "id": "084e6822-24b6-4838-9fe6-7de24f201723",
+    "name": "PeriodElement",
+    "description": "A time period element. This is period structure for use inside collections."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-19T23:25:27.39",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.747",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-09-07T07:01:22.22",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:09:41.35",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "1da20111-6ee7-4563-8d86-54ee58f1bb32",
+          "name": "inherit:id",
+          "description": "This is id for period element. It is inherit properties from Element structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Element/versions/1.1.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8bb19957-97f3-4bba-8092-2a1dc1f1370f",
+          "name": "inherit:period",
+          "description": "Period properties will be inherited from period stricture"
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Period/versions/1.2.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

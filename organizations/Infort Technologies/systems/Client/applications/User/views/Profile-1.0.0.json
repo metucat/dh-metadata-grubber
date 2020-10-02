@@ -1,0 +1,55 @@
+{
+  "identity": {
+    "id": "e9dce843-43d6-407b-8c7e-29e22fe30988",
+    "name": "Profile",
+    "description": "Заполненный и сохраненный профиль"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "full_1(4).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/Profile/full_1(4).png"
+      },
+      {
+        "identity": {
+          "name": "full_2(4).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/Profile/full_2(4).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(4).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/Profile/full_3(4).png"
+      }
+    ],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-08-29T08:08:57.603",
+      "createdBy": "katriel.b@gmail.com",
+      "updated": "2018-08-29T08:08:57.527",
+      "updatedBy": "orzhan057@gmail.com",
+      "completions": []
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "definitions": [],
+  "layouts": []
+}

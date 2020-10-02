@@ -1,0 +1,79 @@
+{
+  "identity": {
+    "id": "25725728-decc-41e3-8283-d7793070a22c",
+    "name": "FormEditor",
+    "description": "Control for specifying property of dialog or form. Form control contains properties to configure it. "
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "5c91076c-506f-4d7d-b163-ae5b512e3a74",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Control"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Control",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2020-09-11T18:46:08.107",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2020-09-11T18:47:30.417",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2020-09-11T18:47:19.317",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/issues/5307/messages/1"
+        },
+        {
+          "status": "Approved",
+          "completed": "2020-09-11T18:47:29.81",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/issues/5307/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "aa85fd7a-772f-4471-9dd8-3f417158ff9d",
+          "name": "formTip",
+          "description": "Tip for form usage"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

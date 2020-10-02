@@ -1,0 +1,218 @@
+{
+  "identity": {
+    "id": "0bb42f07-9c01-494b-9ce6-51e964246e66",
+    "name": "Attachment",
+    "description": "This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However it can be used for any data that has a MIME type.\n\nhttp://build.fhir.org//datatypes.html#Attachment"
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-03T05:36:45.483",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.357",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-21T20:54:07.307",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:47:47.113",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "62c20cad-a9a0-4be8-b61f-8d3ea71183ef",
+          "name": "inherit:id",
+          "description": "This is id for period element. It is inherit properties from Element structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Element/versions/1.1.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "dc624e40-2cca-4060-93a1-f8125e0b1bad",
+          "name": "contentType",
+          "description": "Mime type of the content, with charset etc."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 100,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "24a69fe7-d9be-4a47-a9b0-44b491992c5c",
+          "name": "language",
+          "description": "Human language of the content (BCP-47)"
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/datasets/Locale/versions/1.2.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a4b95aba-fc6f-4fec-843a-19dfa1685a0f",
+          "name": "data",
+          "description": "Data inline, base64ed"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Binary",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d9a04c1f-c7c9-4c6c-87bf-8e273fc27b31",
+          "name": "url",
+          "description": "Uri where the data can be found"
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "URI",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "69d0f694-1e34-4d73-bee7-bfe1b74ea5db",
+          "name": "size",
+          "description": "Number of bytes of content (if url provided)"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Unsigned Integer",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b24d5edc-8d00-4bed-b66a-1a77c59b1258",
+          "name": "hash",
+          "description": "Hash of the data (sha-1, base64ed)"
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Binary",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1be69899-0b43-476c-95a9-cd62e79d5662",
+          "name": "title",
+          "description": "Label to display in place of the data"
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "f463dabf-26cc-4503-8be5-222043a294a9",
+          "name": "creation",
+          "description": "Date attachment was first created"
+        },
+        "order": 9,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

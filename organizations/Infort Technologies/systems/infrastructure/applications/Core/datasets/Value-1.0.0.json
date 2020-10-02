@@ -1,0 +1,163 @@
+{
+  "identity": {
+    "id": "033d07f1-0df5-47f1-b852-ec045fc80980",
+    "name": "Value",
+    "description": "Value union which can provide different type of measured value."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Union",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-22T05:43:27.45",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.89",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:15:02.683",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "d1415503-a963-402a-94eb-2b7b50181018",
+          "name": "valueQuantity",
+          "description": "Value as quantity."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Quantity/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4617b6eb-db6a-4e7a-a38c-73e3b004eb0e",
+          "name": "valueRange",
+          "description": "Value as range of quantities."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Range/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "71cb84fe-af55-4ed3-8c80-4bec707b385c",
+          "name": "valueRatio",
+          "description": "Value as ratio."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Ratio/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e3ecea9a-f41c-46ec-b18e-b93adf640845",
+          "name": "valuePeriod",
+          "description": "Value as time period."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Period/versions/1.2.0",
+        "subscription": "",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4ab6ad00-5596-4cf8-bc72-0898b6b9b676",
+          "name": "valueString",
+          "description": "Value as text."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a49a1e1a-3ab0-4155-80c2-6755fa4fbb1b",
+          "name": "valueBoolean",
+          "description": "Value as boolean true/false."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Boolean",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

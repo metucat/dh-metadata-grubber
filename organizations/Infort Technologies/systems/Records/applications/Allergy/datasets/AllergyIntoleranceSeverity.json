@@ -1,0 +1,156 @@
+{
+  "identity": {
+    "id": "06a13519-897c-46cb-ab42-7d6535311fd3",
+    "name": "AllergyIntoleranceSeverity",
+    "description": "Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.\nhttp://hl7.org/fhir/ValueSet/reaction-event-severity v3.6.0\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-03T07:12:18.927",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T06:56:09.923",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T06:55:56.89",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceType/issues/3374/messages/7"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T06:56:09.847",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceType/issues/3374/messages/7"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "a8411b8c-ba08-49ec-a062-d7459feba6ec",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1055d339-2c39-4940-a354-ea82947ea556",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "46818051-4f1d-4a4b-a379-f752e32eac6d",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "f2dcdf7b-8920-4bba-ac3f-f351ba60c706",
+          "name": "Translations",
+          "description": "Translations of records to other languages."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Translation/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "mild",
+          "Mild",
+          "Causes mild physiological effects.",
+          "{\"Locale\":\"ru\",\"Name\":\"Слабая\",\"Description\":\"Оказывает не существенный физиологический еффект.\"}"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "moderate",
+          "Moderate",
+          "Causes moderate physiological effects.",
+          "{\"Locale\":\"ru\",\"Name\":\"Средняя\",\"Description\":\"Оказывает физиологический эффект средней тяжести.\"}"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "severe",
+          "Severe",
+          "Causes severe physiological effects.",
+          "{\"Locale\":\"ru\",\"Name\":\"Серезная\",\"Description\":\"Оказывает серезный физиологический эффект.\"}"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

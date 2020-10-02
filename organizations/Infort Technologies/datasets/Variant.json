@@ -1,0 +1,98 @@
+{
+  "identity": {
+    "id": "c6e98e0d-6d6c-40c3-9b4f-9ebfe1c6edbe",
+    "name": "Variant",
+    "description": "Structure to maintain value of specific type."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-08-28T20:49:01.7",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-08-28T20:53:48.32",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-08-28T20:53:38.037",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/3249/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-08-28T20:53:48.247",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/3249/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "b120da08-8c70-4d53-9447-fb551b7c109c",
+          "name": "Type",
+          "description": "Type of value variant contains."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Apdax/datasets/Type/versions/1.7.0",
+        "subscription": "",
+        "optional": true,
+        "value": "String",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d77b4d22-76ca-47b5-a304-39241ab5f636",
+          "name": "Value",
+          "description": "Value of type variant maintained."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

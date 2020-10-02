@@ -1,0 +1,974 @@
+{
+  "identity": {
+    "id": "ce83e68e-8fa7-4239-abb7-a0036b8ecff4",
+    "name": "PersonAddressNew",
+    "description": "View to introduce address for person."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 1
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "full_1.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonAddress/full_1.png"
+      },
+      {
+        "identity": {
+          "name": "full_2(adress).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonAddress/full_2(adress).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(adress).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonAddress/full_3(adress).png"
+      }
+    ],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-10-19T01:59:11.47",
+      "createdBy": "f.zhukov90@gmail.com",
+      "updated": "2018-10-19T02:45:49.01",
+      "updatedBy": "unknown",
+      "mirrored": "2018-10-19T02:45:46.59",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-19T02:44:40.53",
+          "completedBy": "f.zhukov90@gmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonAddressNew/issues/3367/messages/22"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-19T02:44:56.84",
+          "completedBy": "f.zhukov90@gmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonAddressNew/issues/3367/messages/22"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 1
+    }
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "694bab37-8239-445b-911b-d31e79e5fe66",
+            "name": "Address",
+            "description": "Field: address[$].address\nControl: Text Field"
+          },
+          "order": 1,
+          "parent": {},
+          "text": "Address",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].address"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "af0ebcd5-a38e-408f-8a30-c873dbeadcba",
+            "name": "Adress",
+            "description": "Field: adress.adress\nControl: Text Field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Адрес",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "ea7f650f-00fd-4bcc-ab1b-0be78e3aedfb",
+            "name": "Adress type",
+            "description": "Field: address[$].type\nControl: Simple Select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Address type",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].type"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "bb71e3f8-f065-4b76-8c3d-9bbdad0a579c",
+            "name": "Adress value",
+            "description": "Field: address[$].value\nControl: Simple Select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Address value",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].value"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "bf3534f1-30fd-4492-a383-e9703df8d81e",
+            "name": "cardName",
+            "description": "Card caption. This is how card with address information looks for user."
+          },
+          "parent": {},
+          "text": "Address Caption",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "cardName"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "62536838-2217-43ce-b08a-6157dd8f5aa2",
+            "name": "City",
+            "description": "Field: address[$].city\nControl: Simple Select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "City",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].city"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "a9bad33b-2258-422b-a99a-16d36fa8034b",
+            "name": "CommonStyleEdit",
+            "description": "This is common style for all fields."
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Font style: Open Sans\n\nFont size (big): 20\nFont color (big): #5F6366\n\nFont size (small): 13\nFont color (small): #999999\n\nFont color (star *): #FF4C00\n\nLine color: #E7E0D0\n\nList Arrow (https://material.io/tools/icons/?icon=arrow_drop_down&style=baseline)\nColor: #D1C5AA\nWidth: 16\n\nCancel Button (https://material.io/tools/icons/?icon=cancel&style=baseline)\n\nFont size (button): 18\nColor (button): #AB9871\nFont color (button): #AB9871\n\nSave Button (https://material.io/tools/icons/?icon=save_alt&style=baseline)\n\nFont size (button): 18\nColor (button): #FF4D00\nFont color (button): #FF4D00\n\nArchive icon (https://material.io/tools/icons/?icon=archive&style=baseline)\nWidth: 32\nColor: #D1C5AA\n\nAdd icon (https://material.io/tools/icons/?icon=add&style=baseline)\nWidth: 24\nColor: #D1C5AA\n\nAdd link\nFont size (big): 20\nColor: #D1C5AA",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "5f315dd7-1012-4080-8ea1-d58c4b30e653",
+            "name": "CommonStyleExpansion",
+            "description": "This is common style for all fields."
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Font style: Open Sans\n\nFont size (big): 20\nFont color (big): #000000\n\nFont size (small): 13\nFont color (small): #999999\n\nExpansion arrow (https://material.io/tools/icons/?icon=expand_less&style=baseline)\nColor: #D1C5AA\nWidth: 20\n\nНезаполненные поля НЕ отображаются вообще",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "208174d5-b6cd-4246-a834-66ff18f31784",
+            "name": "CommonStyleStandart",
+            "description": "This is common style for all fields."
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Font style: Open Sans\n\nFont size (big): 20\nFont color (big): #000000\n\nFont size (small): 13\nFont color (small): #999999\n\nExpansion arrow (https://material.io/tools/icons/?icon=expand_more&style=baseline)\nColor: #D1C5AA\nWidth: 20\n",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "f1b85c52-9e51-4170-9154-1a3579ae1f1b",
+            "name": "Country",
+            "description": "Field: address[$].country\nControl: Simple Select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Country",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].country"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "2dcb0217-5ae3-4a75-8289-37d505062ca1",
+            "name": "District",
+            "description": "Field: address[$].distric\nControl: Simple Select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "District",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].distric"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "a26f0ac3-c109-4718-9206-e63e25c78cdb",
+            "name": "Index",
+            "description": "Field: address[$].index\nControl: Text Field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Index",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].index"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "89de63fa-3896-4a59-b66f-40bab406be06",
+            "name": "Region",
+            "description": "Field: address[$].region\nControl: Text Field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Region",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "address[$].region"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "locale": "1049",
+      "elements": [
+        {
+          "identity": {
+            "id": "fc17a3b6-11de-44e4-9bb7-fa05226de6aa",
+            "name": "Address"
+          },
+          "order": 1,
+          "parent": {},
+          "text": "Адрес"
+        },
+        {
+          "identity": {
+            "id": "5f90a29f-b272-40d4-889a-86e8240627e2",
+            "name": "Adress type"
+          },
+          "parent": {},
+          "text": "Вид адреса"
+        },
+        {
+          "identity": {
+            "id": "e989b32a-a275-4263-9c23-4d6ff7e93e3b",
+            "name": "Adress value"
+          },
+          "parent": {},
+          "text": "Тип адреса"
+        },
+        {
+          "identity": {
+            "id": "450dc5df-b535-4fda-a3b6-564d6b809867",
+            "name": "cardName"
+          },
+          "parent": {},
+          "text": "Заголовок адреса"
+        },
+        {
+          "identity": {
+            "id": "80c9067d-4157-444e-ba53-6b4e015adfbd",
+            "name": "City"
+          },
+          "parent": {},
+          "text": "Город"
+        },
+        {
+          "identity": {
+            "id": "947b8c9c-ae8b-4614-9c54-72e812c9fbe3",
+            "name": "Country"
+          },
+          "order": 3,
+          "parent": {},
+          "text": "Страна"
+        },
+        {
+          "identity": {
+            "id": "a3d7320a-0759-47d9-87f4-e3c12d274998",
+            "name": "District"
+          },
+          "parent": {},
+          "text": "Штат"
+        },
+        {
+          "identity": {
+            "id": "904eb83d-a497-401d-a57b-de14188b1fad",
+            "name": "Index"
+          },
+          "parent": {},
+          "text": "Индекс"
+        },
+        {
+          "identity": {
+            "id": "1cf82568-5b4e-4085-a585-60ee8f0f51e2",
+            "name": "Region"
+          },
+          "parent": {},
+          "text": "Область"
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

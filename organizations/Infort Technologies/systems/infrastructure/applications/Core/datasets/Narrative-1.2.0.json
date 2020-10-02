@@ -1,0 +1,119 @@
+{
+  "identity": {
+    "id": "8c9754f9-6bd7-4e07-8c17-d48d318a35e0",
+    "name": "Narrative",
+    "description": "Any resource that is a DomainResource (almost all types of resource) may include a human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human.\n\nIf narrative is present with a status other than 'empty', it SHALL reflect all content needed for a human to understand the essential clinical and business information for the resource. In other words, it must be safe to render only the narrative of the resource without displaying any of the resource's discrete/encoded information. Resource definitions and/or profiles on resources may define what content should be represented in the narrative to ensure clinical safety.\n\nThe narrative for a resource can contain additional information that is not in the structured data, including human-edited content. Such additional information SHALL be in the scope of the definition of the resource, though it is common for the narrative to include additional descriptive information extracted from other referenced resources when describing references. Narrative for a resource should include summary information about any referenced resources that would be required for a consumer of the resource to be able to understand the key, essential information about a resource without retrieving any additional resources.\n\nFor example, the narrative for a MedicationRequest might include brief summary information about the referenced patient, prescriber and medication. Some resources (e.g. List, Composition) may provide specific rules about what content must (or must not) be included in the resource narrative. Consideration should be given to the fact that referenced resources may be updated without updating referencing resources, so the proportion of content of a referenced resource included in a referencing resource should be limited. Systems MAY choose how narrative is generated, including how much de-referencing to perform, but SHALL NOT assume that the resource is rendered in any particular context when generating narrative."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-07T23:07:13.697",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.7",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-21T20:54:07.307",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:07:45.73",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "56b2dea1-dc99-4cc2-b5e0-7832fdbfb63d",
+          "name": "inherit:id",
+          "description": "Data inherited from element structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Element/versions/1.2.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "db5374f2-994d-4443-8d87-0cb0bb5813f0",
+          "name": "status",
+          "description": "Status for text."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/NarrativeStatus/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8e3dd2aa-0818-46fe-b234-c0a456b16a00",
+          "name": "div",
+          "description": "Limited xhtml content\n+ The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes\n+ The narrative SHALL have some non-whitespace content\n"
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "HTML",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

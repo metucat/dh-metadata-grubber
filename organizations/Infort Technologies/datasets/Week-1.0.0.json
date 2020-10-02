@@ -1,0 +1,527 @@
+{
+  "identity": {
+    "id": "674b2ec9-e222-4e66-b2a4-e495d188307e",
+    "name": "Week",
+    "description": "Enumerator Names of the weeks of the year by ISO 8601 and RFC 3339."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-05-10T05:30:53.673",
+      "createdby": "sashaberger@hotmail.com",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-05-10T06:12:47.53",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2810/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-05-10T06:13:20.817",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2810/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "4fc1798f-d0e4-4429-874d-1d82ef8d0fd2",
+          "name": "Week",
+          "description": "Week name."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 4,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4de6865d-ddc8-401b-afaa-00088894c2c8",
+          "name": "Description",
+          "description": "Description for the week."
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "189d10c3-ba0d-41b4-b4dd-19eb4ab4d6de",
+          "name": "Code",
+          "description": "Week order number and numeric code."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "W01",
+          "First week of the year.",
+          "1"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "W02",
+          "Second week of the year.",
+          "2"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "W03",
+          "Third week of the year.",
+          "3"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "W04",
+          "4th week of the year.",
+          "4"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "W05",
+          "5th week of the year.",
+          "5"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "W06",
+          "6th week of the year.",
+          "6"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "W07",
+          "7th week of the year.",
+          "7"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "W08",
+          "8th week of the year.",
+          "8"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "W09",
+          "9th week of the year.",
+          "9"
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "W10",
+          "10th week of the year.",
+          "10"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "W11",
+          "Eleven week of the year.",
+          "11"
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "W12",
+          "Twelve week of the year.",
+          "12"
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "W13",
+          "13th week of the year.",
+          "13"
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "W14",
+          "14th week of the year.",
+          "14"
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "W15",
+          "15th week of the year.",
+          "15"
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "W16",
+          "16th week of the year.",
+          "16"
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "W17",
+          "17th week of the year.",
+          "17"
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "W18",
+          "18th week of the year.",
+          "18"
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "W19",
+          "19th week of the year.",
+          "19"
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "W20",
+          "20th week of the year.",
+          "20"
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "W21",
+          "21st week of the year.",
+          "21"
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "W22",
+          "22nd week of the year.",
+          "22"
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "W23",
+          "23rd week of the year.",
+          "23"
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "W24",
+          "24th week of the year.",
+          "24"
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "W25",
+          "25th week of the year.",
+          "25"
+        ]
+      },
+      {
+        "index": 26,
+        "values": [
+          "W26",
+          "26th week of the year.",
+          "26"
+        ]
+      },
+      {
+        "index": 27,
+        "values": [
+          "W27",
+          "27th week of the year.",
+          "27"
+        ]
+      },
+      {
+        "index": 28,
+        "values": [
+          "W28",
+          "28th week of the year.",
+          "28"
+        ]
+      },
+      {
+        "index": 29,
+        "values": [
+          "W29",
+          "29th week of the year.",
+          "29"
+        ]
+      },
+      {
+        "index": 30,
+        "values": [
+          "W30",
+          "30th week of the year.",
+          "30"
+        ]
+      },
+      {
+        "index": 31,
+        "values": [
+          "W31",
+          "31st week of the year.",
+          "31"
+        ]
+      },
+      {
+        "index": 32,
+        "values": [
+          "W32",
+          "32nd week of the year.",
+          "32"
+        ]
+      },
+      {
+        "index": 33,
+        "values": [
+          "W33",
+          "33rd week of the year.",
+          "33"
+        ]
+      },
+      {
+        "index": 34,
+        "values": [
+          "W34",
+          "34th week of the year.",
+          "34"
+        ]
+      },
+      {
+        "index": 35,
+        "values": [
+          "W35",
+          "35th week of the year.",
+          "35"
+        ]
+      },
+      {
+        "index": 36,
+        "values": [
+          "W36",
+          "36th week of the year.",
+          "36"
+        ]
+      },
+      {
+        "index": 37,
+        "values": [
+          "W37",
+          "37th week of the year.",
+          "37"
+        ]
+      },
+      {
+        "index": 38,
+        "values": [
+          "W38",
+          "38th week of the year.",
+          "38"
+        ]
+      },
+      {
+        "index": 39,
+        "values": [
+          "W39",
+          "39th week of the year.",
+          "39"
+        ]
+      },
+      {
+        "index": 40,
+        "values": [
+          "W40",
+          "40th week of the year.",
+          "40"
+        ]
+      },
+      {
+        "index": 41,
+        "values": [
+          "W41",
+          "41st week of the year.",
+          "41"
+        ]
+      },
+      {
+        "index": 42,
+        "values": [
+          "W42",
+          "42nd week of the year.",
+          "42"
+        ]
+      },
+      {
+        "index": 43,
+        "values": [
+          "W43",
+          "43rd week of the year.",
+          "43"
+        ]
+      },
+      {
+        "index": 44,
+        "values": [
+          "W44",
+          "44th week of the year.",
+          "44"
+        ]
+      },
+      {
+        "index": 45,
+        "values": [
+          "W45",
+          "45th week of the year.",
+          "45"
+        ]
+      },
+      {
+        "index": 46,
+        "values": [
+          "W46",
+          "46th week of the year.",
+          "46"
+        ]
+      },
+      {
+        "index": 47,
+        "values": [
+          "W47",
+          "47th week of the year.",
+          "47"
+        ]
+      },
+      {
+        "index": 48,
+        "values": [
+          "W48",
+          "48th week of the year.",
+          "48"
+        ]
+      },
+      {
+        "index": 49,
+        "values": [
+          "W49",
+          "49th week of the year.",
+          "49"
+        ]
+      },
+      {
+        "index": 50,
+        "values": [
+          "W50",
+          "50th week of the year.",
+          "50"
+        ]
+      },
+      {
+        "index": 51,
+        "values": [
+          "W51",
+          "51st week of the year.",
+          "51"
+        ]
+      },
+      {
+        "index": 52,
+        "values": [
+          "W52",
+          "52nd week of the year.",
+          "52"
+        ]
+      },
+      {
+        "index": 53,
+        "values": [
+          "W53",
+          "53rd week of the year.",
+          "53"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

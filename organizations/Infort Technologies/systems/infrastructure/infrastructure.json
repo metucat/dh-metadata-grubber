@@ -1,0 +1,24 @@
+{
+  "identity": {
+    "id": "7dbe5b4f-e547-4703-8c24-c3cbd800f89d",
+    "name": "infrastructure",
+    "description": "Most common data structures, interfaces and services used across systems. Infrastructure  system include support for Authentication and Authorization across all applications."
+  },
+  "object": {
+    "parent": {
+      "id": "96c4b66c-ec16-4c0c-a1f2-7d2e5ca6ab68",
+      "name": "/organizations/Infort Technologies"
+    },
+    "tags": [],
+    "documents": [],
+    "type": "System",
+    "properties": [],
+    "history": {
+      "created": "2018-07-18T04:56:16.303",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-07-18T04:56:16.303",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": []
+    }
+  }
+}

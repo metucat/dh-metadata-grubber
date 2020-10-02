@@ -1,0 +1,244 @@
+{
+  "identity": {
+    "id": "5e4ceb30-0c00-40ee-b4fb-8006b87ba120",
+    "name": "DiagnosticReportStatus",
+    "description": "Report status enumerator. Include all codes defined in http://hl7.org/fhir/diagnostic-report-status"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "20da2839-16e2-4b1c-b60b-4db663491ec6",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-19T06:28:37.017",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T07:22:47.9",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T07:22:24.057",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/LOINCCodes/issues/3375/messages/4"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T07:22:47.83",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/LOINCCodes/issues/3375/messages/4"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "97dbd679-8ed5-45a2-9410-383e2c94ce80",
+          "name": "Lvl",
+          "description": "A few code lists that FHIR defines are hierarchical - each code is assigned a level. For value sets, levels are mostly used to organize codes for user convenience, but may follow code system hierarchy - see Code System for further information"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cc701eeb-29b4-4cbf-9ba1-0d95445a2ab4",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "34df8447-bb69-4625-88ac-f53a584275f3",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 3,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "56c57032-6f3f-4631-b562-fe36965615f6",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a01d03eb-e3c1-4f59-a0a2-ddf98aa43246",
+          "name": "Canonical Status",
+          "description": "Resource status enumerator."
+        },
+        "order": 5,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 0,
+        "values": [
+          "0",
+          "registered",
+          "Registered",
+          "The existence of the report is registered, but there is nothing yet available.",
+          "received"
+        ]
+      },
+      {
+        "index": 1,
+        "values": [
+          "0",
+          "partial",
+          "Partial",
+          "This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.",
+          ""
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "1",
+          "preliminary",
+          "Preliminary",
+          "Verified early results are available, but not all results are final.",
+          " "
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "0",
+          "final",
+          "Final",
+          "The report is complete and verified by an authorized person.",
+          "complete"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "0",
+          "amended",
+          "Amended",
+          "Subsequent to being final, the report has been modified. This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued.",
+          " "
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "1",
+          "corrected",
+          "Corrected",
+          "Subsequent to being final, the report has been modified to correct an error in the report or referenced results.",
+          " "
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "1",
+          "appended",
+          "Appended",
+          "Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged.",
+          " "
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "0",
+          "cancelled",
+          "Cancelled",
+          "The report is unavailable because the measurement was not started or not completed (also sometimes called \"aborted\").",
+          "abandoned"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "0",
+          "entered-in-error",
+          "Entered in Error",
+          "The report has been withdrawn following a previous final release. This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be \"cancelled\" rather than \"entered-in-error\".).",
+          "error"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "0",
+          "unknown",
+          "Unknown",
+          "The authoring system does not know which of the status values currently applies to this report. Note: This concept is not to be used for \"other\" - one of the listed statuses is presumed to apply although which one is not known.",
+          "unknown"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

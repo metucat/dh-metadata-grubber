@@ -1,0 +1,575 @@
+{
+  "identity": {
+    "id": "d7245b79-3139-4317-8b91-3e1d37ab2f48",
+    "name": "PartyLegalEntities",
+    "description": "Management of clients restricted by properties. Interface can provide access to specific client."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "Interface",
+    "usage": "RESTful API",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-08T01:31:40.6",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.71",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-09-21T07:33:07.833",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T01:31:54.413",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "servers": [],
+  "path": "/parties/{partyId}/legalentities/{legalentityId}",
+  "parameters": [
+    {
+      "location": "Header",
+      "field": {
+        "identity": {
+          "id": "f1a52bf3-6e70-489d-8a74-03931a618a8c",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "format": "Base64 JWT token",
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "41536f36-eca9-49d5-865f-350f7aa0b4c0",
+          "name": "endTime",
+          "description": "End of time window specified to limit objects with last updated in this time window."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Body",
+      "field": {
+        "identity": {
+          "id": "9073624f-d61a-4b46-8ae5-0df3009a4751",
+          "name": "legalentity",
+          "description": "Document with legal entity specification."
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/LegalEntity/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Path",
+      "field": {
+        "identity": {
+          "id": "808ce72b-d174-40e3-b5e8-bbb44e8d0ff4",
+          "name": "legalentityId",
+          "description": "Id of legal entity operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every client."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "51c89efe-144c-4fd7-9de8-91802d207419",
+          "name": "options",
+          "description": "Options specified additional requirements for returned entity. For example reconcile option will require to send events to data lake and mark as reconciliation. "
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Path",
+      "field": {
+        "identity": {
+          "id": "5e6b44fd-7bde-4b5d-8e3f-934ff7cd8b75",
+          "name": "partyId",
+          "description": "Id of party operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every party."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "c9b1a496-1641-4528-ae45-f3dc9d642003",
+          "name": "search",
+          "description": "Expression to limit number of entities in response."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "46cc76a9-077a-453f-ae17-5a89ec6f374a",
+          "name": "startTime",
+          "description": "Beginning of time window specified to limit objects with last updated in this time window."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      }
+    }
+  ],
+  "responses": [
+    {
+      "code": "404",
+      "field": {
+        "identity": {
+          "id": "3cfd3048-8367-4e71-97ff-0d47f9c37564",
+          "name": "FailureNotFound",
+          "description": "Legal Entity is not found"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "200",
+      "field": {
+        "identity": {
+          "id": "3ce8b331-a7c5-4f68-afb6-0a02845377bc",
+          "name": "Success",
+          "description": "LegalEntity is found and returned."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/LegalEntity/versions/1.0.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "409",
+      "field": {
+        "identity": {
+          "id": "034565af-5740-44d1-bda5-87a60eaefd80",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "401",
+      "field": {
+        "identity": {
+          "id": "1d8931a4-f58c-4d35-9362-0caaf185ef22",
+          "name": "FailureAlreadyExist",
+          "description": "Legal Entity is already exist."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "400",
+      "field": {
+        "identity": {
+          "id": "c45bb5b2-4a73-473a-b800-a4ff5f7dbaed",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "201",
+      "field": {
+        "identity": {
+          "id": "9df69486-003d-4033-aff8-095c23b5efe9",
+          "name": "SuccessCreated",
+          "description": "Create operation completed successfully."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "204",
+      "field": {
+        "identity": {
+          "id": "fb3558f8-99a2-41e7-842c-72550b4fb0bb",
+          "name": "SuccessCompleted",
+          "description": "Operation completed successfully without object returned."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "identity": {
+        "id": "16a789cb-9378-40b9-8bc9-3bd1a707bb56",
+        "name": "GetLegalEntity",
+        "description": "Get legal entity or list of legal entities from service."
+      },
+      "deprecated": false,
+      "action": "GET",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "5e6b44fd-7bde-4b5d-8e3f-934ff7cd8b75",
+          "name": "partyId",
+          "description": "Id of party operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every party."
+        },
+        {
+          "id": "51c89efe-144c-4fd7-9de8-91802d207419",
+          "name": "options",
+          "description": "Options specified additional requirements for returned entity. For example reconcile option will require to send events to data lake and mark as reconciliation. "
+        },
+        {
+          "id": "46cc76a9-077a-453f-ae17-5a89ec6f374a",
+          "name": "startTime",
+          "description": "Beginning of time window specified to limit objects with last updated in this time window."
+        },
+        {
+          "id": "41536f36-eca9-49d5-865f-350f7aa0b4c0",
+          "name": "endTime",
+          "description": "End of time window specified to limit objects with last updated in this time window."
+        },
+        {
+          "id": "c9b1a496-1641-4528-ae45-f3dc9d642003",
+          "name": "search",
+          "description": "Expression to limit number of entities in response."
+        },
+        {
+          "id": "808ce72b-d174-40e3-b5e8-bbb44e8d0ff4",
+          "name": "legalentityId",
+          "description": "Id of legal entity operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every client."
+        }
+      ],
+      "responses": [
+        {
+          "id": "c9802606-3924-4a76-99b2-a1cdf705ac98",
+          "name": "Success",
+          "description": "Client is found and returned."
+        },
+        {
+          "id": "cd1e3fbe-4f02-4395-8f71-495b94596fb8",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "3930eb5b-c80f-496c-8f2e-40289ae47108",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "f22c7dae-479d-4622-ad78-6cdd8c2d9b08",
+          "name": "FailureNotFound",
+          "description": "Client is not found"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "id": "f8b463d0-9f17-423b-a1c3-a195d9798b90",
+        "name": "UpdateLegalEntity",
+        "description": "Change legal entity specification. Legal entity will be created if not exist.\n"
+      },
+      "deprecated": false,
+      "action": "PUT",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "5e6b44fd-7bde-4b5d-8e3f-934ff7cd8b75",
+          "name": "partyId",
+          "description": "Id of party operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every party."
+        },
+        {
+          "id": "808ce72b-d174-40e3-b5e8-bbb44e8d0ff4",
+          "name": "legalentityId",
+          "description": "Id of legal entity operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every client."
+        },
+        {
+          "id": "9073624f-d61a-4b46-8ae5-0df3009a4751",
+          "name": "legalentity",
+          "description": "Document with legal entity specification."
+        }
+      ],
+      "responses": [
+        {
+          "id": "ed25ebd5-605e-4e1e-b501-c442dbf25632",
+          "name": "SuccessCompleted",
+          "description": "Operation completed successfully without object returned."
+        },
+        {
+          "id": "b2ae698f-3a67-4adb-9083-b8730cd3a02a",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "b196b3ba-0a38-4b1e-8f5f-c8bfc4fbdb4e",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "f22c7dae-479d-4622-ad78-6cdd8c2d9b08",
+          "name": "FailureNotFound",
+          "description": "Client is not found"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "id": "36da0866-7ed4-4b0a-9ea8-744b9e113475",
+        "name": "CreateLegalEntity",
+        "description": "Create new legal entity. Validate legal entity not exist for this client"
+      },
+      "deprecated": false,
+      "action": "POST",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "5e6b44fd-7bde-4b5d-8e3f-934ff7cd8b75",
+          "name": "partyId",
+          "description": "Id of party operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every party."
+        }
+      ],
+      "responses": [
+        {
+          "id": "63786346-3a1d-42aa-bbb6-1b651318514a",
+          "name": "SuccessCreated",
+          "description": "Create operation completed successfully."
+        },
+        {
+          "id": "b2ae698f-3a67-4adb-9083-b8730cd3a02a",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "b196b3ba-0a38-4b1e-8f5f-c8bfc4fbdb4e",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "4901e6ce-40a6-4744-b4de-90917a0ffa32",
+          "name": "FailureAlreadyExist",
+          "description": "Client is already exist."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "id": "4ad7b189-393c-4b69-81e6-6ff5c75f7103",
+        "name": "ModifyLegalEntity",
+        "description": "Change legal entity properties to values specified in request. Property not specified will remain same. No element of any collection will be deleted. "
+      },
+      "deprecated": false,
+      "action": "PATCH",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "5e6b44fd-7bde-4b5d-8e3f-934ff7cd8b75",
+          "name": "partyId",
+          "description": "Id of party operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every party."
+        },
+        {
+          "id": "808ce72b-d174-40e3-b5e8-bbb44e8d0ff4",
+          "name": "legalentityId",
+          "description": "Id of legal entity operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every client."
+        },
+        {
+          "id": "9073624f-d61a-4b46-8ae5-0df3009a4751",
+          "name": "legalentity",
+          "description": "Document with legal entity specification."
+        }
+      ],
+      "responses": [
+        {
+          "id": "ed25ebd5-605e-4e1e-b501-c442dbf25632",
+          "name": "SuccessCompleted",
+          "description": "Operation completed successfully without object returned."
+        },
+        {
+          "id": "b2ae698f-3a67-4adb-9083-b8730cd3a02a",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "b196b3ba-0a38-4b1e-8f5f-c8bfc4fbdb4e",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "f22c7dae-479d-4622-ad78-6cdd8c2d9b08",
+          "name": "FailureNotFound",
+          "description": "Client is not found"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "identity": {
+        "id": "511ef77f-974c-42c0-ba11-de3413d4b534",
+        "name": "Microservice",
+        "description": "Party micro service"
+      },
+      "platform": "RESTfull-API",
+      "unit": "Party",
+      "location": {},
+      "schedule": {}
+    }
+  ],
+  "examples": []
+}

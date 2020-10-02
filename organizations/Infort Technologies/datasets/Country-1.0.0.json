@@ -1,0 +1,116 @@
+{
+  "identity": {
+    "id": "86f4fdd8-932d-42e5-b49d-4dce9bac7bc3",
+    "name": "Country",
+    "description": "Enumerator of countries."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "1e79a1b9-e817-45bb-a37a-19f3666cae74",
+      "name": "/organizations/Apdax/systems/DifHub/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "811"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "890"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "2017-10-23T00:50:51.303",
+      "updated": "2017-10-23T00:50:51.977",
+      "updatedby": "metadb_admin",
+      "completion": [
+        {
+          "status": "Approved",
+          "completed": "2017-10-23T00:51:11.587",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/User/issues/2286/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "4d31fadf-8992-4457-8638-f669cf954c09",
+          "name": "Country",
+          "description": "Name of Country."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6368e73b-d3fb-4b3a-b9e0-b46b8cd29439",
+          "name": "Code",
+          "description": "Phone code for country."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Short",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "United States",
+          "1"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Russia",
+          "7"
+        ]
+      }
+    ]
+  }
+}

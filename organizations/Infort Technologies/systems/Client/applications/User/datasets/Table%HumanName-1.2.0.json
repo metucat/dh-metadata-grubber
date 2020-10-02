@@ -1,0 +1,254 @@
+{
+  "identity": {
+    "id": "cef68572-4d71-4dae-a6d8-da0cf8179b04",
+    "name": "Table:HumanName",
+    "description": "Contains information for human name used in person resource."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Table",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-1,"top":1914,"width":0,"height":0}},"style":{"border":{"left":{"color":"#B63455"}}}},{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":759,"top":1914,"width":0,"height":0}},"style":{"border":{"left":{"color":"#B63455"}}}}],
+    "history": {
+      "created": "2018-10-07T22:30:30.627",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T22:38:58.32",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-27T07:04:13.637",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:30:40.313",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T22:38:57.993",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "81cb5834-0130-4d3f-9f77-47e011ee338a",
+          "name": "EntityId",
+          "description": "Global id of entity human name defined for."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "315ad078-33d7-449e-a6c6-6c37b151299b",
+          "name": "Id",
+          "description": "This is id of the entity."
+        },
+        "order": 2,
+        "usage": "Key",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9295654e-80c4-4d17-8c47-72fb6d442bcc",
+          "name": "Use",
+          "description": "Use for name"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/NameUse/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "172e18c6-ec8a-48ec-b03c-8172496213eb",
+          "name": "Text",
+          "description": "Text for full name."
+        },
+        "order": 4,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 1024,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "247435a1-a5d8-4bc1-a778-9236100a1eb2",
+          "name": "Family",
+          "description": "Human family name"
+        },
+        "order": 5,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 256,
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "85f0489a-39f3-4122-ae13-67c21ea48865",
+          "name": "Given",
+          "description": "Main given name and additional names of user. Field in JSON format."
+        },
+        "order": 6,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 1024,
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2d3dcd2b-0ddd-48b4-9628-3f01d7458c3a",
+          "name": "Prefix",
+          "description": "List of prefixes in JSON format."
+        },
+        "order": 7,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "06a47e05-c80f-43d5-b136-7b8824fa1866",
+          "name": "Suffix",
+          "description": "Name suffix array in JSON format."
+        },
+        "order": 8,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c455b766-d5da-468e-87ec-de5489ad75a9",
+          "name": "Start",
+          "description": "start time address is valid "
+        },
+        "order": 9,
+        "usage": "Column",
+        "count": 1,
+        "type": "DateTime",
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4eb9e6dc-2802-42b3-9da0-e9c06fb38bb1",
+          "name": "End",
+          "description": "End time for the address validity. If not set it is valid right now. "
+        },
+        "order": 10,
+        "usage": "Column",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": [
+      {
+        "identity": {
+          "id": "ef1c32d9-9007-4bce-8c02-710e913570cf",
+          "name": "Entity",
+          "description": "Join to actual entity"
+        },
+        "fields": [
+          "EntityId"
+        ],
+        "primary": false
+      },
+      {
+        "identity": {
+          "id": "fdf9ba4d-9127-4eb6-955a-e38e8635a57a",
+          "name": "Global ",
+          "description": "Global address key "
+        },
+        "fields": [
+          "Id"
+        ],
+        "primary": true
+      }
+    ]
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

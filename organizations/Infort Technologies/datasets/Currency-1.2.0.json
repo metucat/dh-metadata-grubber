@@ -1,0 +1,1519 @@
+{
+  "identity": {
+    "id": "62a81393-3196-40b7-93a7-d995b035c224",
+    "name": "Currency",
+    "description": "Enumerator of currencies supported by the system. ISO 4217."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "mirrored": "2017-10-19T06:55:00.48",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-19T06:57:02.85",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2276/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-19T06:57:23.443",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2276/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": false,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "fa036551-2b6e-45b7-82a2-7ccc0c391a04",
+          "name": "Currency",
+          "description": "Name of the currency."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "60d6527a-880a-4c5a-8c4f-da24f3bc0c01",
+          "name": "Description",
+          "description": "Currency description."
+        },
+        "order": 2,
+        "usage": "Description",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "7dda1d01-10ff-4486-90f5-b1edd5402008",
+          "name": "Currency code",
+          "description": "Numeric code for currency reference."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Small",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "AED",
+          "United Arab Emirates dirham",
+          "784"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "AFN",
+          "Afghan afghani",
+          "971"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "ALL",
+          "Albanian lek",
+          "008"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "AMD",
+          "Armenian dram",
+          "051"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "ANG",
+          "Netherlands Antillean guilder",
+          "532"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "AOA",
+          "Angolan kwanza",
+          "973"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "ARS",
+          "Argentine peso",
+          "032"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "AUD",
+          "Australian dollar",
+          "036"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "AWG",
+          "Aruban florin",
+          "533"
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "AZN",
+          "Azerbaijani manat",
+          "944"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "BAM",
+          "Bosnia and Herzegovina convertible mark",
+          "977"
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "BBD",
+          "Barbados dollar",
+          "052"
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "BDT",
+          "Bangladeshi taka",
+          "050"
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "BGN",
+          "Bulgarian lev",
+          "975"
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "BGN",
+          "Bulgarian lev",
+          "975"
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "BHD",
+          "Bahraini dinar",
+          "048"
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "BIF",
+          "Burundian franc",
+          "108"
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "BMD",
+          "Bermudian dollar",
+          "060"
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "BND",
+          "Brunei dollar",
+          "096"
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "BOB",
+          "Boliviano",
+          "068"
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "BOV",
+          "Bolivian Mvdol",
+          "984"
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "BRL",
+          "Brazilian real",
+          "986"
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "BSD",
+          "Bahamian dollar",
+          "044"
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "BWP",
+          "Botswana pula",
+          "072"
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "BYN",
+          "Belarusian ruble",
+          "933"
+        ]
+      },
+      {
+        "index": 26,
+        "values": [
+          "BZD",
+          "Belize dollar",
+          "084"
+        ]
+      },
+      {
+        "index": 27,
+        "values": [
+          "CAD",
+          "Canadian dollar",
+          "124"
+        ]
+      },
+      {
+        "index": 28,
+        "values": [
+          "CDF",
+          "Congolese franc",
+          "976"
+        ]
+      },
+      {
+        "index": 29,
+        "values": [
+          "CHE",
+          "WIR Euro (complementary currency)",
+          "947"
+        ]
+      },
+      {
+        "index": 30,
+        "values": [
+          "CHF",
+          "Swiss franc",
+          "756"
+        ]
+      },
+      {
+        "index": 31,
+        "values": [
+          "CHW",
+          "WIR Franc (complementary currency)",
+          "948"
+        ]
+      },
+      {
+        "index": 32,
+        "values": [
+          "CLF",
+          "Unidad de Fomento (funds code)",
+          "990"
+        ]
+      },
+      {
+        "index": 33,
+        "values": [
+          "CLP",
+          "Chilean peso",
+          "152"
+        ]
+      },
+      {
+        "index": 34,
+        "values": [
+          "CNY",
+          "Chinese yuan",
+          "156"
+        ]
+      },
+      {
+        "index": 35,
+        "values": [
+          "COP",
+          "Colombian peso",
+          "170"
+        ]
+      },
+      {
+        "index": 36,
+        "values": [
+          "COU",
+          "Unidad de Valor Real (UVR) (funds code)",
+          "970"
+        ]
+      },
+      {
+        "index": 37,
+        "values": [
+          "CRC",
+          "Costa Rican colon",
+          "188"
+        ]
+      },
+      {
+        "index": 38,
+        "values": [
+          "CUC",
+          "Cuban convertible peso",
+          "931"
+        ]
+      },
+      {
+        "index": 39,
+        "values": [
+          "CUP",
+          "Cuban peso",
+          "192"
+        ]
+      },
+      {
+        "index": 40,
+        "values": [
+          "CVE",
+          "Cape Verde escudo",
+          "132"
+        ]
+      },
+      {
+        "index": 41,
+        "values": [
+          "CZK",
+          "Czech koruna",
+          "203"
+        ]
+      },
+      {
+        "index": 42,
+        "values": [
+          "DJF",
+          "Djiboutian franc",
+          "262"
+        ]
+      },
+      {
+        "index": 43,
+        "values": [
+          "DKK",
+          "Danish krone",
+          "208"
+        ]
+      },
+      {
+        "index": 44,
+        "values": [
+          "DOP",
+          "Dominican peso",
+          "214"
+        ]
+      },
+      {
+        "index": 45,
+        "values": [
+          "DZD",
+          "Algerian dinar",
+          "012"
+        ]
+      },
+      {
+        "index": 46,
+        "values": [
+          "EGP",
+          "Egyptian pound",
+          "818"
+        ]
+      },
+      {
+        "index": 47,
+        "values": [
+          "ERN",
+          "Eritrean nakfa",
+          "232"
+        ]
+      },
+      {
+        "index": 48,
+        "values": [
+          "ETB",
+          "Ethiopian birr",
+          "230"
+        ]
+      },
+      {
+        "index": 49,
+        "values": [
+          "EUR",
+          "Euro",
+          "978"
+        ]
+      },
+      {
+        "index": 50,
+        "values": [
+          "FJD",
+          "Fiji dollar",
+          "242"
+        ]
+      },
+      {
+        "index": 51,
+        "values": [
+          "FKP",
+          "Falkland Islands pound",
+          "238"
+        ]
+      },
+      {
+        "index": 52,
+        "values": [
+          "GBP",
+          "Pound sterling",
+          "826"
+        ]
+      },
+      {
+        "index": 53,
+        "values": [
+          "GEL",
+          "Georgian lari",
+          "981"
+        ]
+      },
+      {
+        "index": 54,
+        "values": [
+          "GHS",
+          "Ghanaian cedi",
+          "936"
+        ]
+      },
+      {
+        "index": 55,
+        "values": [
+          "GIP",
+          "Gibraltar pound",
+          "292"
+        ]
+      },
+      {
+        "index": 56,
+        "values": [
+          "GMD",
+          "Gambian dalasi",
+          "270"
+        ]
+      },
+      {
+        "index": 57,
+        "values": [
+          "GNF",
+          "Guinean franc",
+          "324"
+        ]
+      },
+      {
+        "index": 58,
+        "values": [
+          "GTQ",
+          "Guatemalan quetzal",
+          "320"
+        ]
+      },
+      {
+        "index": 59,
+        "values": [
+          "GYD",
+          "Guyanese dollar",
+          "328"
+        ]
+      },
+      {
+        "index": 60,
+        "values": [
+          "HKD",
+          "Hong Kong dollar",
+          "344"
+        ]
+      },
+      {
+        "index": 61,
+        "values": [
+          "HNL",
+          "Honduran lempira",
+          "340"
+        ]
+      },
+      {
+        "index": 62,
+        "values": [
+          "HRK",
+          "Croatian kuna",
+          "191"
+        ]
+      },
+      {
+        "index": 63,
+        "values": [
+          "HTG",
+          "Haitian gourde",
+          "332"
+        ]
+      },
+      {
+        "index": 64,
+        "values": [
+          "HUF",
+          "Hungarian forint",
+          "348"
+        ]
+      },
+      {
+        "index": 65,
+        "values": [
+          "IDR",
+          "Indonesian rupiah",
+          "348"
+        ]
+      },
+      {
+        "index": 66,
+        "values": [
+          "ILS",
+          "Israeli new shekel",
+          "376"
+        ]
+      },
+      {
+        "index": 67,
+        "values": [
+          "INR",
+          "Indian rupee",
+          "356"
+        ]
+      },
+      {
+        "index": 68,
+        "values": [
+          "IQD",
+          "Iraqi dinar",
+          "368"
+        ]
+      },
+      {
+        "index": 69,
+        "values": [
+          "IRR",
+          "Iranian rial",
+          "364"
+        ]
+      },
+      {
+        "index": 70,
+        "values": [
+          "ISK",
+          "Icelandic króna",
+          "352"
+        ]
+      },
+      {
+        "index": 71,
+        "values": [
+          "JMD",
+          "Jamaican dollar",
+          "388"
+        ]
+      },
+      {
+        "index": 72,
+        "values": [
+          "JOD",
+          "Jordanian dinar",
+          "400"
+        ]
+      },
+      {
+        "index": 73,
+        "values": [
+          "JPY",
+          "Japanese yen",
+          "392"
+        ]
+      },
+      {
+        "index": 74,
+        "values": [
+          "KES",
+          "Kenyan shilling",
+          "404"
+        ]
+      },
+      {
+        "index": 75,
+        "values": [
+          "KGS",
+          "Kyrgyzstani som",
+          "417"
+        ]
+      },
+      {
+        "index": 76,
+        "values": [
+          "KHR",
+          "Cambodian riel",
+          "116"
+        ]
+      },
+      {
+        "index": 77,
+        "values": [
+          "KMF",
+          "Comoro franc",
+          "174"
+        ]
+      },
+      {
+        "index": 78,
+        "values": [
+          "KPW",
+          "North Korean won",
+          "408"
+        ]
+      },
+      {
+        "index": 79,
+        "values": [
+          "KRW",
+          "South Korean won",
+          "410"
+        ]
+      },
+      {
+        "index": 80,
+        "values": [
+          "KWD",
+          "Kuwaiti dinar",
+          "414"
+        ]
+      },
+      {
+        "index": 81,
+        "values": [
+          "KYD",
+          "Cayman Islands dollar",
+          "136"
+        ]
+      },
+      {
+        "index": 82,
+        "values": [
+          "KZT",
+          "Kazakhstani tenge",
+          "398"
+        ]
+      },
+      {
+        "index": 83,
+        "values": [
+          "LAK",
+          "Lao kip",
+          "418"
+        ]
+      },
+      {
+        "index": 84,
+        "values": [
+          "LBP",
+          "Lebanese pound",
+          "422"
+        ]
+      },
+      {
+        "index": 85,
+        "values": [
+          "LKR",
+          "Sri Lankan rupee",
+          "144"
+        ]
+      },
+      {
+        "index": 86,
+        "values": [
+          "LRD",
+          "Liberian dollar",
+          "430"
+        ]
+      },
+      {
+        "index": 87,
+        "values": [
+          "LSL",
+          "Lesotho loti",
+          "426"
+        ]
+      },
+      {
+        "index": 88,
+        "values": [
+          "LYD",
+          "Libyan dinar",
+          "434"
+        ]
+      },
+      {
+        "index": 89,
+        "values": [
+          "MAD",
+          "Moroccan dirham",
+          "504"
+        ]
+      },
+      {
+        "index": 90,
+        "values": [
+          "MDL",
+          "Moldovan leu",
+          "498"
+        ]
+      },
+      {
+        "index": 91,
+        "values": [
+          "MGA",
+          "Malagasy ariary",
+          "969"
+        ]
+      },
+      {
+        "index": 92,
+        "values": [
+          "MKD",
+          "Macedonian denar",
+          "807"
+        ]
+      },
+      {
+        "index": 93,
+        "values": [
+          "MMK",
+          "Myanmar kyat",
+          "104"
+        ]
+      },
+      {
+        "index": 94,
+        "values": [
+          "MNT",
+          "Mongolian tögrög",
+          "496"
+        ]
+      },
+      {
+        "index": 95,
+        "values": [
+          "MOP",
+          "Macanese pataca",
+          "446"
+        ]
+      },
+      {
+        "index": 96,
+        "values": [
+          "MRO",
+          "Mauritanian ouguiya",
+          "478"
+        ]
+      },
+      {
+        "index": 97,
+        "values": [
+          "MUR",
+          "Mauritian rupee",
+          "480"
+        ]
+      },
+      {
+        "index": 98,
+        "values": [
+          "MVR",
+          "Maldivian rufiyaa",
+          "462"
+        ]
+      },
+      {
+        "index": 99,
+        "values": [
+          "MWK",
+          "Malawian kwacha",
+          "454"
+        ]
+      },
+      {
+        "index": 100,
+        "values": [
+          "MXN",
+          "Mexican peso",
+          "484"
+        ]
+      },
+      {
+        "index": 101,
+        "values": [
+          "MXV",
+          "Mexican Unidad de Inversion (UDI) (funds code)",
+          "979"
+        ]
+      },
+      {
+        "index": 102,
+        "values": [
+          "MYR",
+          "Malaysian ringgit",
+          "458"
+        ]
+      },
+      {
+        "index": 103,
+        "values": [
+          "MZN",
+          "Mozambican metical",
+          "943"
+        ]
+      },
+      {
+        "index": 104,
+        "values": [
+          "NAD",
+          "Namibian dollar",
+          "516"
+        ]
+      },
+      {
+        "index": 105,
+        "values": [
+          "NGN",
+          "Nigerian naira",
+          "566"
+        ]
+      },
+      {
+        "index": 106,
+        "values": [
+          "NIO",
+          "Nicaraguan córdoba",
+          "558"
+        ]
+      },
+      {
+        "index": 107,
+        "values": [
+          "NOK",
+          "Norwegian krone",
+          "578"
+        ]
+      },
+      {
+        "index": 108,
+        "values": [
+          "NPR",
+          "Nepalese rupee",
+          "524"
+        ]
+      },
+      {
+        "index": 109,
+        "values": [
+          "NZD",
+          "New Zealand dollar",
+          "554"
+        ]
+      },
+      {
+        "index": 110,
+        "values": [
+          "OMR",
+          "Omani rial",
+          "512"
+        ]
+      },
+      {
+        "index": 111,
+        "values": [
+          "PAB",
+          "Panamanian balboa",
+          "590"
+        ]
+      },
+      {
+        "index": 112,
+        "values": [
+          "PEN",
+          "Peruvian Sol",
+          "604"
+        ]
+      },
+      {
+        "index": 113,
+        "values": [
+          "PHP",
+          "Philippine piso",
+          "608"
+        ]
+      },
+      {
+        "index": 114,
+        "values": [
+          "PKR",
+          "Pakistani rupee",
+          "586"
+        ]
+      },
+      {
+        "index": 115,
+        "values": [
+          "PLN",
+          "Polish złoty",
+          "985"
+        ]
+      },
+      {
+        "index": 116,
+        "values": [
+          "PYG",
+          "Paraguayan guaraní",
+          "600"
+        ]
+      },
+      {
+        "index": 117,
+        "values": [
+          "QAR",
+          "Qatari riyal",
+          "634"
+        ]
+      },
+      {
+        "index": 118,
+        "values": [
+          "RON",
+          "Romanian leu",
+          "946"
+        ]
+      },
+      {
+        "index": 119,
+        "values": [
+          "RSD",
+          "Serbian dinar",
+          "941"
+        ]
+      },
+      {
+        "index": 120,
+        "values": [
+          "RUB",
+          "Russian ruble",
+          "643"
+        ]
+      },
+      {
+        "index": 121,
+        "values": [
+          "RWF",
+          "Rwandan franc",
+          "646"
+        ]
+      },
+      {
+        "index": 122,
+        "values": [
+          "SAR",
+          "Saudi riyal",
+          "682"
+        ]
+      },
+      {
+        "index": 123,
+        "values": [
+          "SBD",
+          "Solomon Islands dollar",
+          "090"
+        ]
+      },
+      {
+        "index": 124,
+        "values": [
+          "SCR",
+          "Seychelles rupee",
+          "690"
+        ]
+      },
+      {
+        "index": 125,
+        "values": [
+          "SDG",
+          "Sudanese pound",
+          "938"
+        ]
+      },
+      {
+        "index": 126,
+        "values": [
+          "SEK",
+          "Swedish krona/kronor",
+          "752"
+        ]
+      },
+      {
+        "index": 127,
+        "values": [
+          "SGD",
+          "Singapore dollar",
+          "702"
+        ]
+      },
+      {
+        "index": 128,
+        "values": [
+          "SHP",
+          "Saint Helena pound",
+          "654"
+        ]
+      },
+      {
+        "index": 129,
+        "values": [
+          "SLL",
+          "Sierra Leonean leone",
+          "694"
+        ]
+      },
+      {
+        "index": 130,
+        "values": [
+          "SOS",
+          "Somali shilling",
+          "706"
+        ]
+      },
+      {
+        "index": 131,
+        "values": [
+          "SRD",
+          "Surinamese dollar",
+          "968"
+        ]
+      },
+      {
+        "index": 132,
+        "values": [
+          "SSP",
+          "South Sudanese pound",
+          "728"
+        ]
+      },
+      {
+        "index": 133,
+        "values": [
+          "STD",
+          "São Tomé and Príncipe dobra",
+          "678"
+        ]
+      },
+      {
+        "index": 134,
+        "values": [
+          "SVC",
+          "Salvadoran colón",
+          "222"
+        ]
+      },
+      {
+        "index": 135,
+        "values": [
+          "SYP",
+          "Syrian pound",
+          "760"
+        ]
+      },
+      {
+        "index": 136,
+        "values": [
+          "SZL",
+          "Swazi lilangeni",
+          "748"
+        ]
+      },
+      {
+        "index": 137,
+        "values": [
+          "THB",
+          "Thai baht",
+          "764"
+        ]
+      },
+      {
+        "index": 138,
+        "values": [
+          "TJS",
+          "Tajikistani somoni",
+          "972"
+        ]
+      },
+      {
+        "index": 139,
+        "values": [
+          "TMT",
+          "Turkmenistan manat",
+          "934"
+        ]
+      },
+      {
+        "index": 140,
+        "values": [
+          "TND",
+          "Tunisian dinar",
+          "788"
+        ]
+      },
+      {
+        "index": 141,
+        "values": [
+          "TOP",
+          "Tongan paʻanga",
+          "776"
+        ]
+      },
+      {
+        "index": 142,
+        "values": [
+          "TRY",
+          "Turkish lira",
+          "949"
+        ]
+      },
+      {
+        "index": 143,
+        "values": [
+          "TTD",
+          "Trinidad and Tobago dollar",
+          "780"
+        ]
+      },
+      {
+        "index": 144,
+        "values": [
+          "TWD",
+          "New Taiwan dollar",
+          "901"
+        ]
+      },
+      {
+        "index": 145,
+        "values": [
+          "TZS",
+          "Tanzanian shilling",
+          "834"
+        ]
+      },
+      {
+        "index": 146,
+        "values": [
+          "UAH",
+          "Ukrainian hryvnia",
+          "980"
+        ]
+      },
+      {
+        "index": 147,
+        "values": [
+          "UGX",
+          "Ugandan shilling",
+          "800"
+        ]
+      },
+      {
+        "index": 148,
+        "values": [
+          "USD",
+          "United States dollar",
+          "840"
+        ]
+      },
+      {
+        "index": 149,
+        "values": [
+          "USN",
+          "United States dollar (next day) (funds code)",
+          "997"
+        ]
+      },
+      {
+        "index": 150,
+        "values": [
+          "UYI",
+          "Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code),",
+          "940"
+        ]
+      },
+      {
+        "index": 151,
+        "values": [
+          "UYU",
+          "Uruguayan peso",
+          "858"
+        ]
+      },
+      {
+        "index": 152,
+        "values": [
+          "UZS",
+          "Uzbekistan som",
+          "860"
+        ]
+      },
+      {
+        "index": 153,
+        "values": [
+          "VEF",
+          "Venezuelan bolívar",
+          "937"
+        ]
+      },
+      {
+        "index": 154,
+        "values": [
+          "VND",
+          "Vietnamese đồng",
+          "704"
+        ]
+      },
+      {
+        "index": 155,
+        "values": [
+          "VUV",
+          "Vanuatu vatu",
+          "548"
+        ]
+      },
+      {
+        "index": 156,
+        "values": [
+          "WST",
+          "Samoan tala",
+          "882"
+        ]
+      },
+      {
+        "index": 157,
+        "values": [
+          "XAF",
+          "CFA franc BEAC",
+          "950"
+        ]
+      },
+      {
+        "index": 158,
+        "values": [
+          "XAG",
+          "Silver (one troy ounce)",
+          "961"
+        ]
+      },
+      {
+        "index": 159,
+        "values": [
+          "XAU",
+          "Gold (one troy ounce)",
+          "959"
+        ]
+      },
+      {
+        "index": 160,
+        "values": [
+          "XBA",
+          "European Composite Unit (EURCO) (bond market unit)",
+          "955"
+        ]
+      },
+      {
+        "index": 161,
+        "values": [
+          "XBB",
+          "European Monetary Unit (E.M.U.-6) (bond market unit)",
+          "956"
+        ]
+      },
+      {
+        "index": 162,
+        "values": [
+          "XBC",
+          "European Unit of Account 9 (E.U.A.-9) (bond market unit)",
+          "957"
+        ]
+      },
+      {
+        "index": 163,
+        "values": [
+          "XCD",
+          "East Caribbean dollar",
+          "951"
+        ]
+      },
+      {
+        "index": 164,
+        "values": [
+          "XDR",
+          "Special drawing rights",
+          "960"
+        ]
+      },
+      {
+        "index": 165,
+        "values": [
+          "XOF",
+          "CFA franc BCEAO",
+          "952"
+        ]
+      },
+      {
+        "index": 166,
+        "values": [
+          "XPD",
+          "Palladium (one troy ounce)",
+          "964"
+        ]
+      },
+      {
+        "index": 167,
+        "values": [
+          "XPF",
+          "CFP franc (franc Pacifique)",
+          "953"
+        ]
+      },
+      {
+        "index": 168,
+        "values": [
+          "XPT",
+          "Platinum (one troy ounce)",
+          "962"
+        ]
+      },
+      {
+        "index": 169,
+        "values": [
+          "XSU",
+          "SUCRE",
+          "994"
+        ]
+      },
+      {
+        "index": 170,
+        "values": [
+          "XTS",
+          "Code reserved for testing purposes",
+          "963"
+        ]
+      },
+      {
+        "index": 171,
+        "values": [
+          "XUA",
+          "ADB Unit of Account",
+          "965"
+        ]
+      },
+      {
+        "index": 172,
+        "values": [
+          "XXX",
+          "No currency",
+          "999"
+        ]
+      },
+      {
+        "index": 173,
+        "values": [
+          "YER",
+          "Yemeni rial",
+          "886"
+        ]
+      },
+      {
+        "index": 174,
+        "values": [
+          "ZAR",
+          "South African rand",
+          "710"
+        ]
+      },
+      {
+        "index": 175,
+        "values": [
+          "ZMW",
+          "Zambian kwacha",
+          "967"
+        ]
+      },
+      {
+        "index": 176,
+        "values": [
+          "ZWL",
+          "Zimbabwean dollar",
+          "932"
+        ]
+      }
+    ]
+  }
+}

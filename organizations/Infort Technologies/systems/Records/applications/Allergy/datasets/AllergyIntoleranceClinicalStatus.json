@@ -1,0 +1,194 @@
+{
+  "identity": {
+    "id": "299f33d4-6d54-4615-bacb-d5b341838b4b",
+    "name": "AllergyIntoleranceClinicalStatus",
+    "description": "The clinical status of the allergy or intolerance. Include all codes defined in http://hl7.org/fhir/ValueSet/allergy-clinical-status v3.6.0\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-02T04:45:51.687",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T06:56:09.893",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T06:55:01.833",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceType/issues/3374/messages/7"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T06:56:09.847",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceType/issues/3374/messages/7"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "e487b347-896b-4a3e-be78-edc32f5cb7d2",
+          "name": "Lvl",
+          "description": "A few code lists that FHIR defines are hierarchical - each code is assigned a level. For value sets, levels are mostly used to organize codes for user convenience, but may follow code system hierarchy - see Code System for further information"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "dec61994-a913-4781-952d-a3927e62ff75",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ed827a2f-a18a-46a9-8d2c-5d58148a47dc",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 3,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ece063a3-e6dd-4f5e-992e-7fa1411fc1c4",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4ed4a856-09be-4869-8a40-8dd3469e9ec4",
+          "name": "Canonical Status",
+          "description": "Reference to canonical status"
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "13035172-9572-4758-8964-cdf899385e1a",
+          "name": "Translations",
+          "description": "Translations of records to other languages."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Translation/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "0",
+          "active",
+          "Active",
+          "An active record of a risk of a reaction to the identified substance.",
+          "~active",
+          "{\"Locale\":\"ru\",\"Name\":\"Активный\",\"Description\":\"Активная запись риска реакции на специфическую субстанцию\"}"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "0",
+          "inactive",
+          "Inactive",
+          "An inactivated record of a risk of a reaction to the identified substance.",
+          "~inactive",
+          "{\"Locale\":\"ru\",\"Name\":\"Не актуальная\",\"Description\":\"Не актуальная запись риска реакции на определенную субстанцию\"}"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "1",
+          "resolved",
+          "Resolved",
+          "A reaction to the identified substance has been clinically reassessed by testing or re-exposure and considered to be resolved. Re-exposure could be accidental, unplanned, or outside of any clinical setting.",
+          "~resolved ",
+          "{\"Locale\":\"ru\",\"Name\":\"Разрешена\",\"Description\":\"Реакция на определенную субстанцию была проверина клинически тестирование или повторным применением и считается решенной. Применение могло быть случайным, не запланированным или вне клиники.\"}"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

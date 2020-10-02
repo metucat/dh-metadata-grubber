@@ -1,0 +1,24 @@
+{
+  "identity": {
+    "id": "e37abbf9-ead0-48d5-987a-926ec14e3aaf",
+    "name": "Immunization",
+    "description": "Describes the administered a vaccine or a record of an immunization.\n"
+  },
+  "object": {
+    "parent": {
+      "id": "10e1c7ba-234a-420d-95ed-e6bfa64aa4dd",
+      "name": "/organizations/Infort Technologies/systems/Records"
+    },
+    "tags": [],
+    "documents": [],
+    "type": "Application",
+    "properties": [],
+    "history": {
+      "created": "2018-10-07T06:32:07.447",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T06:32:07.447",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": []
+    }
+  }
+}

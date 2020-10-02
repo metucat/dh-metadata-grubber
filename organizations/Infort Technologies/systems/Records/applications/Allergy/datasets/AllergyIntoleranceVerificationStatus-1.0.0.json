@@ -1,0 +1,184 @@
+{
+  "identity": {
+    "id": "75711e59-a3cb-494b-a8d6-43d7c6a3a1c5",
+    "name": "AllergyIntoleranceVerificationStatus",
+    "description": "Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.\nhttp://hl7.org/fhir/ValueSet/allergy-verification-status v3.6.0\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-02T05:42:28.103",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T06:59:39.467",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T06:57:22.05",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/issues/3374/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T06:59:39.32",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/issues/3374/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "76b5fb9f-2b64-4eac-b05c-30dd27babc2e",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "7b5c6b20-c8e7-49ef-b83f-92b47d848ff6",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c47512e9-aa19-4f21-b97b-73f4694a80eb",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "f7011b2f-5230-443d-ac69-246bd00287e3",
+          "name": "Canonical Status",
+          "description": "Reference to canonical status"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cdde83cc-9ed5-470b-8a34-5cd76002ab4b",
+          "name": "Translations",
+          "description": "Translations of records to other languages."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Translation/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "unconfirmed",
+          "Unconfirmed",
+          "A low level of certainty about the propensity for a reaction to the identified substance.",
+          "~unconfirmed",
+          "{\"Locale\":\"ru\",\"Name\":\"Не подтвержден\",\"Description\":\"Низкий уровень уверенности по предрасроложенности  к реакции на определенную субстанцию\"}"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "confirmed",
+          "Confirmed",
+          "A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.",
+          "~confirmed",
+          "{\"Locale\":\"ru\",\"Name\":\"Подтвержен\",\"Description\":\"Высокий уровень уверенности в предрасположенности к реакции на определенную субстанцию, которая может включать клиническое подтверждение тестированием или испытанием. \"}"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "refuted",
+          "Refuted",
+          "A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.",
+          "~refuted",
+          "{\"Locale\":\"ru\",\"Name\":\"Отменен\",\"Description\":\"Предрасположенность к рекации на определенную субстанцию было оспорено или доказано с достаточной степенью клинической уверенности чтобы отменить обьявление. Это может включать или нет тестирование или повторное применение.\"}"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "entered-in-error",
+          "Entered In Error",
+          "The statement was entered in error and is not valid.",
+          "~error ",
+          "{\"Locale\":\"ru\",\"Name\":\"Введено по ошибке\",\"Description\":\"Обьявдегие было внесено по ошибке и не является правильным.\"}"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

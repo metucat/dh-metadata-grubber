@@ -1,0 +1,238 @@
+{
+  "identity": {
+    "id": "967575fc-3167-4532-b498-5d4d3dd701cb",
+    "name": "Identifier",
+    "description": "A numeric or alphanumeric string that is associated with a single object or entity within a given system. Typically, identifiers are used to connect content in resources to external content available in other frameworks or protocols. Identifiers are associated with objects and may be changed or retired due to human or system process and errors. \nStructure"
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-17T08:23:51.763",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-17T08:38:50.013",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-21T20:54:07.307",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-09-17T08:38:39.897",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3326/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-17T08:38:50.057",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3326/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "f2ecfe13-a4b3-447c-9bc8-1ed557e28bdd",
+          "name": "id",
+          "description": "xml:id (or equivalent in JSON)"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "0d543c8e-fe74-4f9f-9c4f-7473c9d184a5",
+          "name": " extension",
+          "description": "Additional Content defined by implementations."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Extension/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3821795b-bb23-45b0-b66d-3878d33a5f98",
+          "name": "use",
+          "description": "A numeric or alphanumeric string that is associated with a single object or entity within a given system. Typically, identifiers are used to connect content in resources to external content available in other frameworks or protocols. Identifiers are associated with objects and may be changed or retired due to human or system process and errors. \n"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/IdentifierUse/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "130ca833-b477-4c57-9ea9-011c967f01e8",
+          "name": "type",
+          "description": "Description of identifier"
+        },
+        "order": 4,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/IdentifierType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1a36af91-ac1a-49d9-a354-2cef23155fe5",
+          "name": "system",
+          "description": "The namespace for the identifier value."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "URI",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e6482b1b-0cd2-4e2f-b6c7-5712ebe34f50",
+          "name": "value",
+          "description": "The value that is unique."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b1bc5576-6c1a-487a-a8ea-be93fd23ee94",
+          "name": "description",
+          "description": "Description of identifier. Provide additional information about identifier."
+        },
+        "order": 7,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6c0037e8-a066-4211-ba6a-9ffa37506efd",
+          "name": "attachment",
+          "description": "Image or copy of the document to support identifier."
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Attachment/versions/1.1.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "61a432ec-9089-47ae-b048-490f63d6b11a",
+          "name": "period",
+          "description": "Time period when id is/was valid for use."
+        },
+        "order": 9,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Period/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1bf01131-c7ce-42a8-99a3-ff5a2a9030e1",
+          "name": " assigner",
+          "description": "Organization that issued id (may be just text)"
+        },
+        "order": 10,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

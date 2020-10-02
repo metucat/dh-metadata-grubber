@@ -1,0 +1,220 @@
+{
+  "identity": {
+    "id": "00e888bb-bfcc-48a3-b040-eba3f72e85c2",
+    "name": "Table:ContactPoint",
+    "description": "Contains information for contact point  entity used by person resource."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Table",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-1,"top":1914,"width":0,"height":0}},"style":{"border":{"left":{"color":"#B63455"}}}},{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":759,"top":1914,"width":0,"height":0}},"style":{"border":{"left":{"color":"#B63455"}}}}],
+    "history": {
+      "created": "2018-10-07T22:30:07.277",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T22:38:58.303",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-01T09:37:04.81",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:30:17.91",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T22:38:57.993",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "a966308b-5e77-49f2-9ac9-ff658ae6047e",
+          "name": "EntityId",
+          "description": "Global id of entity contact point defined for."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "f789997a-7334-4a10-9a67-dcd9c4cb256b",
+          "name": "Id",
+          "description": "This is id of contact point entity."
+        },
+        "order": 2,
+        "usage": "Key",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e0b3d1f5-8c63-4d73-916f-c2cf5d44fd04",
+          "name": "System ",
+          "description": "System for contact point"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/AddressType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c92fafd1-672c-4312-bdb2-f70d8dc96819",
+          "name": "Value",
+          "description": "Actual value for contact point."
+        },
+        "order": 4,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "58ed33e3-b73d-41a7-a052-2308b9857a2a",
+          "name": "Use",
+          "description": "Use for contact point."
+        },
+        "order": 5,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/ContactPointUse/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a9315735-5842-43a0-9c04-1fba6133d41a",
+          "name": "Rank",
+          "description": "Contact point rank."
+        },
+        "order": 6,
+        "usage": "Column",
+        "count": 1,
+        "type": "Unsigned Integer",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1575b621-9571-45ec-9a7a-d799e45291d3",
+          "name": "Start",
+          "description": "start time address is valid "
+        },
+        "order": 7,
+        "usage": "Column",
+        "count": 1,
+        "type": "DateTime",
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9fa308db-4207-41db-a9bb-3a16b0c1a84f",
+          "name": "End",
+          "description": "End time for the address validity. If not set it is valid right now. "
+        },
+        "order": 8,
+        "usage": "Column",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": [
+      {
+        "identity": {
+          "id": "515a4f7f-56e3-42a3-a23e-9c577d1fedf3",
+          "name": "Entity",
+          "description": "Join to actual entity"
+        },
+        "fields": [
+          "EntityId"
+        ],
+        "primary": false
+      },
+      {
+        "identity": {
+          "id": "3ca556a3-00f7-4b08-9966-dd75e5d1d36e",
+          "name": "Global ",
+          "description": "Global address key "
+        },
+        "fields": [
+          "Id"
+        ],
+        "primary": true
+      }
+    ]
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

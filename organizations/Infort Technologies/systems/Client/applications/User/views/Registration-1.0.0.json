@@ -1,0 +1,904 @@
+{
+  "identity": {
+    "id": "a76a6d76-460b-462c-a6ce-cd447ff42aea",
+    "name": "Registration",
+    "description": "Первичная регистрация"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "Test.pdf"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/Registration/Test.pdf"
+      }
+    ],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-08-29T08:10:02.12",
+      "createdBy": "katriel.b@gmail.com",
+      "updated": "2018-08-29T08:10:02.043",
+      "updatedBy": "orzhan057@gmail.com",
+      "completions": []
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "6fba5665-f86d-4539-9ebe-8a1176aaa2df",
+            "name": "BirthDate",
+            "description": "Field: BirthDate\nControl: date picker"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Дата рождения",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "2ea87f21-7b83-4e3e-8846-9089f36f2b4e",
+            "name": "Family",
+            "description": "Field: name.family\nControl: text field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Фамилия",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "2aa89683-8a5a-43cc-a124-13e6f337639f",
+            "name": "Gender",
+            "description": "Field: gender\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Пол",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "8abd1686-b5f0-497d-9b0d-870fdaa82d12",
+            "name": "Identifier period end",
+            "description": "Field: Identifier.period.end\nControl: date picker"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Дата окончания действия",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "23235487-ca87-4d3a-a5bf-a6415afae9ca",
+            "name": "Identifier period start",
+            "description": "Field: Identifier.period.start\nControl: date picker"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Дата выдачи",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "ce7b735e-cf1f-47a0-8b11-bf8e2943c9f3",
+            "name": "Identifier type",
+            "description": "Field: identifier.type\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Тип документа",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "9af9a240-3a1f-4f9f-a9d9-a2451c6fef6c",
+            "name": "Identifier value",
+            "description": "Field: identifier.value\nControl: text field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Номер документа",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "7d109341-eaf4-4673-b5f4-ca6906d36e82",
+            "name": "Middle name",
+            "description": "Field: name.given\nControl: text field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Отчество",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "da25deaf-e468-4afe-b46c-4929d894caa1",
+            "name": "Name",
+            "description": "Field: name.given\nControl: text field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Имя",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "f2753314-4a71-4bdf-9dc2-780394890bc0",
+            "name": "prefix",
+            "description": "Field: name.prefix\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Префикс",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "4ddec936-3b42-4360-bc51-ac4bf659cf13",
+            "name": "Telecom rank",
+            "description": "Field: telecom.rank\nControl: ???"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Основной контакт",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "82c1c148-1a57-42e9-ac29-eca3c1e9aec9",
+            "name": "Telecom system",
+            "description": "Field: telecom.system\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Тип связи",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "e262eb98-a6e4-4bde-b83d-d3515707a1f2",
+            "name": "Telecom use",
+            "description": "Field: telecom.use\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Тип контакта",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "e7ab4ae7-f87c-4a1e-93d3-0981bd649309",
+            "name": "Telecom use1",
+            "description": "Field: telecom.use\nControl: simple select"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Тип контакта",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "ca1d9e80-11b1-4332-b050-42fd5f47e34d",
+            "name": "Telecom value",
+            "description": "Field: telecom.value\nControl: text field"
+          },
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Тип связи",
+          "align": "",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

@@ -1,0 +1,426 @@
+{
+  "identity": {
+    "id": "b09f2578-afa3-4758-9f65-d395e704b17e",
+    "name": "To:Avro",
+    "description": "Map to convert DifHub types to Apache Hive types."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2019-12-27T08:22:43.97",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-12-28T09:22:21.25",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-12-28T09:19:52.4",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Platform/issues/4614/messages/4"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-12-28T09:22:21.083",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Platform/issues/4614/messages/4"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "fe431163-a60e-4bd9-8a6a-757d065123e9",
+          "name": "Type",
+          "description": "Type name."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 32,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d58deb8b-1f27-4978-ad24-e93db7848578",
+          "name": "Format",
+          "description": "Format or usage of parameter to extend type."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "29ab87c3-ee92-4a50-b6a1-6b50d1fe42aa",
+          "name": "Description",
+          "description": "Description for the type."
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6d2908eb-77d1-432b-b814-f5f3284c5e07",
+          "name": "Platform",
+          "description": "Map of types for Avro."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b59e2339-b744-4132-aa06-a7c3e0fdeb25",
+          "name": "Attribute",
+          "description": "Additional attribute of type/, represent Avro logical type."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Boolean",
+          null,
+          "Boolean type for MySQL",
+          "boolean",
+          ""
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Small",
+          null,
+          "One byte integer signed integer",
+          "int",
+          ""
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Short",
+          null,
+          "Two bytes signed integer. ",
+          "int",
+          ""
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "Medium",
+          null,
+          "Three bytes signed integer.",
+          "int",
+          ""
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "Integer",
+          null,
+          "Four bytes signed integer.",
+          "int",
+          ""
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "Long",
+          null,
+          "Eight bytes signed integer",
+          "long",
+          ""
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "Huge",
+          "",
+          "16 bytes signed integer. Can be represented by BINARY",
+          "fixed16",
+          ""
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "Byte",
+          null,
+          "One bute unsigned integere",
+          "bytes",
+          ""
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "Unsigned Short",
+          null,
+          "Two bytes unsigned integer",
+          "int",
+          ""
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "Unsigned Integer",
+          null,
+          "For bytes unsigned integer",
+          "long",
+          ""
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "Unsigned Long",
+          "",
+          "Eight bytes unsigned integer",
+          "fixed8",
+          ""
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "Unsigned Huge",
+          "",
+          "16 bytes signed integer. Can be represented by BINARY",
+          "fixed16",
+          ""
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "Float",
+          null,
+          "Four byte numeric number",
+          "float",
+          ""
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "Double",
+          null,
+          "Eight bytes numeric",
+          "double",
+          ""
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "Decimal",
+          null,
+          "Decimal number",
+          "bytes",
+          "decimal"
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "Bit",
+          null,
+          "Bit array",
+          "boolean",
+          ""
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "Text",
+          null,
+          "One byte charecter set.",
+          "bytes",
+          ""
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "String",
+          null,
+          "Unicode string",
+          "string",
+          ""
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "Binary",
+          null,
+          "Binary byte array",
+          "bytes",
+          ""
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "Date",
+          null,
+          "Date of time.",
+          "int",
+          "date"
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "Time",
+          null,
+          "Time of Date",
+          "long",
+          "timestamp-micros"
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "DateTime",
+          null,
+          "Date and Time",
+          "long",
+          "timestamp-micros"
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "TimeSpan",
+          "",
+          "Time span",
+          "fixed12",
+          "duration"
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "Money",
+          null,
+          "Money in currency",
+          "long",
+          ""
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "Guid",
+          null,
+          "Unique identifier",
+          "string",
+          "uuid"
+        ]
+      },
+      {
+        "index": 26,
+        "values": [
+          "Enum",
+          null,
+          "Enumerator of values",
+          "enum",
+          ""
+        ]
+      },
+      {
+        "index": 27,
+        "values": [
+          "Structure",
+          null,
+          "Complex structure",
+          "object",
+          ""
+        ]
+      },
+      {
+        "index": 28,
+        "values": [
+          "Structure",
+          "UNION",
+          "Union of types",
+          "union",
+          ""
+        ]
+      },
+      {
+        "index": 29,
+        "values": [
+          "Reference",
+          null,
+          "Reference to structure",
+          "object",
+          ""
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

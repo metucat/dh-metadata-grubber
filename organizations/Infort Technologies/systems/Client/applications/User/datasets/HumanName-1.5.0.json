@@ -1,0 +1,205 @@
+{
+  "identity": {
+    "id": "a14276ab-ecfc-4778-ac11-5142d8a9c01b",
+    "name": "HumanName",
+    "description": "A name of a human with text, parts and usage information. \nNames may be changed or repudiated. People may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts is not always significant. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems SHALL care about name parts around the world varies widely. "
+  },
+  "version": {
+    "major": 1,
+    "minor": 5,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":786,"top":163,"width":0,"height":0}},"style":{"border":{"left":{"color":"#8F70CB"}}}}],
+    "history": {
+      "created": "2018-10-13T08:55:14.803",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-13T08:56:56.957",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-10-07T22:39:38.813",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-13T08:55:55.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/HumanName/issues/3403/messages/4"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-13T08:56:56.963",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/HumanName/issues/3403/messages/4"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 5,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "ec94c2d0-94fe-4128-bef7-dcf07282fee4",
+          "name": "inherit:id",
+          "description": "This is id for period element. It is inherit properties from Element structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Element/versions/1.2.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3e9593b6-110d-4f38-a23d-f9447156fc55",
+          "name": "use",
+          "description": "The use of a human name."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/NameUse/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3bdad572-c6bb-421d-93f2-1624adb3dba4",
+          "name": "text",
+          "description": "Text representation of the full name."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 1024,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d542290e-680c-4d10-baec-36d560959520",
+          "name": "family",
+          "description": "Family name (often called 'Surname')"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 256,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6a4a186b-9aac-4fdf-b993-e20d1f8897e1",
+          "name": "given",
+          "description": "Given names (not always 'first'). Includes middle names\nThis repeating element order: Given Names appear in the correct order for presenting the name"
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 0,
+        "type": "String",
+        "size": 256,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "31d0ec95-20d2-4062-b971-e5a07688934b",
+          "name": "prefix",
+          "description": "Parts that come before the name\nThis repeating element order: Prefixes appear in the correct order for presenting the name"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 0,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "5bfd5551-ef7a-437a-a585-93b02717db91",
+          "name": "suffix",
+          "description": "Parts that come after the name\nThis repeating element order: Suffixes appear in the correct order for presenting the name"
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 0,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "454b6eb7-8cfe-4d00-935e-f74bfbb6aeaa",
+          "name": "period",
+          "description": "Time period when name is/was valid for use."
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Period/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

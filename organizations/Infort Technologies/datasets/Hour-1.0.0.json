@@ -1,0 +1,345 @@
+{
+  "identity": {
+    "id": "9b6db7b9-b28c-4b26-b7ed-9c42c6451d21",
+    "name": "Hour",
+    "description": "Enumerator Names of the hours of the day by ISO 8601 and RFC 3339."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-05-07T06:14:21.05",
+      "createdby": "sashaberger@hotmail.com",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-05-07T06:43:18.117",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2796/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-05-07T06:43:33.683",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2796/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "77baea3d-4e53-4926-b5e6-d9af1e3ce5f0",
+          "name": "Hour",
+          "description": "Day hour name."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 10,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "aac395e7-a003-4c6b-bb04-2689d45b7208",
+          "name": "Description",
+          "description": "Description for the day hour."
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2b8f748f-db37-4ac9-85d0-ca555c118a89",
+          "name": "Code",
+          "description": "Day hour order number and numeric code."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b974205a-5f55-447e-aba0-3ca82a579309",
+          "name": "Alias",
+          "description": "Alias based on 12 hours."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 10,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "00",
+          "Zero hour of the day and same as 24th hour.",
+          "0",
+          "12AM"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "01",
+          "First hour of the day.",
+          "1",
+          "1AM"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "02",
+          "Second hour of the day.",
+          "2",
+          "2AM"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "03",
+          "Third hour of the day.",
+          "3",
+          "3AM"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "04",
+          "Fourth hour of the day",
+          "4",
+          "4AM"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "05",
+          "Fifth hour of the day.",
+          "5",
+          "5AM"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "06",
+          "Sixth hour of the day.",
+          "6",
+          "6AM"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "07",
+          "Seventh hour of the day,",
+          "7",
+          "7AM"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "08",
+          "Eight hour of the day",
+          "8",
+          "8AM"
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "09",
+          "Ninth hour of the day. ",
+          "9",
+          "9AM"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "10",
+          "Tenth hour of the day.",
+          "10",
+          "10AM"
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "11",
+          "Eleventh hour of the day",
+          "11",
+          "11AM"
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "12",
+          "Twelfth hour of the day",
+          "12",
+          "12PM"
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "13",
+          "13th hour of the day.",
+          "13",
+          "1PM"
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "14",
+          "14th hour of day.",
+          "14",
+          "2PM"
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "15",
+          "15th hour of the day.",
+          "15",
+          "3PM"
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "16",
+          "16th hour of the day.",
+          "16",
+          "4PM"
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "17",
+          "17th hour of the day.",
+          "17",
+          "5PM"
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "18",
+          "18th hour of the day.",
+          "18",
+          "6PM"
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "19",
+          "19th hour of the day.",
+          "19",
+          "7PM"
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "20",
+          "20th hour of the day",
+          "20",
+          "8PM"
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "21",
+          "Twenty First hour of the day.",
+          "21",
+          "9PM"
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "22",
+          "Twenty Second hour of the day.",
+          "22",
+          "10PM"
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "23",
+          "Twenty Third hour of the day,",
+          "23",
+          "11PM"
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "24",
+          "24th hour of the day and same as Zero hour,",
+          "24",
+          "12AM"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

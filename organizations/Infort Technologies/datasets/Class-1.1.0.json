@@ -1,0 +1,188 @@
+{
+  "identity": {
+    "id": "c9ffe3b8-15f3-40bb-8228-ba9554bf3998",
+    "name": "Class",
+    "description": "Enumerator of objects types supported by DifHub service. Those objects can be access througth API by URI."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "1000"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "500"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "mirrored": "2017-06-20T23:39:45.093",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-31T07:24:09.69",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-31T07:36:19.43",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "509bec2b-5fba-4cae-b354-858a46b73a14",
+          "name": "Class",
+          "description": "Name of object type."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "55d3aabc-81ef-41a2-b0f8-a1578bf1b4d9",
+          "name": "Code",
+          "description": "Description of type."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": [
+      {
+        "identity": {
+          "id": "32b3ab37-1ce8-4e3a-b0d2-f7fde6284f4f",
+          "name": "Test",
+          "description": "disc"
+        },
+        "primary": false
+      }
+    ]
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 0,
+        "values": [
+          "Organization",
+          "0"
+        ]
+      },
+      {
+        "index": 1,
+        "values": [
+          "System",
+          "1"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Application",
+          "2"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Dataset",
+          "3"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "Publication",
+          "4"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "Subscription",
+          "5"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "Interface",
+          "6"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "Pipeline",
+          "7"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "View",
+          "8"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "Settings",
+          "9"
+        ]
+      }
+    ]
+  }
+}

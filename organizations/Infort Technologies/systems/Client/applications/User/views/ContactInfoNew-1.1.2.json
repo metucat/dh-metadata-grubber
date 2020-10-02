@@ -1,0 +1,550 @@
+{
+  "identity": {
+    "id": "01e086b2-899a-4758-bf9d-f5f545609bf1",
+    "name": "ContactInfoNew",
+    "description": "Contact information for person. This view allows to provide communication information for person of different types."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 2
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "full_1.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_1.png"
+      },
+      {
+        "identity": {
+          "name": "full_2(contact).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_2(contact).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(contact).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_3(contact).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(contact)_extended.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_3(contact)_extended.png"
+      }
+    ],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-10-19T00:51:27.52",
+      "createdBy": "f.zhukov90@gmail.com",
+      "updated": "2018-10-19T01:18:43.543",
+      "updatedBy": "unknown",
+      "mirrored": "2018-10-19T01:18:40.613",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-19T01:16:35.98",
+          "completedBy": "f.zhukov90@gmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoNew/issues/3367/messages/19"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-19T01:18:05.81",
+          "completedBy": "f.zhukov90@gmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoNew/issues/3367/messages/19"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 2
+    }
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "e7a9aa75-0fff-46c9-a3ad-935d61c0b3fc",
+            "name": "cardName",
+            "description": "Card caption. This is how card with contact information looks for user."
+          },
+          "order": 1,
+          "parent": {},
+          "text": "Contact Caption",
+          "align": "Left | Middle",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "cardName"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "a4b75e02-a688-4eef-bdde-566eef83369c",
+            "name": "contactTimeEnd",
+            "description": "Field: telecom[$].period.end\nControl: TimePicker"
+          },
+          "order": 8,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "To",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "telecom[$].period.end"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "TimePicker"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "4804c084-2384-480d-a818-7e0ea898978a",
+            "name": "contactTimeStart",
+            "description": "Field: telecom[$].period.start\nControl: TimePicker"
+          },
+          "order": 7,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "From",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "telecom[$].period.sta"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "TimePicker"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "e8513b7e-4684-4142-a2df-21acfd7e11ee",
+            "name": "telecomRank",
+            "description": "Field: telecom[$].rank\nControl: Checkbox"
+          },
+          "order": 6,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Main contact",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "telecom[$].rank"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Checkbox"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "8e1b1101-2d14-4200-af9a-6387c83bff0d",
+            "name": "telecomSystem",
+            "description": "Field: telecom[$].system\nControl: Simple Select"
+          },
+          "order": 4,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Connection Type",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "telecom[$].system"
+            },
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "6c069905-6f76-4f95-bdb0-069896c21e4a",
+            "name": "telecomValue",
+            "description": "Field: telecom[$].value\nControl: Text Field"
+          },
+          "order": 5,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Value",
+          "align": "",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "telecom[$].value"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "locale": "1049",
+      "elements": [
+        {
+          "identity": {
+            "id": "c3bb79cd-87e6-4492-8b64-2f8b3acd2104",
+            "name": "cardName",
+            "description": ""
+          },
+          "parent": {},
+          "text": "Заголовок блока"
+        },
+        {
+          "identity": {
+            "id": "2c7de606-5b8b-4bb5-81df-e5d4a2e322f7",
+            "name": "contactTimeEnd"
+          },
+          "parent": {},
+          "text": "До"
+        },
+        {
+          "identity": {
+            "id": "908435fb-530b-4d4c-9e07-8bcae701847e",
+            "name": "contactTimeStart"
+          },
+          "parent": {},
+          "text": "От"
+        },
+        {
+          "identity": {
+            "id": "bce2633b-6806-4309-ac2d-06609048e5c9",
+            "name": "telecomRank"
+          },
+          "parent": {},
+          "text": "Основной контакт"
+        },
+        {
+          "identity": {
+            "id": "84de5a09-2414-4ed8-9770-c0af9260ef0e",
+            "name": "telecomSystem"
+          },
+          "parent": {},
+          "text": "Тип связи"
+        },
+        {
+          "identity": {
+            "id": "e77ac427-4df9-4742-8dac-fe25c81452ec",
+            "name": "telecomValue"
+          },
+          "parent": {},
+          "text": "Значение"
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

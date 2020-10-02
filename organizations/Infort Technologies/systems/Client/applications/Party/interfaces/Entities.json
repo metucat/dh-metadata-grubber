@@ -1,0 +1,369 @@
+{
+  "identity": {
+    "id": "23678af5-63f9-441a-b87f-28a9092bc057",
+    "name": "Entities",
+    "description": "Management of clients restricted by properties. Interface can provide access to specific client."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "Interface",
+    "usage": "RESTful API",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-08T01:30:32.923",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.663",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T05:58:53.223",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T01:30:46.7",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "servers": [],
+  "path": "/entities/{entityId}",
+  "parameters": [
+    {
+      "location": "Header",
+      "field": {
+        "identity": {
+          "id": "ce545777-cd73-4184-8218-b56a816c6ff9",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "format": "Base64 JWT token",
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "ea6cf5ff-9259-4957-861f-842a5db4f912",
+          "name": "endTime",
+          "description": "End of time window specified to limit objects with last updated in this time window."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Path",
+      "field": {
+        "identity": {
+          "id": "8e787a18-edf2-48a5-9241-7b0b1ca2dbf1",
+          "name": "entityId",
+          "description": "Id of entity operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every client."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "787c6602-93e9-4042-9b34-3cacfd257aa6",
+          "name": "options",
+          "description": "Options specified additional requirements for returned entity. For example reconcile option will require to send events to data lake and mark as reconciliation. "
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "fd9a08ff-2933-4568-b9e1-d28c6b1da9ec",
+          "name": "search",
+          "description": "Expression to limit number of entities in response."
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "7cc896fb-693b-4e07-8935-2392b080d273",
+          "name": "source",
+          "description": "This option identifies the source system name"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "39eb317a-154e-4e87-95c6-e9050a2bde57",
+          "name": "startTime",
+          "description": "Beginning of time window specified to limit objects with last updated in this time window."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "location": "Query",
+      "field": {
+        "identity": {
+          "id": "6e355770-1e59-4861-aa8c-bd03a8dba4f2",
+          "name": "type",
+          "description": "This type  identifies the entity in the system"
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    }
+  ],
+  "responses": [
+    {
+      "code": "404",
+      "field": {
+        "identity": {
+          "id": "5b2e25d6-481f-43b4-ad26-6bde37e19820",
+          "name": "FailureNotFound",
+          "description": "Entity is not found"
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "200",
+      "field": {
+        "identity": {
+          "id": "d8a53449-c166-4193-af89-a314f5e29348",
+          "name": "Success",
+          "description": "Entity is found and returned."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "409",
+      "field": {
+        "identity": {
+          "id": "73bbc25b-6403-411e-a6ab-21398af744c3",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    },
+    {
+      "code": "400",
+      "field": {
+        "identity": {
+          "id": "ef1f4dbc-da76-4895-8561-3de94c0aa682",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Error/versions/1.1.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "identity": {
+        "id": "9c807849-11ab-42a6-a170-37d0b949e0f4",
+        "name": "GetEntity",
+        "description": "Get entity or list of entities from service."
+      },
+      "deprecated": false,
+      "action": "GET",
+      "parameters": [
+        {
+          "id": "c9f4ad9c-109f-415d-a8fc-21219de7348a",
+          "name": "bearer",
+          "description": "JWT Bearer token"
+        },
+        {
+          "id": "066c37c5-36cb-4bd2-af92-262ac924b86c",
+          "name": "options",
+          "description": "Options specified additional requirements for returned entity. For example reconcile option will require to send events to data lake and mark as reconciliation. "
+        },
+        {
+          "id": "cdb8497f-26be-4489-94d1-2844722770ea",
+          "name": "source",
+          "description": "This option identifies the source system name"
+        },
+        {
+          "id": "39d45c39-7e5d-47d9-97a3-bec35bc2849f",
+          "name": "type",
+          "description": "This type  identifies the entity in the system"
+        },
+        {
+          "id": "e79c6b36-53db-461d-a909-02d712640f73",
+          "name": "startTime",
+          "description": "Beginning of time window specified to limit objects with last updated in this time window."
+        },
+        {
+          "id": "4ed2f835-179b-489c-8dcf-0eef7b368eb9",
+          "name": "endTime",
+          "description": "End of time window specified to limit objects with last updated in this time window."
+        },
+        {
+          "id": "2922c8ac-d407-4220-a9dc-749a32672bd4",
+          "name": "search",
+          "description": "Expression to limit number of entities in response."
+        },
+        {
+          "id": "b2ed235b-8f5b-44c7-9813-15f7b54c42ac",
+          "name": "entityId",
+          "description": "Id of entity operation executed for. When start with $ it is Id, else it is name of object. When id not specified it is means operation apply to every client."
+        }
+      ],
+      "responses": [
+        {
+          "id": "c9802606-3924-4a76-99b2-a1cdf705ac98",
+          "name": "Success",
+          "description": "Client is found and returned."
+        },
+        {
+          "id": "cd1e3fbe-4f02-4395-8f71-495b94596fb8",
+          "name": "Failure",
+          "description": "Execution of user request failed."
+        },
+        {
+          "id": "d210e321-7cee-4565-94d1-c609fa3ea7c7",
+          "name": "FailureAccessDenied",
+          "description": "User don't have permissions to execute operation on the object."
+        },
+        {
+          "id": "67cd2c7d-91a8-4d7b-8f5f-931848e28d0f",
+          "name": "FailureNotFound",
+          "description": "Entity is not found"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "identity": {
+        "id": "345f6b72-fbab-4a76-9b79-16e4cb954cdc",
+        "name": "Microservice",
+        "description": "Party micro service."
+      },
+      "platform": "RESTfull-API",
+      "unit": "Party",
+      "location": {},
+      "schedule": {}
+    }
+  ],
+  "examples": []
+}

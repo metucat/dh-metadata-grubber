@@ -1,0 +1,196 @@
+{
+  "identity": {
+    "id": "1db2b237-e786-4a10-a30d-642412a75c66",
+    "name": "History",
+    "description": "Structure for object history. Object history provides information when object was updated and in what completion state it is now."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-679,"top":705,"width":0,"height":0}},"style":{"border":{"left":{"color":"#4CAF6D"}}}}],
+    "history": {
+      "created": "2018-09-07T06:57:05.77",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-07T06:58:31.68",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-14T21:01:23.613",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-09-07T06:58:22.3",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3300/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-07T06:58:31.727",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3300/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "78537be4-88a0-4396-b5dc-c71fa83b39ec",
+          "name": "createdAt",
+          "description": "Date of object creation."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9734f002-b41d-424b-b1ee-a801f54628fd",
+          "name": "createdBy",
+          "description": "User created object."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 256,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4de8b19f-1c97-48e2-b4ba-914e76014587",
+          "name": "updatedAt",
+          "description": "Date of object last update."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "0c3fccf1-38e6-4cf0-bc80-76c293187987",
+          "name": "updatedBy",
+          "description": "User last updated object."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 256,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9877aa17-ff6f-40cf-a169-479643242be6",
+          "name": "updatedNote",
+          "description": "Mote about goal of object update."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4246af6f-943c-4e84-a826-1f1f2eeded93",
+          "name": "updatedMessage",
+          "description": "Message in issue associated with changes in object."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "0157c070-0104-4d7d-a3b3-7c6e9d7bdead",
+          "name": "retiredAt",
+          "description": "Date object was retired."
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8943d833-6079-4c0b-88bb-0ebf7e44ae90",
+          "name": "retiredBy",
+          "description": "User retired object."
+        },
+        "order": 9,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 256,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a01a0fbd-d660-4710-a731-002f46874bcb",
+          "name": "completions",
+          "description": "Array of completion statuses reached by this object."
+        },
+        "order": 10,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Completion/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

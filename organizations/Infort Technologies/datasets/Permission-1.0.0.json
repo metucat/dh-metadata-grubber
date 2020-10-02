@@ -1,0 +1,146 @@
+{
+  "identity": {
+    "id": "5de8f526-ce77-4c36-b630-bd24257c83ee",
+    "name": "Permission",
+    "description": "Define what access users have to the field data: Read, Write or Read and Writr. Permisions is a bitmask and can apply simultineosly."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "125"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "831"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-17T06:38:33.763",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2263/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-17T06:39:04.03",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2263/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "00e68a17-a796-4e98-807b-d1d4b0ac9816",
+          "name": "Permission",
+          "description": "Name of user permission to an object."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a55705ec-b1e4-40cd-a3cf-25f89548c972",
+          "name": "Description",
+          "description": "Description of the permision."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3b7b0342-116f-46bb-a35d-fe9efab92342",
+          "name": "Code",
+          "description": "Code of the permision. Permision is bitmask and code represent one of the bits."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Read",
+          "Users allowed read content.",
+          "1"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Write",
+          "User allowed write (change) content.",
+          "2"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Execute",
+          "User allowed execute available commands or scripts.",
+          "4"
+        ]
+      }
+    ]
+  }
+}

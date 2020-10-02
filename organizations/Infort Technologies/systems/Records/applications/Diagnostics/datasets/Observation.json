@@ -1,0 +1,445 @@
+{
+  "identity": {
+    "id": "986d2510-0892-4d87-9c68-f8086b8adafd",
+    "name": "Observation",
+    "description": "Observations are a central element in healthcare, used to support diagnosis, monitor progress, determine baselines and patterns and even capture demographic characteristics. Most observations are simple name/value pair assertions with some metadata, but some observations group other observations together logically, or even are multi-component observations. Note that the DiagnosticReport resource provides a clinical or workflow context for a set of observations and the Observation resource is referenced by DiagnosticReport to represent laboratory, imaging, and other clinical and diagnostic data to form a complete report. \nUses for the Observation resource include:\nVital signs such as body weight, blood pressure, and temperature \nLaboratory Data like blood glucose, or an estimated GFR \nImaging results like bone density or fetal measurements\nClinical Findings* such as abdominal tenderness \nDevice measurements such as EKG data or Pulse Oximetry data \nClinical assessment tools such as APGAR or a Glasgow Coma Score \nPersonal characteristics: such as eye-color \nSocial history like tobacco use, family support, or cognitive status\nCore characteristics like pregnancy status, or a death assertion\n*The boundaries between clinical findings and disorders remains a challenge in medical ontology. Refer the Boundaries section below and in Condition for general guidance. These boundaries can be clarified by profiling Observation for a particular use case. "
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "20da2839-16e2-4b1c-b60b-4db663491ec6",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Resource",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":668,"top":67,"width":0,"height":0}},"style":{"border":{"left":{"color":"#9BE620"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":16,"top":47,"width":268,"height":203.546875}},"style":{"border":{"left":{"color":"#9BE620"}}}}],
+    "history": {
+      "created": "2018-09-19T07:36:18.77",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T07:28:15.31",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T07:24:43.083",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ReferenceRange/issues/3375/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T07:28:15.253",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ReferenceRange/issues/3375/messages/14"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "f386a93b-3707-4810-bcc7-d292a45f61be",
+          "name": "identity",
+          "description": "Observation identity. Id is global (guid), Name is report name. Name unique inside folder."
+        },
+        "order": 1,
+        "usage": "Identity",
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity",
+        "optional": false,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "bb816441-95cc-404b-bfae-2dab1816d440",
+          "name": "entity",
+          "description": "Observation is an entity and can be created and updated through API."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Entity/versions/1.3.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "aa550028-c4e2-493e-a2b8-778d81d3ffe3",
+          "name": "basedOn",
+          "description": "Fulfills plan, proposal or order"
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 0,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "6fb2495e-da61-43f4-9042-80ff4bee7902",
+          "name": "partOn",
+          "description": "Part of referenced event"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 0,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "9e0af8b6-a6da-4510-a492-24b102668c57",
+          "name": "status",
+          "description": "Observation status."
+        },
+        "order": 5,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ObservationStatus/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "99e37fd3-2072-4b2c-bc55-f70b5362f82c",
+          "name": "category",
+          "description": "Classification of type of observation"
+        },
+        "order": 6,
+        "usage": "Value",
+        "count": 0,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ObservationCategoryCodes/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3ef871a3-ac36-4ce6-8a3a-1df6e294da97",
+          "name": "subject",
+          "description": "Who and/or what the observation is about"
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "fa2baa56-b838-4c38-be4a-f35eff50e89a",
+          "name": "focus",
+          "description": "What the observation is about, when it is not about the subject of record"
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 0,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "e1a605fd-6bdc-4c4c-a3fe-5f76f82c052b",
+          "name": "encounter",
+          "description": "Healthcare event during which this observation is made"
+        },
+        "order": 9,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "b5629d86-db39-4064-aa4e-8b494e27dc53",
+          "name": "performer",
+          "description": "Who is responsible for the observation"
+        },
+        "order": 10,
+        "usage": "Property",
+        "count": 0,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "ff424856-1792-4abb-a555-f5eba43b7460",
+          "name": "issued",
+          "description": "Date/Time this version was made available"
+        },
+        "order": 11,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "fce9c2ef-1291-4f77-904b-5e656ad48488",
+          "name": "effective",
+          "description": "Clinically relevant time/time-period for observation. We will use time period for now as it can specify exact time or period of time."
+        },
+        "order": 12,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Period/versions/1.2.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e8b7716a-a029-4ce0-b01c-a51ce23cb339",
+          "name": "result",
+          "description": "Observation result."
+        },
+        "order": 13,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ObservationResult/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e4b965ad-0411-47df-b0f1-a22bf6cd32df",
+          "name": "comment",
+          "description": "Comments about the test result value"
+        },
+        "order": 14,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "63272caf-cd04-4678-941f-01e56bbec86d",
+          "name": "bodySite",
+          "description": "Observed body part\nSNOMED CT Body Structures "
+        },
+        "order": 15,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 10,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "827c11bd-b13a-4f7f-8359-417864b8c83a",
+          "name": "method",
+          "description": "How it was done."
+        },
+        "order": 16,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 10,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ed7681d1-cf43-4aaf-9f47-8242167026bc",
+          "name": "specimen",
+          "description": "Specimen used for this observation"
+        },
+        "order": 17,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8848bf21-545c-401e-bc91-228bbdc93926",
+          "name": "device",
+          "description": "Measurement Device"
+        },
+        "order": 18,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a25fd763-4781-4088-a4b1-e5b49599f5e7",
+          "name": "component",
+          "description": "Component results"
+        },
+        "order": 19,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ObservationResult/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

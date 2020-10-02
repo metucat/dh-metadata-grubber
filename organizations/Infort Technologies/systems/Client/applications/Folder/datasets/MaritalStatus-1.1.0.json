@@ -1,0 +1,200 @@
+{
+  "identity": {
+    "id": "5e24d1b3-d10f-4ff7-8c45-c089aeff4d89",
+    "name": "MaritalStatus",
+    "description": "Marital (civil) status of a patient. Include all codes defined in http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "28d9d178-9734-43a4-b3a4-852a5d990131",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Folder"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-08T04:50:45.3",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T05:00:44.753",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-20T02:41:18.457",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T04:51:00.303",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/RelatedPerson/issues/3386/messages/13"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T05:00:44.643",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/RelatedPerson/issues/3386/messages/13"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "904d0b2d-4e13-4cac-9c08-0b8d103f349d",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "23932823-cc83-4885-ba5a-e9ea595f61e1",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "7a440edd-7315-4274-a3a6-171d45d1fca6",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "A",
+          "Annulled",
+          "Marriage contract has been declared null and to not have existed"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "D",
+          "Divorced",
+          "Marriage contract has been declared dissolved and inactive"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "I",
+          "Interlocutory",
+          "Subject to an Interlocutory Decree."
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "L",
+          "Legally Separated",
+          "Legally Separated"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "M",
+          "Married",
+          "A current marriage contract is active"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "P",
+          "Polygamous",
+          "More than 1 current spouse"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "S",
+          "Never Married",
+          "No marriage contract has ever been entered"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "T",
+          "Domestic partner",
+          "Person declares that a domestic partner relationship exists."
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "U",
+          "unmarried",
+          "Currently not in a marriage contract."
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "W",
+          "Widowed",
+          "The spouse has died"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "UNK",
+          "unknown",
+          "Description:A proper value is applicable, but not known. Usage Notes: This means the actual value is not known. If the only thing that is unknown is how to properly express the value in the necessary constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used. No properties should be included for a datatype with this property unless: Those properties themselves directly translate to a semantic of \"unknown\". (E.g. a local code sent as a translation that conveys 'unknown') Those properties further qualify the nature of what is unknown. (E.g. specifying a use code of \"H\" and a URL prefix of \"tel:\" to convey that it is the home phone number that is unknown.)"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

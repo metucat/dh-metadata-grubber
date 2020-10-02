@@ -1,0 +1,208 @@
+{
+  "identity": {
+    "id": "37f77931-bd96-42a0-b9a2-331399771e93",
+    "name": "Table:Account",
+    "description": "Table of Database for Account information."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Table",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":71,"top":1186,"width":0,"height":0}},"style":{"border":{"left":{"color":"#565CCD"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-71,"top":1186,"width":0,"height":0}},"style":{"border":{"left":{"color":"#565CCD"}}}}],
+    "history": {
+      "created": "2018-10-08T00:34:16.337",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.6",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:34:31.283",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "f4bcf607-7b55-400c-a222-52b310c925b2",
+          "name": "PartyId",
+          "description": "Party internal id used to associated account with party it specified for."
+        },
+        "order": 1,
+        "usage": "Column",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d3ba1268-61fe-425f-a7f0-d2c4d8bd2d29",
+          "name": "AccountId",
+          "description": "Internal account id used to identify account inside database and associate account with other entities by join."
+        },
+        "order": 2,
+        "usage": "Key",
+        "count": 1,
+        "type": "Guid",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a215d580-6387-46b6-9c4a-313bc46d7180",
+          "name": "AccountName",
+          "description": "Name of account. Account name must be unique for client."
+        },
+        "order": 3,
+        "usage": "Name",
+        "type": "String",
+        "size": 255,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "bff3b15f-4abf-484b-93f4-44ef45f50861",
+          "name": "AccountDescription",
+          "description": "Description od client's account."
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8bc4488f-e031-4288-807b-c81c18b68f6d",
+          "name": "AccountType",
+          "description": "Type of account as defined in account type enumerator."
+        },
+        "order": 5,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/AccountType/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "939f7b36-526b-4380-a147-a4d04b141a9c",
+          "name": "LegalEntityId",
+          "description": "Account legal entity id. This is legal entity of client, account associated with."
+        },
+        "order": 7,
+        "usage": "Column",
+        "count": 1,
+        "type": "Guid",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "71c1ed5e-8b56-471b-8515-1d57470e688a",
+          "name": "Region",
+          "description": "Country of the account if different from legal entity"
+        },
+        "order": 9,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/datasets/Country/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "5652cb29-a0bd-4719-84ce-05747b5ec1c0",
+          "name": "AccountNumber",
+          "description": "Unique code for account"
+        },
+        "order": 10,
+        "usage": "Column",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      }
+    ],
+    "keys": [
+      {
+        "identity": {
+          "id": "05370003-17fa-4d81-8c17-c4f4fa208dc3",
+          "name": "Global",
+          "description": "Global primary key for account"
+        },
+        "fields": [
+          "AccountId"
+        ],
+        "primary": true
+      },
+      {
+        "identity": {
+          "id": "5e7e4a94-9490-48c1-9161-9c5564014113",
+          "name": "Party",
+          "description": "Reference to party"
+        },
+        "fields": [
+          "PartyId"
+        ],
+        "primary": false,
+        "constraint": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/Table:Party"
+      }
+    ]
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

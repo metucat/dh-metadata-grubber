@@ -1,0 +1,835 @@
+{
+  "identity": {
+    "id": "ce87c1a6-577f-4f4e-8d19-1bd1b91dade4",
+    "name": "PersonalDataNew",
+    "description": "This is view for Edit, Review and Board representation of person most important data. This data allow to recognize person and communicate with person.\nEdit view provide all fields in edit mode and allow user to introduce data.\nReview view provide access to all data without ability to edit.\nBoard  view present most usable part of personal data on dashboard.\nData referenced to field from resource Person."
+  },
+  "version": {
+    "major": 1,
+    "minor": 5,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "full_1.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonslData/full_1.png"
+      },
+      {
+        "identity": {
+          "name": "full_2.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonslData/full_2.png"
+      },
+      {
+        "identity": {
+          "name": "full_3.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/PersonslData/full_3.png"
+      }
+    ],
+    "type": "view",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2020-09-01T21:19:53.903",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2020-09-01T23:33:25.82",
+      "updatedBy": "unknown",
+      "mirrored": "2020-09-01T23:33:24.247",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2020-09-01T21:23:00.79",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5286/messages/1"
+        },
+        {
+          "status": "Approved",
+          "completed": "2020-09-01T21:23:10.39",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5286/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 5,
+      "revision": 0
+    },
+    "alias": ""
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "9a6feee9-67b9-4add-a1b0-ad24de7ecccd",
+            "name": "birthDate",
+            "description": "Date of birth selected from calendar or can be typed directly."
+          },
+          "order": 8,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Visible",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Date of birth",
+          "align": "Left | Bottom",
+          "links": [],
+          "control": {"identity":{"description":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"},"reference":"/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0","subscription":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0","value":{"dataField":"birthDate","editTip":"Enter person day of birth"}},
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource",
+                "description": "Resorce with sate of bith."
+              },
+              "type": "String",
+              "value": "Person"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "c5ca42d9-a4f9-4a4d-bb35-268c7b90ca66",
+            "name": "cardName",
+            "description": "Card to introduce and review personal information for user profile."
+          },
+          "order": 1,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Hidden",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {
+              "color": "#E7E0D0"
+            },
+            "font": {
+              "style": "Normal",
+              "color": " #3F3F00",
+              "weight": "500",
+              "size": "24"
+            }
+          },
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Infort Technologies/systems/Client/applications/User/views/PersonalDataNew/cardName",
+          "text": "Personal Information",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Card",
+                "description": "Settings for card caption and description."
+              },
+              "type": "Boolean",
+              "value": "true"
+            },
+            {
+              "identity": {
+                "name": "Resource",
+                "description": "Resource updated by card data"
+              },
+              "type": "String",
+              "value": "Person"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "66c0430b-4d6a-4ec4-a7a4-160aaacb10d3",
+            "name": "family",
+            "description": "Family name need to be typed.\n"
+          },
+          "order": 4,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Family Name",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "name[0].family"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "b2aa01eb-56ef-46bc-89b6-10bcbd3cc0d6",
+            "name": "gender",
+            "description": "Person gender can be selected from list of genders."
+          },
+          "order": 7,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Visible",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Gender",
+          "align": "Left | Middle",
+          "links": [],
+          "control": {"identity":{"description":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"},"reference":"/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0","subscription":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0","value":{"editTip":"Select user gender","dataField":"gender"}},
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource",
+                "description": "Resource contained gender information"
+              },
+              "type": "String",
+              "value": "Person"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "2bf00a51-6f7a-41ea-becd-ea8f083a5da7",
+            "name": "middleName",
+            "description": "Middle name of the person optional and can be typed in."
+          },
+          "order": 6,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Middle Name",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "name[0].given[1]"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "3aabece6-8f57-4d6a-8928-4286c3deb6f9",
+            "name": "name",
+            "description": "Person given name need to be typed."
+          },
+          "order": 5,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Collapse",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "First Name",
+          "align": "Left | Bottom",
+          "links": [],
+          "control": {"identity":{"description":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"},"reference":"/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0","subscription":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0","value":{"dataField":"name[0].given[0]","editTip":"Enter user first name"}},
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource",
+                "description": "Resource used for dialog data"
+              },
+              "type": "String",
+              "value": "Person"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "8a5611d2-3ccd-4b39-aa76-0df5549fb217",
+            "name": "prefix",
+            "description": "This is prefix to the name. "
+          },
+          "order": 3,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Prefix",
+          "align": "Left | Middle",
+          "links": [],
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "name[0].prefix[0]"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Text"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "6f343588-b2ce-4d3b-a693-dd8437a5790f",
+            "name": "text",
+            "description": "Full person name how he want to be called.\nBy default it is First Name.\n"
+          },
+          "order": 2,
+          "parent": {
+            "name": ""
+          },
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Full Name",
+          "align": "Left | Bottom",
+          "links": [],
+          "control": {"identity":{"description":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"},"reference":"/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0","subscription":"/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0","value":{"editFormat":"STRING","dataField":"text"}},
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "name[0].text"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "locale": "1049",
+      "elements": [
+        {
+          "identity": {
+            "id": "b3cd3bea-0ba5-43b3-9288-fa4d8c4ab6b4",
+            "name": "birthDate",
+            "description": ""
+          },
+          "order": 8,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Дата рождения",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "a4168c40-2d0d-4868-934e-a389d47d3242",
+            "name": "cardName",
+            "description": ""
+          },
+          "order": 1,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Персональные данные",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "ca2983b1-1d8f-4278-84ab-2a0b15daba00",
+            "name": "family",
+            "description": ""
+          },
+          "order": 4,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Фамилия",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "9d77cf64-3882-4521-8123-9e520931afb2",
+            "name": "gender",
+            "description": ""
+          },
+          "order": 7,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Пол",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "c0368df0-882b-46f0-bd22-caf773ded2fc",
+            "name": "middleName",
+            "description": ""
+          },
+          "order": 6,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Отчество",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "bbb055a5-4b54-4174-98e8-48f9a09aa162",
+            "name": "name",
+            "description": ""
+          },
+          "order": 5,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Имя",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "ef4246a7-f014-4ab4-b97d-4607835cad9d",
+            "name": "prefix",
+            "description": ""
+          },
+          "order": 3,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Префикс",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "d4336d4a-582e-4869-8aa4-1fbfa5fe4d7a",
+            "name": "text",
+            "description": "Full person name how he want to be called.\nBy default it is First Name plus Middle Name.\n"
+          },
+          "order": 2,
+          "parent": {
+            "name": ""
+          },
+          "frame": {},
+          "style": {},
+          "image": "",
+          "text": "Как к Вам обращаться?",
+          "align": "Left | Bottom",
+          "links": [],
+          "properties": []
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

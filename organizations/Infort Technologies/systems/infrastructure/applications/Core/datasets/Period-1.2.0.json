@@ -1,0 +1,98 @@
+{
+  "identity": {
+    "id": "bf7d211b-3c04-4ae5-be5e-32d5829a0958",
+    "name": "Period",
+    "description": "A time period defined by a start and end date/time. \nA period specifies a range of times. The context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the period applies (e.g. \"give to the patient between 2 and 4 pm on 24-Jun 2013\"). This is simple period used not as part of array of elements."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-08-28T19:58:18.173",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-07T06:59:06.08",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-21T20:54:07.307",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-08-28T19:59:29.373",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Binding/issues/3247/messages/5"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-07T06:59:06.09",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Binding/issues/3247/messages/5"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "8ceb807b-4187-4410-8f72-e7e148e3ae66",
+          "name": "start",
+          "description": "Starting time with inclusive boundary"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "69730a1a-a394-4919-8991-3471e79e910d",
+          "name": "end",
+          "description": "End time with inclusive boundary, if not ongoing."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

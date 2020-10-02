@@ -1,0 +1,146 @@
+{
+  "identity": {
+    "id": "bfe5466b-3ec6-4a5c-8396-f7b3a3c62c63",
+    "name": "Role",
+    "description": "Enumerator of supported roles for users of the object. Role defines permisions user will have to object properties."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "125"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "168"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-30T06:41:29.107",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Translation/issues/2313/messages/5"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-30T06:42:43.03",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Translation/issues/2313/messages/5"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "037750a5-e01b-4830-9ef0-5a38aa832248",
+          "name": "Role",
+          "description": "Name of the role."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1f1946c6-6ad9-42e5-8b1d-1a3cd1c9cd2c",
+          "name": "Description",
+          "description": "Description of the role."
+        },
+        "order": 2,
+        "usage": "Description",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "263aed61-dddf-4562-8039-fce35b14ac69",
+          "name": "Code",
+          "description": "Code for the role."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Architect",
+          "Architect have full access to object. Architect aproved changes and usage of objects under his control.",
+          "0"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Developer",
+          "Developer can introduce new objects and modefy existing objects.",
+          "1"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Analyst",
+          "Analist can review objects he have access.",
+          "2"
+        ]
+      }
+    ]
+  }
+}

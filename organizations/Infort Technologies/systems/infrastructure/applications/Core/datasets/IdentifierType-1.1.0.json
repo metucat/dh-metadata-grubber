@@ -1,0 +1,223 @@
+{
+  "identity": {
+    "id": "e9dd1d44-3a61-445e-8ed5-72fd0fb72c27",
+    "name": "IdentifierType",
+    "description": "Identifier type enumerator. A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.Include these codes as defined in http://terminology.hl7.org/CodeSystem/v2-0203."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-18T05:29:39.02",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-18T05:31:03.157",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-14T21:01:23.613",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-09-18T05:30:44.177",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3329/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-18T05:31:03.187",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3329/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "7d7acb74-0f75-4e84-a9aa-b6895023b058",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 8,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "45fc6d57-3f3e-4a15-924d-8da0f87a4e1e",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 100,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 0,
+        "values": [
+          "DL",
+          "Driver's license number"
+        ]
+      },
+      {
+        "index": 1,
+        "values": [
+          "PPN",
+          "Passport number"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "BRN",
+          "Breed Registry Number"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "MR",
+          "Medical record number"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "MCN",
+          "Microchip Number"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "EN",
+          "Employer number"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "TAX",
+          "Tax ID number"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "NIIP",
+          "National Insurance Payor Identifier (Payor)"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "PRN",
+          "Provider number"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "MD",
+          "Medical License number"
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "DR",
+          "Donor Registration Number"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "ACSN",
+          "Accession ID"
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "UDI",
+          "Universal Device Identifier"
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "SNO",
+          "Serial Number"
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "SB",
+          "Social Beneficiary Identifier"
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "PLAC",
+          "Placer Identifier"
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "FILL",
+          "Filler Identifier"
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "JHN",
+          "Jurisdictional health number (Canada)"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

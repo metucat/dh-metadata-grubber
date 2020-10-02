@@ -1,0 +1,136 @@
+{
+  "identity": {
+    "id": "82cb139a-0a23-4c11-8f74-e3e1f888a731",
+    "name": "Version",
+    "description": "Object version. Version presented by 3 values: Major present backward incompatable versions, Minor identify backward compatable version and Revision identified small fixes."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "942"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "267"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "mirrored": "2017-10-30T06:43:07.853",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-31T07:35:39.59",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-31T07:36:19.43",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "a0812d60-c1e2-4049-bcc3-18ddc6e4d539",
+          "name": "Major",
+          "description": "Major version of object. Major version introduced for not backward compatabale changes. New major version of an object can be created only for latest object version."
+        },
+        "order": 1,
+        "usage": "Key",
+        "count": 1,
+        "type": "Short",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "72326e68-8c9a-408f-96be-c9234736f50d",
+          "name": "Minor",
+          "description": "Minor version of object. Minor version introduce for backward compatable changes. New minor version of an object can be created only for latest object version."
+        },
+        "order": 2,
+        "usage": "Key",
+        "count": 1,
+        "type": "Short",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "65a1931a-f47b-46b1-b6ef-6e33cf25a2b2",
+          "name": "Revision",
+          "description": "Object revision. Introduced for bag fixes with backward compatability garantee. Revision can be created for any version of the object."
+        },
+        "order": 3,
+        "usage": "Key",
+        "count": 1,
+        "type": "Integer",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2fec6a54-0378-46d4-8a42-da26c1c957c0",
+          "name": "Label",
+          "description": "Version label. Human friendly label for the version. Label need to be unique for all object versions."
+        },
+        "order": 4,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": []
+  }
+}

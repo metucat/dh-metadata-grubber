@@ -1,0 +1,131 @@
+{
+  "identity": {
+    "id": "084e6822-24b6-4838-9fe6-7de24f201723",
+    "name": "PeriodElement",
+    "description": "A time period defined by a start and end date/time. \nA period specifies a range of times. The context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the period applies (e.g. \"give to the patient between 2 and 4 pm on 24-Jun 2013\"). Element used in array."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-08-28T19:58:07.287",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-07T07:00:21.57",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-09-07T07:00:04.86",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3301/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-07T07:00:21.613",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/issues/3301/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "1da20111-6ee7-4563-8d86-54ee58f1bb32",
+          "name": "id",
+          "description": "xml:id (or equivalent in JSON)"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4affbdf6-0edd-47df-9eb1-130e1e157a08",
+          "name": " extension",
+          "description": "Additional Content defined by implementations."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Extension/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8bb19957-97f3-4bba-8092-2a1dc1f1370f",
+          "name": "start",
+          "description": "Starting time with inclusive boundary"
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "7dd8ed5b-beb0-452a-88c9-1e42c8c8cea8",
+          "name": "end",
+          "description": "End time with inclusive boundary, if not ongoing."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

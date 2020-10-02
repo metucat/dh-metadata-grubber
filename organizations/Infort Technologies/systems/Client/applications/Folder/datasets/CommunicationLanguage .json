@@ -1,0 +1,100 @@
+{
+  "identity": {
+    "id": "ab616097-e4b1-491e-ad10-772dc4df4d76",
+    "name": "CommunicationLanguage ",
+    "description": "A contact person or organization for patient for different needs.\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "28d9d178-9734-43a4-b3a4-852a5d990131",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Folder"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-08T04:46:27.087",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T05:00:44.723",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-20T02:41:18.457",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T04:46:43.75",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/RelatedPerson/issues/3386/messages/13"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T05:00:44.643",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/RelatedPerson/issues/3386/messages/13"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "85ec1ff8-7641-41e5-aeb7-ce4498612343",
+          "name": "language",
+          "description": "The language which can be used to communicate with the patient about his or her health"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/datasets/Locale/versions/1.2.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c8f32cfd-cf38-4d76-ba97-ff1878495235",
+          "name": "preferred",
+          "description": "Language preference indicator"
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Boolean",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

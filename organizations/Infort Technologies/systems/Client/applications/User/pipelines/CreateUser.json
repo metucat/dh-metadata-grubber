@@ -1,0 +1,140 @@
+{
+  "identity": {
+    "id": "1b737993-7e91-4eb5-9f6f-b909c6608ba6",
+    "name": "CreateUser",
+    "description": "This is work flow to create user. When user created many different entities need to be organized in state, ready for user to operate or extend his party."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "Pipeline",
+    "usage": "Work Flow",
+    "access": "External",
+    "properties": [],
+    "history": {
+      "created": "2019-01-01T23:22:39.433",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-02-06T07:43:10.633",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-02-06T07:42:59.943",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3555/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-02-06T07:43:10.303",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3555/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "activities": [
+    {
+      "identity": {
+        "name": "CreateUser",
+        "description": "Create user as entity. User must have default profile, visible for all parties where user contact or communicate with. This profile not represent user as patient or practitioner. It is only communication profile used for user security and communication."
+      },
+      "order": 1,
+      "type": "Operation",
+      "inputs": [
+        {
+          "identity": {
+            "name": "User ",
+            "description": "User name and password to initialize user in the network."
+          },
+          "inputMode": "Dataset",
+          "component": {
+            "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/User/versions/1.1.3",
+            "subscription": "",
+            "components": [
+              "identity"
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "identity": {
+            "name": "ActiveUser",
+            "description": "Active user created as result of operation"
+          },
+          "outputMode": "Response",
+          "component": {
+            "reference": "SuccessCreated"
+          }
+        }
+      ],
+      "operation": {
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Users/versions/1.0.0",
+        "subscription": "",
+        "components": [
+          "CreateUser"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "name": "CreateProfile",
+        "description": "User profile created as entity person referenced in user entity. This profile used to keep user information he want to be accessible to system for communication. "
+      },
+      "order": 2,
+      "type": "Operation",
+      "inputs": [
+        {
+          "identity": {
+            "name": "UserInfo",
+            "description": "User information to create personal profile."
+          },
+          "inputMode": "Operation",
+          "component": {
+            "reference": "CreateUser",
+            "components": [
+              "CreateUser"
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "identity": {
+            "name": "Profile",
+            "description": "This is reference to profile created as person object in the User service."
+          },
+          "outputMode": "Response",
+          "component": {
+            "reference": "SuccessCreated"
+          }
+        }
+      ],
+      "operation": {
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/versions/1.4.0",
+        "subscription": "",
+        "components": [
+          "CreatePerson"
+        ]
+      }
+    }
+  ],
+  "layouts": []
+}

@@ -1,0 +1,262 @@
+{
+  "identity": {
+    "id": "fb8af96f-56b9-4001-ad0b-2c6d8c62a428",
+    "name": "DataAbsentReason",
+    "description": "Used to specify why the normally expected content of the data element is missing. Include all codes defined in http://terminology.hl7.org/CodeSystem/data-absent-reason"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "20da2839-16e2-4b1c-b60b-4db663491ec6",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-21T09:22:26.843",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T07:22:47.853",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T07:21:39.197",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/LOINCCodes/issues/3375/messages/4"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T07:22:47.83",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/LOINCCodes/issues/3375/messages/4"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "8e8c3f76-eaab-4444-9696-c634a47d9469",
+          "name": "Lvl",
+          "description": "A few code lists that FHIR defines are hierarchical - each code is assigned a level. For value sets, levels are mostly used to organize codes for user convenience, but may follow code system hierarchy - see Code System for further information"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "dee8ecc3-ede1-440c-b6f2-9476b13f768a",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "96b5b56c-672d-4d22-a821-995fc0c5bf15",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 3,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d7cb7540-ba42-4eac-943c-fd28f0b6a52b",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 0,
+        "values": [
+          "0",
+          "unknown",
+          "Unknown",
+          "The value is expected to exist but is not known."
+        ]
+      },
+      {
+        "index": 1,
+        "values": [
+          "1",
+          "asked-unknown",
+          "Asked But Unknown",
+          "The source was asked but does not know the value."
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "1",
+          "temp-unknown",
+          "Temporarily Unknown",
+          "There is reason to expect (from the workflow) that the value may become known."
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "1",
+          "not-asked",
+          "Not Asked",
+          "The workflow didn't lead to this value being known."
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "1",
+          "asked-declined",
+          "Asked But Declined",
+          "The source was asked but declined to answer."
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "0",
+          "masked",
+          "Masked",
+          "The information is not available due to security, privacy or related reasons."
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "0",
+          "not-applicable",
+          "Not Applicable",
+          "There is no proper value for this element (e.g. last menstrual period for a male)."
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "0",
+          "unsupported",
+          "Unsupported",
+          "The source system wasn't capable of supporting this element."
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "0",
+          "as-text",
+          "As Text",
+          "The content of the data is represented in the resource narrative."
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "0",
+          "error",
+          "Error",
+          "Some system or workflow process error means that the information is not available."
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "1",
+          "not-a-number",
+          "Not a Number (NaN)",
+          "The numeric value is undefined or unrepresentable due to a floating point processing error."
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "1",
+          "negative-infinity",
+          "Negative Infinity (NINF)",
+          "The numeric value is excessively low and unrepresentable due to a floating point processing error."
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "1",
+          "positive-infinity",
+          "Positive Infinity (PINF)",
+          "The numeric value is excessively high and unrepresentable due to a floating point processing error."
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "0",
+          "not-performed",
+          "Not Performed",
+          "The value is not available because the observation procedure (test, etc.) was not performed."
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "0",
+          "not-permitted",
+          "Not Permitted",
+          "The value is not permitted in this context (e.g. due to profiles, or the base data types)."
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

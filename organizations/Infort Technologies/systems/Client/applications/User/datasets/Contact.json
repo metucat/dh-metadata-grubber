@@ -1,0 +1,168 @@
+{
+  "identity": {
+    "id": "f75f2ff3-fb2e-49ef-953d-a1674b5bbd57",
+    "name": "Contact",
+    "description": "An individual has identity outside of a healthcare setting. The Person resource is used to capture this information and to relate the person as an individual to other resources that do have a health-related context. \nFor example, while a patient resource may be created and maintained by each organization providing care for that person as a patient, a person resource provides a mechanism for linking patient resources across different organizations and their unique patient identity domains. "
+  },
+  "version": {
+    "major": 1,
+    "minor": 6,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Resource",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":668,"top":67,"width":0,"height":0}},"style":{"border":{"left":{"color":"#9BE620"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":370,"top":179,"width":334.00225830078125,"height":286.43973541259766}},"style":{"border":{"left":{"color":"#9BE620"}}}}],
+    "history": {
+      "created": "2019-02-01T05:16:59.18",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-03-21T15:41:52.257",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2019-02-01T05:17:18.75",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-03-21T15:41:15.657",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3662/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-03-21T15:41:52.15",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3662/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 6,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "de2c46bc-b7a3-4316-b1ac-1786945d9019",
+          "name": "identity",
+          "description": "Contact identity. Id is global (guid), Name is contact definition and it is not unique."
+        },
+        "order": 1,
+        "usage": "Identity",
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity",
+        "optional": false,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "119a4b39-f43a-451c-98ab-066b84b002d7",
+          "name": "entity",
+          "description": "Contact is an entity and can be created and updated through API."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Entity/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2ab4fd07-217e-4fbb-965d-4cb8ba3e1c9f",
+          "name": "type",
+          "description": "Type of contact."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/ContactType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "294fe5a0-2b94-4845-8438-af32dad9c2cf",
+          "name": "telecom",
+          "description": "A contact detail."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/ContactPoint/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "f1f4bdcd-a7e6-4763-b92f-2ae4dc60c567",
+          "name": "address",
+          "description": "One or more addresses for the contact."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Address/versions/1.1.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2b0f3460-e577-4842-a5ec-c23034f59f38",
+          "name": "person",
+          "description": "Person for contact if contact associated with one."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

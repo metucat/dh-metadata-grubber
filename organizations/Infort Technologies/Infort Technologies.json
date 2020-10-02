@@ -1,0 +1,30 @@
+{
+  "identity": {
+    "id": "96c4b66c-ec16-4c0c-a1f2-7d2e5ca6ab68",
+    "name": "Infort Technologies",
+    "description": "Medical records and ERP systems."
+  },
+  "object": {
+    "tags": [],
+    "documents": [],
+    "type": "Org",
+    "usage": "Department",
+    "access": "External",
+    "properties": [],
+    "history": {
+      "created": "2020-09-16T00:07:40.217",
+      "createdBy": "unknown",
+      "updated": "2020-09-16T00:07:40.217",
+      "updatedBy": "unknown",
+      "completions": []
+    },
+    "alias": ""
+  },
+  "integration": {
+    "url": "https://sashaberger@dev.azure.com/Infort-Dev/Client/_git/infort-metadata",
+    "user": "Z2rVFFrrrqgKIT6eWX5QLS+vqdfXV6tRh9VLTwt7b0Q8zyjY1dKnYGjA4LdnuBugViLAfEz6Jz32lhsivOMPbFzi0XcFK4aZu4pF/mrL44/u7c9bMEpcGqG22z25SGXS6aINIkZwqyatiurinMCHSfShFS6NpJnf/8yxKt0HNS/27yRNi1QqaVbKowrsjYJFAUeE3AL/RlV5RPpGgkkf2opRGOKtV0AU5YrEYbH6N82qDmA1QKGEMNZXppqCaQ2dCYG9GqxloY2nKXMdqH9c9SioozclGKmvHZb8KkPU/Uhf613SUnLOwEB+71lZISrElg/vnJjomvd0I9aQkWTR0g==",
+    "password": "jn2QdLvIh346WT8InPwTV9qnpjy9T6FSD8cQCtIwCGZxC2IcOQsI76Pf76OV7CHqXcER50rbLfswYn9fNI7o8VMIO+mLPz0sbZuoqTft51IxSbOOjgvSIZqpYGd3TfFtyIfCyj4Q8nkl56ErhKWxS/kpQN4rHg/2Xa0j0TzfENjL4JeO2Nh8sKdvEfZGzFtCjzFz06QBr4C1g7ooBVeMssTiBj5ITTvHr+lL5GfMs7ncL4f7/c25Wd9QYtlJbZLQ6m8JPIhoKZguLY0A+q9ZeQq8i63KbpkvfOhK6LlMd0AO9zETik+4MgwiDQ729/KuqIZ6KRQV94lsMyZCm2iQGg==",
+    "integration": true,
+    "status": ""
+  }
+}

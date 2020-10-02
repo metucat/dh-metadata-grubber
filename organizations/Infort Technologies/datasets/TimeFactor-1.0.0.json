@@ -1,0 +1,93 @@
+{
+  "identity": {
+    "id": "a80b5050-3cfa-45fb-8a2f-96fd7cfece5e",
+    "name": "TimeFactor",
+    "description": "Factor for time specification. Factor apply to current time components before compare with specification. For example for day 05/09/2017 is a day 9 of May. With factor 2 for Daily, we will divide it to 2 and compare remains to Month Day spec. If our spec defines execute on first day of month, and factor is 2, we will execute every second day of month."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"MC"},"links":[],"frame":{"position":{"left":713,"top":61,"width":233,"height":234.33333206176758}},"style":{"border":{"left":{"color":"#8F70CB"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":1035,"top":743,"width":333,"height":232}},"style":{"border":{"left":{"color":"#9BE620"}}}}],
+    "history": {
+      "created": "2019-05-01T06:31:39.693",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-05-01T07:31:25.453",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-05-01T07:31:13.173",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/TimeFactor/issues/3735/messages/3"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-05-01T07:31:25.287",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/TimeFactor/issues/3735/messages/3"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "6f84c128-fa21-4a54-85bc-f6c04b3c3466",
+          "name": "Component",
+          "description": "Component of date factor apply to."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Apdax/datasets/Frequency/versions/1.1.0",
+        "subscription": "",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3d197d90-0b42-47fc-9529-2a809f3dd4da",
+          "name": "Value",
+          "description": "Value of factor to apply."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Small",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "identity": {
+    "id": "2c804533-1177-4b87-87aa-bb446e20cfb5",
+    "name": "ErrorCode",
+    "description": "List of error codes that can be returned by application. Enum provide specification for errors reported by service defined in application."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-969,"top":671,"width":0,"height":0}},"style":{"border":{"left":{"color":"#04C1B4"}}}}],
+    "history": {
+      "created": "2018-10-07T22:26:40.263",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T22:38:58.193",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-09-17T06:55:16.76",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:26:57.087",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T22:38:57.993",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "00e04880-6503-45c1-9c8d-53c3f07f0cf3",
+          "name": "code",
+          "description": "Code value"
+        },
+        "order": 1,
+        "usage": "Key",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9991f223-4988-47a5-86f7-389f55028f4e",
+          "name": "severity",
+          "description": "Severity for the error."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Business Systems/datasets/Severity",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ed2f672e-e990-45d9-9149-733e6013621e",
+          "name": "text",
+          "description": "Text to format error response based on properties."
+        },
+        "order": 3,
+        "usage": "Name",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a0482484-aff9-4739-b8f8-deb2e1eeb796",
+          "name": "description",
+          "description": "Error detailed description."
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "dc251e31-206e-472a-b5e3-121b0d2c1e3a",
+          "name": "translation",
+          "description": "Translation of the error to specific local. Name translation apply to text  string of the error."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Business Systems/datasets/Translation",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "8022",
+          "Fatal",
+          "Oder have rong number",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "4000",
+          "Fatal",
+          "Invalid Request",
+          "Invalid Request",
+          ""
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "4001",
+          "Error",
+          "Invalid Account Type",
+          "Allowed values: [DISTRIBUTOR, SUPPLIER, AGENT]",
+          ""
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "4002",
+          "Error",
+          "Invalid Client Type",
+          "Allowed values: [MERCHANT, CONSUMER]",
+          ""
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "4003",
+          "Error",
+          "Invalid LegalEntity Type",
+          "Allowed values: [PERSONAL, BUSINESS]",
+          ""
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "4010",
+          "Error",
+          "Duplicate Client Name",
+          "Client Name @name should be unique.",
+          ""
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "4011",
+          "Error",
+          "Invalid Account Name",
+          "Account Name @name should be unique across the same Client",
+          ""
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "4012",
+          "Error",
+          "Invalid LegalEntity Name",
+          "Legal Entity Name @name should be unique across the same Client",
+          ""
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "6000",
+          "Error",
+          "Account  does not exists",
+          "Account @entityId does not exists",
+          ""
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "6001",
+          "Error",
+          "Client  does not exists",
+          "Client @entityId does not exists",
+          ""
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "6002",
+          "Error",
+          "LegalEntity  does not exists",
+          "LegalEntity @entityId does not exists",
+          ""
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

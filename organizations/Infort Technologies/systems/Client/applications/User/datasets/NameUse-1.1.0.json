@@ -1,0 +1,191 @@
+{
+  "identity": {
+    "id": "27dea183-10c4-45dc-8143-8f66ca8519b4",
+    "name": "NameUse",
+    "description": "Identifier use enumerator. All codes from system http://hl7.org/fhir/identifier-use."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":1212,"top":95,"width":0,"height":0}},"style":{"border":{"left":{"color":"#007DC5"}}}}],
+    "history": {
+      "created": "2018-10-07T22:27:44.09",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T22:38:58.227",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-07-31T09:59:10.403",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:27:54.963",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T22:38:57.993",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/interfaces/Persons/issues/3383/messages/23"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "be9e7bb3-51bb-4023-be2a-78df8c38f2aa",
+          "name": "Lvl",
+          "description": "A few code lists that FHIR defines are hierarchical - each code is assigned a level. For value sets, levels are mostly used to organize codes for user convenience, but may follow code system hierarchy - see Code System for further information"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Small",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "42529161-2787-41ac-893c-64d362e95d8e",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b02eac39-d38b-4517-9f38-bdcb97ac1d33",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 3,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6b483c15-4c4f-43d1-96ad-edee54a25288",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "0",
+          "usual",
+          "Usual",
+          "Known as/conventional/the one you normally use"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "0",
+          "official",
+          "Official",
+          "The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called \"legal name\"."
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "0",
+          "temp",
+          "Temp",
+          "A temporary name. Name.period can provide more detailed information. This may also be used for temporary names assigned at birth or in emergency situations."
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "0",
+          "nickname",
+          "Nickname",
+          "A name that is used to address the person in an informal manner, but is not part of their formal or usual name"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "0",
+          "anonymous",
+          "Anonymous",
+          "Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons)"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "0",
+          "old",
+          "Old",
+          "This name is no longer in use (or was never correct, but retained for records)"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "1",
+          "maiden",
+          "Name changed for Marriage",
+          "A name used prior to changing name because of marriage. This name use is for use by applications that collect and store names that were used prior to a marriage. Marriage naming customs vary greatly around the world, and are constantly changing. This term is not gender specific. The use of this term does not imply any particular history for a person's name"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

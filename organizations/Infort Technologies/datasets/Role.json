@@ -1,0 +1,172 @@
+{
+  "identity": {
+    "id": "bfe5466b-3ec6-4a5c-8396-f7b3a3c62c63",
+    "name": "Role",
+    "description": "Enumerator of supported roles for users of the object. Role defines permisions user will have to object properties."
+  },
+  "version": {
+    "major": 2,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2019-08-08T20:26:40.63",
+      "createdBy": "unknown",
+      "updated": "2019-08-08T20:30:51.493",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-03-15T07:17:43.513",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-08-08T20:30:25.113",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/4097/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-08-08T20:30:51.393",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/4097/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 2,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "037750a5-e01b-4830-9ef0-5a38aa832248",
+          "name": "Role",
+          "description": "Name of the role."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1f1946c6-6ad9-42e5-8b1d-1a3cd1c9cd2c",
+          "name": "Description",
+          "description": "Description of the role."
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "263aed61-dddf-4562-8039-fce35b14ac69",
+          "name": "Code",
+          "description": "Code for the role."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c8ad0653-e128-4951-99f2-aefd3e8c3124",
+          "name": "Permissions",
+          "description": "List of permissions associated with role. Permissions supported: Read, Write, Approve, "
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 0,
+        "type": "Enum",
+        "reference": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/RolePermission/versions/1.0.0",
+        "optional": false,
+        "value": "Read",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Architect",
+          "Team Architect. Architect have full access to objects in his area of responsibility. Architect can approve changes and access to objects under his control.",
+          "0",
+          "[\"Read\",\"Write\",\"Approve\"]"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Developer",
+          "Team Architect. Architect have full access to objects in his area of responsibility. Architect can approve changes and access to objects under his control.",
+          "1",
+          "[\"Read\",\"Write\"]"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Analyst",
+          "AAnalyst can review objects he have access to. Analyst can create issue or comment on exiting issues.",
+          "2",
+          "\"Read\""
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "Product",
+          "Analyst can review objects he have access to. Analyst can create issue or comment on exiting issues.",
+          "3",
+          "[\"Read\",\"Write\",\"Approve\"]"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "Business ",
+          "Team Business Manager. Business manager have access to object similar to developer, as he can contribute to design and metadata generation..",
+          "4",
+          "[\"Read\",\"Write\"]"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "Operations",
+          "Team Operation support. Operator can review objects and create/modify issues. Operator have permissions similar to Analyst.",
+          "5",
+          "[\"Read\"]"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

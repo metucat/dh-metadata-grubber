@@ -1,0 +1,296 @@
+{
+  "identity": {
+    "id": "80c6fb92-2b9c-4075-9fbe-e3b1ba8f15a9",
+    "name": "Entity",
+    "description": "Updatable entity. Entity can be accessed by API and referenced."
+  },
+  "version": {
+    "major": 1,
+    "minor": 3,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-1,"top":884,"width":0,"height":0}},"style":{"border":{"left":{"color":"#6CD2DC"}}}}],
+    "history": {
+      "created": "2018-08-28T19:51:02.547",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-07T06:59:06.063",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-20T07:00:04.53",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-08-28T19:54:58.13",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Binding/issues/3247/messages/5"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-07T06:59:06.09",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Binding/issues/3247/messages/5"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 3,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "ff382748-2b71-418b-b3d6-7330d30ec4bd",
+          "name": "parent",
+          "description": "Reference to id of folder for current entity. It include URI of parent entity in name."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity",
+        "subscription": "",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e0eaaf68-ac87-4d15-841a-52084a0562ad",
+          "name": "type",
+          "description": "Type of the entity."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/EntityType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "21e5bf85-9d1f-47c3-a26f-4dbd8e07ecdd",
+          "name": "state",
+          "description": "State of the entity"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/EntityState/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "DRAFT",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ab16506a-3f62-42e1-add8-f94ed3cdbf88",
+          "name": "resource",
+          "description": "Resource structure to define HL7 resource. "
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/DomainResource/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Include"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "c5796d88-5904-4c30-a4e2-251dfb319162",
+          "name": "identifier ",
+          "description": "Identifiers for this entity. A human identifier for this person."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Identifier/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Include"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "930bae3e-11e8-4af6-81db-17f7dee38ad6",
+          "name": "active",
+          "description": "This entity record is in active use"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Boolean",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Include"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "2401c8c4-82bd-4a44-8b4f-98ba25256bc4",
+          "name": "managingOrganization",
+          "description": "The organization that is the custodian of the entity"
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Include"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "77d61bff-17ef-4647-8bdc-fa9cb3ec1fc1",
+          "name": "source",
+          "description": "Source system originated the entity. If not specified entity instantiated by core system."
+        },
+        "order": 8,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/BindingType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a0803372-811f-46e9-aa6f-fd75129ab1a4",
+          "name": "bindings",
+          "description": "Reference to entity system bind to."
+        },
+        "order": 9,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Binding/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cb631e26-c27f-472d-bbaf-58f0da3ed1fc",
+          "name": "tags",
+          "description": "List of tags for entity association."
+        },
+        "order": 10,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.3.0",
+        "subscription": "",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3bb8f8f3-d1db-4fad-8739-15dba3f0abd0",
+          "name": "properties",
+          "description": "Advince properties of the entity. It is name value pairs for additional user defined properties of the entity."
+        },
+        "order": 11,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Property/versions/1.0.1",
+        "subscription": "",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "46534ddb-489b-4ae6-8fd8-d49e83f385ff",
+          "name": "history",
+          "description": "History of the entity instance."
+        },
+        "order": 12,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/History/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

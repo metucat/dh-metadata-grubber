@@ -1,0 +1,164 @@
+{
+  "identity": {
+    "id": "c18320c0-10e7-4216-9e42-53e442dfe9e1",
+    "name": "ElementEditor",
+    "description": "Control for specifying data of elements. Element specify field it allows to edit and provide tip for editing this field data."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "5c91076c-506f-4d7d-b163-ae5b512e3a74",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Control"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Control",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2020-09-17T06:32:17.477",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2020-09-17T06:35:53.233",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2020-09-17T06:35:08.543",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/issues/5329/messages/1"
+        },
+        {
+          "status": "Approved",
+          "completed": "2020-09-17T06:35:52.827",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/issues/5329/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    },
+    "alias": ""
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "bd63934b-3cc9-4701-bb14-28495f58d8eb",
+          "name": "dataList",
+          "description": "Path to array, which prefix field path."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "681d23a7-d353-437f-9a77-4a31b853bdb2",
+          "name": "dataField",
+          "description": "Path to field data from data list element."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2be5667f-b11a-43ff-a037-6db10bec07de",
+          "name": "dataOptions",
+          "description": "Name of state value to use for options. Options can be loaded by view dialog and used by elements needed options list. Specification directed to use value from state for option.."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a1990e34-e555-4275-803d-c48461d4c70e",
+          "name": "editFormat",
+          "description": "Format of editing element. It con override format implied from field data type of from field format specification."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4c725551-8d8b-481e-b2c6-be869c9d47d6",
+          "name": "editTip",
+          "description": "Tip for editing data of the field."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8fed64ab-74e4-4598-ac62-1b13305b8e0a",
+          "name": "baseField",
+          "description": "Name of field used for base data from base value. Base value is value from base layer and can be overridden but not changed. Base value used as tip  in edit mode when available."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

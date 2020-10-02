@@ -1,0 +1,93 @@
+{
+  "identity": {
+    "id": "5b6f9c71-4c39-47cc-8957-385b42a757ec",
+    "name": "test",
+    "description": "test view"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-08-28T20:21:20.663",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-08-28T20:21:20.587",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-08-28T06:04:56.647",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3237/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-08-28T06:05:12.703",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3237/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "909df1b5-2862-49e8-a88f-aab4339561f1",
+            "name": "ggggg",
+            "description": ""
+          },
+          "parent": {
+            "name": ""
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "gggggg",
+          "align": "",
+          "links": []
+        },
+        {
+          "identity": {
+            "id": "46964add-76c6-480c-9cb1-44bde545060c",
+            "name": "nnnnnn",
+            "description": ""
+          },
+          "parent": {
+            "name": ""
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "nnnnnn",
+          "align": "",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

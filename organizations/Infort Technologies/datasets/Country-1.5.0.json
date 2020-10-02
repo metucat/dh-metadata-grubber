@@ -1,0 +1,2622 @@
+{
+  "identity": {
+    "id": "86f4fdd8-932d-42e5-b49d-4dce9bac7bc3",
+    "name": "Country",
+    "description": "List of countries with codes. ISO 3166"
+  },
+  "version": {
+    "major": 1,
+    "minor": 5,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "1e79a1b9-e817-45bb-a37a-19f3666cae74",
+      "name": "/organizations/Apdax/systems/DifHub/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "type": "String",
+        "value": "811"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "type": "String",
+        "value": "890"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "2018-09-10T06:53:39.093",
+      "createdBy": "unknown",
+      "updated": "2018-09-10T06:55:03.603",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-07-30T18:33:09.197",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-09-10T06:54:42.007",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/User/issues/3308/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-10T06:55:03.667",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/User/issues/3308/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 5,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "4d31fadf-8992-4457-8638-f669cf954c09",
+          "name": "Country",
+          "description": "Name of Country."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6368e73b-d3fb-4b3a-b9e0-b46b8cd29439",
+          "name": "Code",
+          "description": "Phone code for country."
+        },
+        "order": 2,
+        "usage": "Code",
+        "count": 1,
+        "type": "Short",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9fbff49b-b79d-4a7d-88dc-a0e8c3b099d8",
+          "name": "Code2",
+          "description": "Two latter code of countries."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 2,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2ce08a90-fcfd-4625-9beb-a380e5445f9f",
+          "name": "Code3",
+          "description": "Three latter code of countries "
+        },
+        "order": 4,
+        "usage": "Value1",
+        "count": 1,
+        "type": "String",
+        "size": 3,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1e20e128-e5bf-4ca2-a601-00bf1111de4c",
+          "name": "TimeZone",
+          "description": "Country main time zone."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 0,
+        "values": [
+          "Afghanistan",
+          "93",
+          "AE",
+          "AFG",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 1,
+        "values": [
+          "Aland Islands",
+          "35818",
+          "AX",
+          "ALA",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Albania",
+          "355",
+          "AL",
+          "ALB",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Algeria",
+          "213",
+          "DZ",
+          "DZA",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "American Samoa",
+          "1684",
+          "AS",
+          "ASM",
+          "UTC+11"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "Andorra",
+          "376",
+          "AD",
+          "AND",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "Angola",
+          "244",
+          "AO",
+          "AGO",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "Anguilla",
+          "1264",
+          "AI",
+          "AIA",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "Antigua and Barbuda",
+          "1268",
+          "AG",
+          "ATG",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "Argentina",
+          "54",
+          "AR",
+          "ARG",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "Armenia",
+          "374",
+          "AM",
+          "ARM",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "Aruba",
+          "297",
+          "AW",
+          "ABW",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "Australia",
+          "61",
+          "AU",
+          "AUS",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "Austria",
+          "43",
+          "AT",
+          "AUT",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "Azerbaijan",
+          "994",
+          "AZ",
+          "AZE",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "Bahamas",
+          "1242",
+          "BS",
+          "BHS",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "Bahrain",
+          "973",
+          "BH",
+          "BHR",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "Bangladesh",
+          "880",
+          "BD",
+          "BGD",
+          "UTC+06"
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "Barbados",
+          "1246",
+          "BB",
+          "BRB",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "Belarus",
+          "375",
+          "BY",
+          "BLR",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "Belgium",
+          "32",
+          "BE",
+          "BEL",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "Belize",
+          "501",
+          "BZ",
+          "BLZ",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "Benin",
+          "229",
+          "BJ",
+          "BEN",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "Bermuda",
+          "1441",
+          "BM",
+          "BMU",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "Bhutan",
+          "975",
+          "BT",
+          "BTN",
+          "UTC+06"
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "Bolivia, Plurinational State of",
+          "591",
+          "BO",
+          "BOL",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 26,
+        "values": [
+          "Bonaire, Sint Eustatius and Saba",
+          "5997",
+          "BQ",
+          "BES",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 27,
+        "values": [
+          "Bosnia and Herzegovina",
+          "387",
+          "BA",
+          "BIH",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 28,
+        "values": [
+          "Botswana",
+          "267",
+          "BW",
+          "BWA",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 29,
+        "values": [
+          "Brazil",
+          "55",
+          "BR",
+          "BRA",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 30,
+        "values": [
+          "British Indian Ocean Territory",
+          "246",
+          "IO",
+          "IOT",
+          "UTC+06"
+        ]
+      },
+      {
+        "index": 31,
+        "values": [
+          "Brunei Darussalam",
+          "673",
+          "BN",
+          "BRN",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 32,
+        "values": [
+          "Bulgaria",
+          "359",
+          "BG",
+          "BGR",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 33,
+        "values": [
+          "Burkina Faso",
+          "226",
+          "BF",
+          "BFA",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 34,
+        "values": [
+          "Burundi",
+          "257",
+          "BI",
+          "BDI",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 35,
+        "values": [
+          "Cabo Verde",
+          "238",
+          "CV",
+          "CPV",
+          "UTC-01"
+        ]
+      },
+      {
+        "index": 36,
+        "values": [
+          "Cambodia",
+          "855",
+          "KH",
+          "KHM",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 37,
+        "values": [
+          "Cameroon",
+          "237",
+          "CM",
+          "CMR",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 38,
+        "values": [
+          "Canada",
+          "1",
+          "CA",
+          "CAN",
+          "UTC-08"
+        ]
+      },
+      {
+        "index": 39,
+        "values": [
+          "Cayman Islands",
+          "1345",
+          "KY",
+          "CYM",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 40,
+        "values": [
+          "Central African Republic",
+          "236",
+          "CF",
+          "CAF",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 41,
+        "values": [
+          "Chad",
+          "235",
+          "TD",
+          "TCD",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 42,
+        "values": [
+          "Chile",
+          "56",
+          "CL",
+          "CHL",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 43,
+        "values": [
+          "China",
+          "86",
+          "CN",
+          "CHN",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 44,
+        "values": [
+          "Christmas Island",
+          "6189164",
+          "CX",
+          "CXR",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 45,
+        "values": [
+          "Cocos (Keeling) Islands",
+          "6189162",
+          "CC",
+          "CCK",
+          "UTC+06"
+        ]
+      },
+      {
+        "index": 46,
+        "values": [
+          "Colombia",
+          "57",
+          "CO",
+          "COL",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 47,
+        "values": [
+          "Comoros",
+          "269",
+          "KM",
+          "COM",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 48,
+        "values": [
+          "Congo",
+          "242",
+          "CG",
+          "COG",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 49,
+        "values": [
+          "Congo, the Democratic Republic of the",
+          "243",
+          "CD",
+          "COD",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 50,
+        "values": [
+          "Cook Islands",
+          "682",
+          "CK",
+          "COK",
+          "UTC-10"
+        ]
+      },
+      {
+        "index": 51,
+        "values": [
+          "Costa Rica",
+          "506",
+          "CR",
+          "CRI",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 52,
+        "values": [
+          "Cote d'Ivoire",
+          "225",
+          "CI",
+          "CIV",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 53,
+        "values": [
+          "Croatia",
+          "385",
+          "HR",
+          "HRV",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 54,
+        "values": [
+          "Cuba",
+          "53",
+          "CU",
+          "CUB",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 55,
+        "values": [
+          "Curacao",
+          "5999",
+          "CW",
+          "CUW",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 56,
+        "values": [
+          "Cyprus",
+          "357",
+          "CY",
+          "CYP",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 57,
+        "values": [
+          "Czechia",
+          "420",
+          "CZ",
+          "CZE",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 58,
+        "values": [
+          "Denmark",
+          "45",
+          "DK",
+          "DNK",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 59,
+        "values": [
+          "Djibouti",
+          "253",
+          "DJ",
+          "DJI",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 60,
+        "values": [
+          "Dominica",
+          "1767",
+          "DM",
+          "DMA",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 61,
+        "values": [
+          "Dominican Republic",
+          "1809",
+          "DO",
+          "DOM",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 62,
+        "values": [
+          "Ecuador",
+          "593",
+          "EC",
+          "ECU",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 63,
+        "values": [
+          "Egypt",
+          "20",
+          "EG",
+          "EGY",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 64,
+        "values": [
+          "El Salvador",
+          "503",
+          "SV",
+          "",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 65,
+        "values": [
+          "Equatorial Guinea",
+          "240",
+          "GQ",
+          "GNQ",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 66,
+        "values": [
+          "Eritrea",
+          "291",
+          "ER",
+          "ERI",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 67,
+        "values": [
+          "Estonia",
+          "372",
+          "EE",
+          "EST",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 68,
+        "values": [
+          "Ethiopia",
+          "251",
+          "ET",
+          "ETH",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 69,
+        "values": [
+          "Falkland Islands (Malvinas)",
+          "500",
+          "FK",
+          "FLK",
+          "UTC-03"
+        ]
+      },
+      {
+        "index": 70,
+        "values": [
+          "Faroe Islands",
+          "298",
+          "",
+          "FRO",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 71,
+        "values": [
+          "Fiji",
+          "679",
+          "FJ",
+          "FJI",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 72,
+        "values": [
+          "Finland",
+          "358",
+          "FI",
+          "FIN",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 73,
+        "values": [
+          "France",
+          "33",
+          "FR",
+          "FRA",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 74,
+        "values": [
+          "French Guiana",
+          "594",
+          "GF",
+          "GUF",
+          "UTC-03"
+        ]
+      },
+      {
+        "index": 75,
+        "values": [
+          "French Polynesia",
+          "689",
+          "PF",
+          "PYF",
+          "UTC-10"
+        ]
+      },
+      {
+        "index": 76,
+        "values": [
+          "French Southern Territories",
+          "689",
+          "TF",
+          "TYF",
+          "UTC-10"
+        ]
+      },
+      {
+        "index": 77,
+        "values": [
+          "Gabon",
+          "241",
+          "GA",
+          "GAB",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 78,
+        "values": [
+          "Gambia",
+          "220",
+          "GM",
+          "GMB",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 79,
+        "values": [
+          "Georgia",
+          "995",
+          "GE",
+          "GEO",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 80,
+        "values": [
+          "Germany",
+          "49",
+          "DE",
+          "DEU",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 81,
+        "values": [
+          "Ghana",
+          "233",
+          "GH",
+          "GHA",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 82,
+        "values": [
+          "Gibraltar",
+          "350",
+          "GI",
+          "GIB",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 83,
+        "values": [
+          "Greece",
+          "30",
+          "GR",
+          "GRC",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 84,
+        "values": [
+          "Greenland",
+          "299",
+          "GL",
+          "GRL",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 85,
+        "values": [
+          "Grenada",
+          "1473",
+          "GD",
+          "GRD",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 86,
+        "values": [
+          "Guadeloupe",
+          "590",
+          "GP",
+          "GLP",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 87,
+        "values": [
+          "Guam",
+          "1671",
+          "GU",
+          "GUM",
+          "UTC+10"
+        ]
+      },
+      {
+        "index": 88,
+        "values": [
+          "Guatemala",
+          "502",
+          "GT",
+          "GTM",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 89,
+        "values": [
+          "Guernsey",
+          "441481",
+          "GG",
+          "GGY",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 90,
+        "values": [
+          "Guinea",
+          "224",
+          "GN",
+          "GIN",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 91,
+        "values": [
+          "Guinea-Bissau",
+          "245",
+          "GW",
+          "GNB",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 92,
+        "values": [
+          "Guyana",
+          "592",
+          "GY",
+          "GUY",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 93,
+        "values": [
+          "Haiti",
+          "509",
+          "HT",
+          "HTI",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 94,
+        "values": [
+          "Heard Island and McDonald Islands",
+          "6723",
+          "HM",
+          "HMD",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 95,
+        "values": [
+          "Holy See",
+          "3906698",
+          "VA",
+          "VAT",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 96,
+        "values": [
+          "Honduras",
+          "504",
+          "HN",
+          "HND",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 97,
+        "values": [
+          "Hong Kong",
+          "852",
+          "HK",
+          "HKG",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 98,
+        "values": [
+          "Hungary",
+          "36",
+          "HU",
+          "HUN",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 99,
+        "values": [
+          "Iceland",
+          "354",
+          "IS",
+          "ISL",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 100,
+        "values": [
+          "India",
+          "91",
+          "IN",
+          "IND",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 101,
+        "values": [
+          "Indonesia",
+          "62",
+          "ID",
+          "IDN",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 102,
+        "values": [
+          "Iran, Islamic Republic of",
+          "98",
+          "IR",
+          "IRN",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 103,
+        "values": [
+          "Iraq",
+          "964",
+          "IQ",
+          "IRQ",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 104,
+        "values": [
+          "Ireland",
+          "353",
+          "IE",
+          "IRL",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 105,
+        "values": [
+          "Isle of Man",
+          "441624",
+          "IM",
+          "IMN",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 106,
+        "values": [
+          "Israel",
+          "972",
+          "IL",
+          "ISR",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 107,
+        "values": [
+          "Italy",
+          "39",
+          "IT",
+          "ITA",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 108,
+        "values": [
+          "Jamaica",
+          "1876",
+          "JM",
+          "JAM",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 109,
+        "values": [
+          "Japan",
+          "81",
+          "JP",
+          "JPN",
+          "UTC+09"
+        ]
+      },
+      {
+        "index": 110,
+        "values": [
+          "Jersey",
+          "441534",
+          "JE",
+          "JEY",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 111,
+        "values": [
+          "Jordan",
+          "962",
+          "JO",
+          "JOR",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 112,
+        "values": [
+          "Kazakhstan",
+          "76",
+          "KZ",
+          "KAZ",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 113,
+        "values": [
+          "Kenya",
+          "254",
+          "KE",
+          "KEN",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 114,
+        "values": [
+          "Kiribati",
+          "686",
+          "KI",
+          "KIR",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 115,
+        "values": [
+          "Korea, Democratic People's Republic of",
+          "850",
+          "KP",
+          "PRK",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 116,
+        "values": [
+          "Korea, Republic of",
+          "82",
+          "KR",
+          "KOR",
+          "UTC+09"
+        ]
+      },
+      {
+        "index": 117,
+        "values": [
+          "Kuwait",
+          "965",
+          "KW",
+          "KWT",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 118,
+        "values": [
+          "Kyrgyzstan",
+          "996",
+          "KG",
+          "KGZ",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 119,
+        "values": [
+          "Lao People's Democratic Republic",
+          "856",
+          "LA",
+          "LAO",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 120,
+        "values": [
+          "Latvia",
+          "371",
+          "LV",
+          "LVA",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 121,
+        "values": [
+          "Lebanon",
+          "961",
+          "LB",
+          "LBN",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 122,
+        "values": [
+          "Lesotho",
+          "266",
+          "LS",
+          "LSO",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 123,
+        "values": [
+          "Liberia",
+          "231",
+          "LR",
+          "LBR",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 124,
+        "values": [
+          "Libya",
+          "218",
+          "LY",
+          "LBY",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 125,
+        "values": [
+          "Liechtenstein",
+          "423",
+          "LI",
+          "LIE",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 126,
+        "values": [
+          "Lithuania",
+          "370",
+          "LT",
+          "LTU",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 127,
+        "values": [
+          "Luxembourg",
+          "352",
+          "LU",
+          "LUX",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 128,
+        "values": [
+          "Macao",
+          "853",
+          "MO",
+          "MAC",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 129,
+        "values": [
+          "Macedonia, the former Yugoslav Republic of",
+          "389",
+          "MK",
+          "MKD",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 130,
+        "values": [
+          "Madagascar",
+          "261",
+          "MG",
+          "MDG",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 131,
+        "values": [
+          "Malawi",
+          "265",
+          "MW",
+          "MWI",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 132,
+        "values": [
+          "Malaysia",
+          "60",
+          "MY",
+          "MYS",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 133,
+        "values": [
+          "Maldives",
+          "960",
+          "MV",
+          "MDV",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 134,
+        "values": [
+          "Mali",
+          "223",
+          "ML",
+          "MLI",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 135,
+        "values": [
+          "Malta",
+          "356",
+          "MT",
+          "MLT",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 136,
+        "values": [
+          "Marshall Islands",
+          "692",
+          "MH",
+          "MHL",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 137,
+        "values": [
+          "Martinique",
+          "596",
+          "MQ",
+          "MTQ",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 138,
+        "values": [
+          "Mauritania",
+          "222",
+          "MR",
+          "MRT",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 139,
+        "values": [
+          "Mauritius",
+          "230",
+          "MU",
+          "MUS",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 140,
+        "values": [
+          "Mayotte",
+          "262269",
+          "YT",
+          "MYT",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 141,
+        "values": [
+          "Mexico",
+          "52",
+          "MX",
+          "MEX",
+          "UTC-08"
+        ]
+      },
+      {
+        "index": 142,
+        "values": [
+          "Micronesia, Federated States of",
+          "691",
+          "FM",
+          "FSM",
+          "UTC+10"
+        ]
+      },
+      {
+        "index": 143,
+        "values": [
+          "Moldova, Republic of",
+          "373",
+          "MD",
+          "MDA",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 144,
+        "values": [
+          "Monaco",
+          "377",
+          "MC",
+          "MCO",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 145,
+        "values": [
+          "Mongolia",
+          "976",
+          "MN",
+          "MNG",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 146,
+        "values": [
+          "Montenegro",
+          "382",
+          "ME",
+          "MNE",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 147,
+        "values": [
+          "Montserrat",
+          "1664",
+          "MS",
+          "MSR",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 148,
+        "values": [
+          "Morocco",
+          "212",
+          "MA",
+          "MAR",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 149,
+        "values": [
+          "Mozambique",
+          "258",
+          "MZ",
+          "MOZ",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 150,
+        "values": [
+          "Myanmar",
+          "95",
+          "MM",
+          "MMR",
+          "UTC+06"
+        ]
+      },
+      {
+        "index": 151,
+        "values": [
+          "Namibia",
+          "264",
+          "NA",
+          "NAM",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 152,
+        "values": [
+          "Nauru",
+          "674",
+          "NR",
+          "NRU",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 153,
+        "values": [
+          "Nepal",
+          "977",
+          "NP",
+          "NPL",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 154,
+        "values": [
+          "Netherlands",
+          "31",
+          "NL",
+          "NLD",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 155,
+        "values": [
+          "New Caledonia",
+          "687",
+          "NC",
+          "NCL",
+          "UTC+11"
+        ]
+      },
+      {
+        "index": 156,
+        "values": [
+          "New Zealand",
+          "64",
+          "NZ",
+          "NZL",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 157,
+        "values": [
+          "Nicaragua",
+          "505",
+          "NI",
+          "NIC",
+          "UTC-06"
+        ]
+      },
+      {
+        "index": 158,
+        "values": [
+          "Niger",
+          "227",
+          "NE",
+          "NER",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 159,
+        "values": [
+          "Nigeria",
+          "234",
+          "NG",
+          "NGA",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 160,
+        "values": [
+          "Niue",
+          "683",
+          "NU",
+          "NIU",
+          "UTC-11"
+        ]
+      },
+      {
+        "index": 161,
+        "values": [
+          "Norfolk Island",
+          "6723",
+          "NF",
+          "NFK",
+          "UTC+11"
+        ]
+      },
+      {
+        "index": 162,
+        "values": [
+          "Northern Mariana Islands",
+          "1670",
+          "MP",
+          "MNP",
+          "UTC+10"
+        ]
+      },
+      {
+        "index": 163,
+        "values": [
+          "Norway",
+          "47",
+          "NO",
+          "NOR",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 164,
+        "values": [
+          "Oman",
+          "968",
+          "OM",
+          "OMN",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 165,
+        "values": [
+          "Pakistan",
+          "92",
+          "PK",
+          "PAK",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 166,
+        "values": [
+          "Palau",
+          "680",
+          "PW",
+          "PLW",
+          "UTC+09"
+        ]
+      },
+      {
+        "index": 167,
+        "values": [
+          "Palestine, State of",
+          "970",
+          "PS",
+          "PSE",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 168,
+        "values": [
+          "Panama",
+          "507",
+          "PA",
+          "PAN",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 169,
+        "values": [
+          "Papua New Guinea",
+          "675",
+          "PG",
+          "PNG",
+          "UTC+10"
+        ]
+      },
+      {
+        "index": 170,
+        "values": [
+          "Paraguay",
+          "595",
+          "PY",
+          "PRY",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 171,
+        "values": [
+          "Peru",
+          "51",
+          "PE",
+          "PER",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 172,
+        "values": [
+          "Philippines",
+          "63",
+          "PH",
+          "PHL",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 173,
+        "values": [
+          "Pitcairn",
+          "64",
+          "PN",
+          "PCN",
+          "UTC-08"
+        ]
+      },
+      {
+        "index": 174,
+        "values": [
+          "Poland",
+          "48",
+          "PL",
+          "POL",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 175,
+        "values": [
+          "Portugal",
+          "351",
+          "PT",
+          "PRT",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 176,
+        "values": [
+          "Puerto Rico",
+          "1787",
+          "PR",
+          "PRI",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 177,
+        "values": [
+          "Qatar",
+          "974",
+          "QA",
+          "QAT",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 178,
+        "values": [
+          "Reunion",
+          "262",
+          "RE",
+          "REU",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 179,
+        "values": [
+          "Romania",
+          "40",
+          "RO",
+          "ROU",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 180,
+        "values": [
+          "Russian Federation",
+          "7",
+          "RU",
+          "RUS",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 181,
+        "values": [
+          "Rwanda",
+          "250",
+          "RW",
+          "RWA",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 182,
+        "values": [
+          "Saint Barthelemy",
+          "590",
+          "BL",
+          "BLM",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 183,
+        "values": [
+          "Saint Helena, Ascension and Tristan da Cunha",
+          "290",
+          "SH",
+          "SHN",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 184,
+        "values": [
+          "Saint Kitts and Nevis",
+          "1869",
+          "KN",
+          "KNA",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 185,
+        "values": [
+          "Saint Lucia",
+          "1758",
+          "LC",
+          "LCA",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 186,
+        "values": [
+          "Saint Martin (French part)",
+          "590",
+          "MF",
+          "MAF",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 187,
+        "values": [
+          "Saint Pierre and Miquelon",
+          "508",
+          "PM",
+          "SPM",
+          "UTC-03"
+        ]
+      },
+      {
+        "index": 188,
+        "values": [
+          "Saint Vincent and the Grenadines",
+          "1784",
+          "VC",
+          "VCT",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 189,
+        "values": [
+          "Samoa",
+          "685",
+          "WS",
+          "WSM",
+          "UTC+13"
+        ]
+      },
+      {
+        "index": 190,
+        "values": [
+          "San Marino",
+          "378",
+          "SM",
+          "SMR",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 191,
+        "values": [
+          "Sao Tome and Principe",
+          "239",
+          "ST",
+          "STP",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 192,
+        "values": [
+          "Saudi Arabia",
+          "966",
+          "SA",
+          "SAU",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 193,
+        "values": [
+          "Senegal",
+          "221",
+          "SN",
+          "SEN",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 194,
+        "values": [
+          "Serbia",
+          "381",
+          "RS",
+          "SRB",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 195,
+        "values": [
+          "Seychelles",
+          "248",
+          "SC",
+          "SYC",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 196,
+        "values": [
+          "Sierra Leone",
+          "232",
+          "SL",
+          "SLE",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 197,
+        "values": [
+          "Singapore",
+          "65",
+          "SG",
+          "SGP",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 198,
+        "values": [
+          "Sint Maarten (Dutch part)",
+          "1721",
+          "SX",
+          "SXM",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 199,
+        "values": [
+          "Slovakia",
+          "421",
+          "SK",
+          "SVK",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 200,
+        "values": [
+          "Slovenia",
+          "386",
+          "SI",
+          "SVN",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 201,
+        "values": [
+          "Solomon Islands",
+          "677",
+          "SB",
+          "SLB",
+          "UTC+11"
+        ]
+      },
+      {
+        "index": 202,
+        "values": [
+          "Somalia",
+          "252",
+          "SO",
+          "SOM",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 203,
+        "values": [
+          "South Africa",
+          "27",
+          "ZA",
+          "ZAF",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 204,
+        "values": [
+          "South Georgia and the South Sandwich Islands",
+          "500",
+          "GS",
+          "SGS",
+          "UTC-02"
+        ]
+      },
+      {
+        "index": 205,
+        "values": [
+          "South Sudan",
+          "211",
+          "SS",
+          "SSD",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 206,
+        "values": [
+          "Spain",
+          "34",
+          "ES",
+          "ESP",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 207,
+        "values": [
+          "Sri Lanka",
+          "94",
+          "LK",
+          "LKA",
+          "UTC+05:30"
+        ]
+      },
+      {
+        "index": 208,
+        "values": [
+          "Sudan",
+          "249",
+          "SD",
+          "SDN",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 209,
+        "values": [
+          "Suriname",
+          "597",
+          "SR",
+          "SUR",
+          "UTC-03"
+        ]
+      },
+      {
+        "index": 210,
+        "values": [
+          "Svalbard and Jan Mayen",
+          "4779",
+          "SJ",
+          "SJM",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 211,
+        "values": [
+          "Swaziland",
+          "268",
+          "SZ",
+          "SWZ",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 212,
+        "values": [
+          "Sweden",
+          "46",
+          "SE",
+          "SWE",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 213,
+        "values": [
+          "Switzerland",
+          "41",
+          "CH",
+          "CHE",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 214,
+        "values": [
+          "Syrian Arab Republic",
+          "963",
+          "SY",
+          "SYR",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 215,
+        "values": [
+          "Taiwan, Province of China",
+          "886",
+          "TW",
+          "TWN",
+          "UTC+08"
+        ]
+      },
+      {
+        "index": 216,
+        "values": [
+          "Tajikistan",
+          "992",
+          "TJ",
+          "TJK",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 217,
+        "values": [
+          "Tanzania, United Republic of",
+          "255",
+          "TZ",
+          "TZA",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 218,
+        "values": [
+          "Thailand",
+          "66",
+          "TH",
+          "THA",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 219,
+        "values": [
+          "Timor-Leste",
+          "670",
+          "TL",
+          "TLS",
+          "UTC+09"
+        ]
+      },
+      {
+        "index": 220,
+        "values": [
+          "Togo",
+          "228",
+          "TG",
+          "TGO",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 221,
+        "values": [
+          "Tokelau",
+          "690",
+          "TK",
+          "TKL",
+          "UTC+13"
+        ]
+      },
+      {
+        "index": 222,
+        "values": [
+          "Tonga",
+          "676",
+          "TO",
+          "TON",
+          "UTC+13"
+        ]
+      },
+      {
+        "index": 223,
+        "values": [
+          "Trinidad and Tobago",
+          "1868",
+          "TT",
+          "TTO",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 224,
+        "values": [
+          "Tunisia",
+          "216",
+          "TN",
+          "TUN",
+          "UTC+01"
+        ]
+      },
+      {
+        "index": 225,
+        "values": [
+          "Turkey",
+          "90",
+          "TR",
+          "TUR",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 226,
+        "values": [
+          "Turkmenistan",
+          "993",
+          "TM",
+          "TKM",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 227,
+        "values": [
+          "Turks and Caicos Islands",
+          "1649",
+          "TC",
+          "TCA",
+          "UTC-05"
+        ]
+      },
+      {
+        "index": 228,
+        "values": [
+          "Tuvalu",
+          "688",
+          "TV",
+          "TUV",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 229,
+        "values": [
+          "Uganda",
+          "256",
+          "UG",
+          "UGA",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 230,
+        "values": [
+          "Ukraine",
+          "380",
+          "UA",
+          "UKR",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 231,
+        "values": [
+          "United Arab Emirates",
+          "971",
+          "AE",
+          "ARE",
+          "UTC+04"
+        ]
+      },
+      {
+        "index": 232,
+        "values": [
+          "United Kingdom of Great Britain and Northern Ireland",
+          "44",
+          "GB",
+          "GBR",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 233,
+        "values": [
+          "United States of America",
+          "1",
+          "US",
+          "USA",
+          "UTC-10"
+        ]
+      },
+      {
+        "index": 234,
+        "values": [
+          "Uruguay",
+          "598",
+          "UY",
+          "URY",
+          "UTC-03"
+        ]
+      },
+      {
+        "index": 235,
+        "values": [
+          "Uzbekistan",
+          "998",
+          "UZ",
+          "UZB",
+          "UTC+05"
+        ]
+      },
+      {
+        "index": 236,
+        "values": [
+          "Vanuatu",
+          "678",
+          "VU",
+          "VUT",
+          "UTC+11"
+        ]
+      },
+      {
+        "index": 237,
+        "values": [
+          "Venezuela, Bolivarian Republic of",
+          "58",
+          "VE",
+          "VEN",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 238,
+        "values": [
+          "Viet Nam",
+          "84",
+          "VN",
+          "VNM",
+          "UTC+07"
+        ]
+      },
+      {
+        "index": 239,
+        "values": [
+          "Virgin Islands, British",
+          "1284",
+          "VG",
+          "VGB",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 240,
+        "values": [
+          "Virgin Islands, U.S.",
+          "1340",
+          "VI",
+          "VIR",
+          "UTC-04"
+        ]
+      },
+      {
+        "index": 241,
+        "values": [
+          "Wallis and Futuna",
+          "681",
+          "WF",
+          "WLF",
+          "UTC+12"
+        ]
+      },
+      {
+        "index": 242,
+        "values": [
+          "Western Sahara",
+          "212",
+          "EH",
+          "ESH",
+          "UTC+00"
+        ]
+      },
+      {
+        "index": 243,
+        "values": [
+          "Yemen",
+          "967",
+          "YE",
+          "YEM",
+          "UTC+03"
+        ]
+      },
+      {
+        "index": 244,
+        "values": [
+          "Zambia",
+          "260",
+          "ZM",
+          "ZMB",
+          "UTC+02"
+        ]
+      },
+      {
+        "index": 245,
+        "values": [
+          "Zimbabwe",
+          "263",
+          "ZW",
+          "ZWE",
+          "UTC+02"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

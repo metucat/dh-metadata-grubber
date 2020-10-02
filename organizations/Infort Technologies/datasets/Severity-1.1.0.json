@@ -1,0 +1,142 @@
+{
+  "identity": {
+    "id": "910dc7b4-b885-442a-8767-188e6884414b",
+    "name": "Severity",
+    "description": "Severity of the error. Enumerate classification of the error severity in execution path.  "
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "mirrored": "2017-10-30T06:43:07.853",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-31T07:32:26.587",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-31T07:36:19.43",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "8be14e56-4e86-4e46-abf0-bbb9d259f75a",
+          "name": "Severity",
+          "description": "Name of the error severity."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c93f151d-fdbb-49f7-8ef6-747138a1f842",
+          "name": "Description",
+          "description": "Description of the severity level."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b0f061b5-26ca-4800-b516-590048dcfdf4",
+          "name": "Code",
+          "description": "Code of the severity level."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 0,
+        "values": [
+          "Fatal",
+          "A severe error that causes your system to crash, resulting in the loss or corruption of unsaved data.",
+          "0"
+        ]
+      },
+      {
+        "index": 1,
+        "values": [
+          "Error",
+          "A severe error that might cause the loss or corruption of unsaved data. Immediate action must be taken to prevent losing data.",
+          "1"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Warning",
+          "Action must be taken at some stage to prevent a severe error from occurring in the future.",
+          "2"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Info",
+          "An informative message, usually describing server activity. No action is necessary.",
+          "3"
+        ]
+      }
+    ]
+  }
+}

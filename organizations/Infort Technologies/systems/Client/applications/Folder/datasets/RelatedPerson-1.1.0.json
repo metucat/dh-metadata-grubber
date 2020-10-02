@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "id": "3e746feb-4fce-4f81-961c-f9fc984649a6",
+    "name": "RelatedPerson",
+    "description": "RelatedPersons typically have a personal or non-healthcare-specific professional relationship to the patient. A RelatedPerson resource is primarily used for attribution of information, since RelatedPersons are often a source of information about the patient. For keeping information about people for contact purposes for a patient, use a Patient's Contact element. Some individuals may serve as both a Patient's Contact and a Related Person. \n\nA patient's wife or husband\nA patient's relatives or friends\nA neighbor bringing a patient to the hospital\nThe owner or trainer of a horse\nA patient's attorney or guardian\nA Guide Dog"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "28d9d178-9734-43a4-b3a4-852a5d990131",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Folder"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":668,"top":67,"width":0,"height":0}},"style":{"border":{"left":{"color":"#9BE620"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":16,"top":47,"width":268,"height":203.546875}},"style":{"border":{"left":{"color":"#9BE620"}}}}],
+    "history": {
+      "created": "2018-10-08T05:00:11.687",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T05:00:44.88",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-20T02:41:18.457",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T05:00:21.773",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/RelatedPerson/issues/3386/messages/13"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T05:00:44.643",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/RelatedPerson/issues/3386/messages/13"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "4886232c-8849-42ff-aa22-70f0666ff69f",
+          "name": "identity",
+          "description": "Person identity. Id is global (guid), Name is person email."
+        },
+        "order": 1,
+        "usage": "Identity",
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity",
+        "optional": false,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a94fcd01-2121-4367-839e-7d76a1d8718f",
+          "name": "relationship",
+          "description": "The nature of the relationship."
+        },
+        "order": 2,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/PatientRelationshipType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "8264ca5c-8963-4e7b-8959-caaf0e9ca13d",
+          "name": "profile",
+          "description": "Reference to person object with personal information of patient."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person/versions/1.2.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/Folder/subscriptions/User/versions/1.0.0",
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low",
+        "properties": [
+          {
+            "identity": {
+              "name": "FHIR"
+            },
+            "value": "Unfold"
+          }
+        ]
+      },
+      {
+        "identity": {
+          "id": "1a8ee40d-31b9-4b62-97ec-309bda05a271",
+          "name": "period",
+          "description": "Period of time that this relationship is considered valid"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Period/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/Folder/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "identity": {
+    "id": "f9eb7efe-8797-4fc1-b156-167a1813815c",
+    "name": "AccountType",
+    "description": "Type of the party account. Account can be to Provide support for services to other parties or to Service actual persons with services or products.. "
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":30,"top":230,"width":0,"height":0}},"style":{"border":{"left":{"color":"#FF9717"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-421,"top":247,"width":0,"height":0}},"style":{"border":{"left":{"color":"#FF9717"}}}}],
+    "history": {
+      "created": "2018-10-08T00:24:35.607",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.49",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:25:37.13",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": false,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "e84a063f-a510-40d1-b850-5af22982d8f9",
+          "name": "Display",
+          "description": "Name of the account type. "
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "480d2787-6634-4d00-bc36-47630130e7a3",
+          "name": "Definition",
+          "description": "Account type description"
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6bbf511d-75a6-4d03-9a7f-be16d02074e4",
+          "name": "Code",
+          "description": "Code for account type."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Service",
+          "Account used to provide services to persons presented on the Network.",
+          "SERVICE"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Support",
+          "Account used to provide support to other parties of the network.",
+          "SUPPORT"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "identity": {
+    "id": "197138d8-34d3-4fd5-be31-0da7f8e182f4",
+    "name": "Resource",
+    "description": "This specification defines a series of different types of resource that can be used to exchange and/or store data in order to solve a wide range of healthcare related problems, both clinical and administrative. In addition, this specification defines several different ways of exchanging the resources.\n\nA resource is an entity that:\n\nhas a known identity (a URL) by which it can be addressed\nidentifies itself as one of the types of resource defined in this specification\ncontains a set of structured data items as described by the definition of the resource type\nhas an identified version that changes if the contents of the resource change\n\nhttp://build.fhir.org//resource.html"
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-07T23:13:38.13",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.873",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-21T20:54:07.307",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:14:35.227",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "c3136281-9272-4468-95ea-4834e9ae4d29",
+          "name": "resourceType",
+          "description": "This is resource type specification. It is duplicate one in entity."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/EntityType/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "22caa702-0276-4105-9dce-5c0946f56f4e",
+          "name": "id",
+          "description": "Logical id of this artifact.\nEach resource has an \"id\" element which contains the logical identity of the resource assigned by the server responsible for storing it. Resources always have a known identity except for the special case when a new resource is being sent to a server to assign an identity (create interaction). The logical identity is unique within the space of all resources of the same type on the same server. Once assigned, the identity is never changed. Note that if the resource is copied to another server, the copy might not be able to retain the same logical identity.\n\nThe unique identifier of a resource instance is an absolute URI constructed from the server base address at which the instance is found, the resource type and the Logical ID, such as http://test.fhir.org/rest/Patient/123 (where 123 is the Logical Id). When the literal identity is an HTTP address, this address can generally be used to retrieve or manipulate the resource. Note that implementations SHOULD NOT assume that the identity of a resource is always resolvable to a literal server - it may be temporarily unavailable, or not available by policy (e.g. firewalls) or in some cases, it might not actually exist (e.g. use of resource outside a RESTful environment). Resources reference each other by their identity. These references are allowed to be absolute or relative (see Resource References for further discussion). Copying or moving resources from one server to another means that resources acquire a new identity. For further details, see Managing Resource Identity (including \"Consistent Resource Identification\").\n\nLogical ids (and therefore literal identities) are case sensitive. Logical Ids are always opaque, and external systems need not and should not attempt to determine their internal structure. A logical id SHALL always be represented in the same way in resource references and URLs. Ids can be up to 64 characters long, and contain any combination of upper and lowercase ASCII letters, numerals, \"-\" and \".\"."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "0e5b2215-c146-4f9d-aabd-7cf6ddc41dd3",
+          "name": "meta",
+          "description": "Metadata about the resource."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Meta/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a1e8e64e-bfc9-4089-88c5-9bb986a30005",
+          "name": "implicitRules",
+          "description": "A set of rules under which this content was created.\n\nA reference to a custom agreement that describes how the resource is being used (e.g. an implementation guide) that was followed when the resource was constructed, where the implemenation guide must be known and understood in order to safely processing the content.\n\nAsserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term, and should be avoided where possible. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally exchangeable sense.\n\nNote that resources are almost always constructed following some custom agreement. Best practice - which is recommended throughout the conformance resources - is that such agreements make all knowledge about the content of the resource explicit in the content of the resource; if custom agreements follow this advice, and declare their extensions as required, then it is not necessary to understand the agreement in order to safely process the resource content. For this reason, use of implicitRules is rare."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "URI",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "54dae59e-d7e7-497a-b4c4-81d83368f018",
+          "name": "language",
+          "description": "Language of the resource content."
+        },
+        "order": 5,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/datasets/Locale/versions/1.1.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

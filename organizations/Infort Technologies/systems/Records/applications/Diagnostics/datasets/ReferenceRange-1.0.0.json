@@ -1,0 +1,192 @@
+{
+  "identity": {
+    "id": "3c3197bf-b1ba-44b1-8601-0bdb73c48781",
+    "name": "ReferenceRange",
+    "description": "Observation result reference range of measured values. "
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "20da2839-16e2-4b1c-b60b-4db663491ec6",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-19T22:48:17.53",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T07:28:15.42",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T07:27:54.67",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ReferenceRange/issues/3375/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T07:28:15.253",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ReferenceRange/issues/3375/messages/14"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "eab3047f-4939-4795-94bd-5a64f5416e8e",
+          "name": "inherit:id",
+          "description": "Properties will be inherited from BackbondElement structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/BackboneElement/versions/1.1.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9f5d280e-5344-4c22-b993-ad8091a33186",
+          "name": "low",
+          "description": "Low Range, if relevant"
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Quantity/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "9f263e31-84d8-4fec-a909-3b3d6a213901",
+          "name": "high",
+          "description": "High Range, if relevant"
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Quantity/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "deb42a4d-ce4c-4258-a73c-19f1780bad8d",
+          "name": "type",
+          "description": "Reference range qualifier"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ObservationReferenceRangeMeaningCodes/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "810f8e81-1c61-4dbe-bc73-75f24056e642",
+          "name": "appliesTo ",
+          "description": "Reference range population"
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 0,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/datasets/ObservationReferenceRangeAppliesToCodes/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "105f5376-1fc4-4aab-bb6b-511b463a7ffa",
+          "name": "age",
+          "description": "Applicable age range, if relevant"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Range/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Diagnostics/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cbfdb0ef-e2e6-4802-b198-6ea0a03ca0b9",
+          "name": "text",
+          "description": "Text based reference range in an observation"
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

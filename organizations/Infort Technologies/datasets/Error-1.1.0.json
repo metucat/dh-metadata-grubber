@@ -1,0 +1,210 @@
+{
+  "identity": {
+    "id": "a39a3274-75b3-46cc-980a-3e25a940e2bc",
+    "name": "Error",
+    "description": "Entity encapsulating the details of an error. This allows the recipient to know details about the error and what may have caused the error.\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Resource",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-31T07:25:29.217",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-31T07:36:19.43",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "19556e78-424c-4dc9-b065-76b594fa887f",
+          "name": "Code",
+          "description": "Error code. "
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "reference": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/",
+        "size": 16,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "34537d9d-d48d-46fa-b2bc-f0fa7c0ab0c4",
+          "name": "Severity",
+          "description": "Severity specified how severe error in current execution path. "
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Apdax/datasets/Severity/versions/1.0.0",
+        "subscription": "",
+        "size": 0,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1f202115-9d8a-40a3-a1a8-1198f1a63a07",
+          "name": "Text",
+          "description": "Error text. When error return text will be formate, based on text string, properties and language."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "reference": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/",
+        "size": 0,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "5ad41cc9-6c32-4494-ba43-9e12432693e0",
+          "name": "Desciption",
+          "description": "Error description contains detailed information about error. "
+        },
+        "order": 4,
+        "usage": "Description",
+        "count": 1,
+        "type": "String",
+        "reference": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/",
+        "size": 0,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "fc519b74-bdd4-4112-a6fc-9722962f1888",
+          "name": "Properties",
+          "description": "Properties allow to parametrize error name. Name can use @number or @name specification to reference different parameters from parameter list by ordinal number or by parameter name."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Apdax/datasets/Property/versions/1.0.1",
+        "subscription": "",
+        "size": 0,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c22667a3-3266-4c5e-81bf-c24b54b61c0b",
+          "name": "Entity",
+          "description": "URI to object or entity error associated with."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "reference": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/",
+        "size": 0,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "006eb157-054d-4c01-839f-8137001fad05",
+          "name": "Field",
+          "description": "Name of the field error associated with."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "reference": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/",
+        "size": 0,
+        "precision": 16,
+        "scale": 4,
+        "optional": true,
+        "aggregate": "sum",
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": []
+  }
+}

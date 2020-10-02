@@ -1,0 +1,181 @@
+{
+  "identity": {
+    "id": "1047aa2a-95ba-44a3-8ceb-1b4af934be89",
+    "name": "GroupEditor",
+    "description": "Control for specifying data of group of fields in element. Group used multiple fields to assemble element."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "5c91076c-506f-4d7d-b163-ae5b512e3a74",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Control"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Control",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2020-09-16T03:37:50.2",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2020-09-16T03:55:07.863",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2020-09-16T03:54:53.93",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/issues/5321/messages/1"
+        },
+        {
+          "status": "Approved",
+          "completed": "2020-09-16T03:55:07.63",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/issues/5321/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    },
+    "alias": ""
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "79154472-6d11-4d40-870c-7307b9cc7e17",
+          "name": "typeField",
+          "description": "Field contained group type. Type used as prefix for name or caption. "
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "5f088760-e254-4bcd-b5ce-7cfe86a1b08c",
+          "name": "nameField",
+          "description": "Field contained group name or caption.. "
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "a3b72d9d-4396-4e06-8eff-f82387efbfbb",
+          "name": "dataField",
+          "description": "Field contained group data. "
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "74b3f6ad-ed14-4efa-aa6d-824a80062c13",
+          "name": "rankField",
+          "description": "Field present rank of the group. Rank 1 present most preferred data."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "1b0d64a5-48b1-462e-8e53-1f2df5307728",
+          "name": "rankOptions",
+          "description": "Reference to options loaded for rank, when rank need to be represented as options."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cd7501f9-e06e-434c-a652-ff34d75f54ba",
+          "name": "editFormat",
+          "description": "Format of editing data for field. It con override format implied from field data type of from field format specification."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 255,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "6e9eb9e5-e32b-4033-843f-275463e11053",
+          "name": "editTip",
+          "description": "Tip for editing data of the field."
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

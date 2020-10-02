@@ -1,0 +1,151 @@
+{
+  "identity": {
+    "id": "d0fd3d87-b71a-47f6-a6bc-00ff0c2779f3",
+    "name": "IdentifierUse",
+    "description": "Identifier use enumerator. All codes from system http://hl7.org/fhir/identifier-use."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-07T23:01:39.483",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.623",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-14T21:01:23.613",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:01:49.213",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "afd060b6-0d9b-4ad1-b37f-9f742e4f7627",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "608082f2-4db3-4b5c-8430-93b5eb76bcdd",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e241c72e-547d-4f53-b300-4a2cb2d8da23",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "usual",
+          "Usual",
+          "The identifier recommended for display and use in real-world interactions."
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "official",
+          "Official",
+          "The identifier considered to be most trusted for the identification of this item."
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "temp",
+          "Temp",
+          "A temporary identifier."
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "secondary",
+          "Secondary",
+          " An identifier that was assigned in secondary use - it serves to identify the object in a relative context, but cannot be consistently assigned to the same object again in a different context."
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "old",
+          "Old",
+          "The identifier id no longer considered valid, but may be relevant for search purposes. E.g. Changes to identifier schemes, account merges, etc.\n "
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

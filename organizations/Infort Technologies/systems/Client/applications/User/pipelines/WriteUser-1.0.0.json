@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "id": "947e2544-3516-46fe-bd56-d2f289ee52de",
+    "name": "WriteUser",
+    "description": "Pipeline to write user data from User resource to user pipeline."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "Pipeline",
+    "usage": "Data Flow",
+    "access": "External",
+    "properties": [],
+    "history": {
+      "created": "2019-01-13T07:34:04.51",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-02-21T06:39:20.353",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-02-21T06:32:17.5",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3582/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-02-21T06:39:20.243",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/3582/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "activities": [
+    {
+      "identity": {
+        "name": "ResourceToTable",
+        "description": "Transfer data from user resource to user table. No transformation required."
+      },
+      "order": 1,
+      "inputs": [
+        {
+          "identity": {
+            "name": "Resource",
+            "description": "This is user resource containing information recived by service."
+          },
+          "inputMode": "Dataset",
+          "component": {
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Extension/versions/1.2.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/System/versions/1.0.0",
+            "components": [
+              "id"
+            ]
+          },
+          "filter": "A>10",
+          "start": "$T - 10",
+          "end": "$T - 1"
+        }
+      ],
+      "outputs": [
+        {
+          "identity": {
+            "name": "Table",
+            "description": "Destination table to write data revived by service."
+          },
+          "outputMode": "Dataset",
+          "component": {
+            "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Table:User/versions/1.2.0",
+            "subscription": "",
+            "components": [
+              "UserId",
+              "UserName",
+              "UserDescription",
+              "UserProfile"
+            ]
+          },
+          "map": [
+            {
+              "output": "Table:User.UserId",
+              "inputs": [
+                "User.identity.Id"
+              ],
+              "formula": ""
+            },
+            {
+              "output": "Table:User.UserName",
+              "inputs": [
+                "User.identity.Name"
+              ],
+              "formula": ""
+            },
+            {
+              "output": "Table:User.UserDescription",
+              "inputs": [
+                "User.identity.Description"
+              ],
+              "formula": ""
+            },
+            {
+              "output": "Table:User.UserProfile",
+              "inputs": [
+                "User.profile.identity.Id"
+              ],
+              "formula": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

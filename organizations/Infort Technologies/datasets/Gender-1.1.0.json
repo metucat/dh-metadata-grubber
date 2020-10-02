@@ -1,0 +1,183 @@
+{
+  "identity": {
+    "id": "398c1aae-5418-4031-80ac-788e18b500ed",
+    "name": "Gender",
+    "description": "ISO/IEC 5218 Information technology. Codes for the representation of human sexes is an international standard that defines a representation of human sexes through a language-neutral single-digit code. It can be used in information systems such as database applications."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "1e79a1b9-e817-45bb-a37a-19f3666cae74",
+      "name": "/organizations/Apdax/systems/DifHub/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-03T09:16:07.27",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-09-03T09:26:57.667",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-05-23T07:36:29.547",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-09-03T09:26:41.627",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/User/issues/3274/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-09-03T09:26:57.707",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/User/issues/3274/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "867edb73-ee3e-42e7-90f6-4ec7e459fd83",
+          "name": "Gender",
+          "description": "Name of the gender."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2c48e350-c6b4-4ba0-8061-2ac0e56ac603",
+          "name": "Description",
+          "description": "Description for gender specification."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ce934ec8-9e00-45bb-95f3-b15b3c6e6f03",
+          "name": "Gender Id",
+          "description": "Id for gender representation. "
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cdd805ce-dc69-4ff6-b788-514c1895b341",
+          "name": "Gender Code",
+          "description": "Code for gender representation. The standard explicitly states that no significance is to be placed on the encoding of male as 1 and female as 2; the encoding merely reflects existing practice in the countries that initiated this standard"
+        },
+        "order": 4,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2d2eabff-4251-4155-93e9-9d47d6c48df5",
+          "name": "Translation",
+          "description": "Translation for enum values to different languages."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Apdax/datasets/Translation/versions/1.3.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Not known",
+          "Gender specification not known.",
+          "NOT_KNOWN",
+          "0",
+          "[{\"Locale\":\"Russian\",\"Name\":\"Не известен\",\"Description\":\"Пол не известен.\"}]"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Male",
+          "Gander specified as male.",
+          "MALE",
+          "1",
+          "[{\"Locale\":\"Russian\",\"Name\":\"Мужской.\",\"Description\":\"Пол мужской.\"}]"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Female",
+          "Gender specified as female.",
+          "FEMALE",
+          "2",
+          "[{\"Locale\":\"Russian\",\"Name\":\"Женский\",\"Description\":\"Пол женский.\"}]"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "Not applicable ",
+          "Gender specification not applicable.",
+          "NOT_APPLICABLE",
+          "9",
+          "[{\"Locale\":\"Russian\",\"Name\":\"Не определен\",\"Description\":\"Пол не определен.\"}]"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

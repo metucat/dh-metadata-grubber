@@ -1,0 +1,191 @@
+{
+  "identity": {
+    "id": "05daba75-9620-4b7f-9ce6-f492e68a72aa",
+    "name": "Platform",
+    "description": "Enumerator of platforms supported by organization."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [
+      {
+        "identity": {
+          "name": "x"
+        },
+        "value": "14"
+      },
+      {
+        "identity": {
+          "name": "y"
+        },
+        "value": "619"
+      }
+    ],
+    "elements": [],
+    "history": {
+      "created": "9999-12-30T00:00:00",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "mirrored": "2017-10-17T06:40:50.247",
+      "completion": [
+        {
+          "status": "Finalized",
+          "completed": "2017-10-31T07:30:34.72",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        },
+        {
+          "status": "Approved",
+          "completed": "2017-10-31T07:36:19.43",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/datasets/Version/issues/2323/messages/14"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "3207f2d4-0dbf-46d7-9244-8e9ac75ac608",
+          "name": "Platform",
+          "description": "Name of the platform."
+        },
+        "order": 1,
+        "usage": "Name",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "3d09001d-fda3-4687-a04d-ab0e181e3f14",
+          "name": "Description",
+          "description": "Description of the platform."
+        },
+        "order": 2,
+        "usage": "Description",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "02cebc8d-89a9-4bed-a492-0c00389aebb2",
+          "name": "Id",
+          "description": "Identifficator used as prefix for platform types. Empty Id means platform use same common types and not requeres types map."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "optional": true,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cf8b20d2-4760-4c3a-888d-a84a3836b32a",
+          "name": "Location",
+          "description": "Reference to structure used for platform location specification. Structure must have usage Location."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "69f0a1e5-eec1-474b-b09c-d4a6fcc11144",
+          "name": "Instance",
+          "description": "Reference to structure used for platform instance specification. Structure must have usage Instance."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "aggregate": "sum",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Git",
+          "Git as storage for JSON data specifications.",
+          "",
+          "Location:Git",
+          "Instance:Git"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "SQLServer ",
+          "SQL Server storage system.",
+          "SQL",
+          "Location:SQLServer",
+          "Instance:SQLServer"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "MySQL",
+          "MySQL storage system.",
+          "MySQL",
+          "Location:MySQL",
+          "Instance:MySQL"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "RESTfull-API",
+          "RESTfull API implementation based on OpenAPI specification: Swagger 2.0.",
+          "REST",
+          "Location:REST",
+          "Instance:REST"
+        ]
+      }
+    ]
+  }
+}

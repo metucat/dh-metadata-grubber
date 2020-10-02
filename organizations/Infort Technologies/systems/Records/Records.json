@@ -1,0 +1,24 @@
+{
+  "identity": {
+    "id": "10e1c7ba-234a-420d-95ed-e6bfa64aa4dd",
+    "name": "Records",
+    "description": "Medical records system suport all operation with party medical records."
+  },
+  "object": {
+    "parent": {
+      "id": "96c4b66c-ec16-4c0c-a1f2-7d2e5ca6ab68",
+      "name": "/organizations/Infort Technologies"
+    },
+    "tags": [],
+    "documents": [],
+    "type": "System",
+    "properties": [],
+    "history": {
+      "created": "2018-06-23T03:36:28.857",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-06-23T03:36:28.857",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": []
+    }
+  }
+}

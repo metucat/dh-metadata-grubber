@@ -1,0 +1,132 @@
+{
+  "identity": {
+    "id": "a53a5604-e9bc-433c-8134-8a9874dd4868",
+    "name": "Region",
+    "description": "This is list of regions used by Network to operate."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-413,"top":992,"width":0,"height":0}},"style":{"border":{"left":{"color":"#565CCD"}}}}],
+    "history": {
+      "created": "2018-10-08T00:33:03.81",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.583",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:34:00.24",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "4dd5f026-6583-4977-a170-c0b8d0d22cbe",
+          "name": "Display",
+          "description": "Name of the rigion"
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c04ca54b-cc48-42b6-ac97-cd42899d5a81",
+          "name": "Drfinition",
+          "description": "Description for the region"
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 0,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "75ed0a5c-79ef-4ebb-850a-ef84a8702b0e",
+          "name": "Code",
+          "description": "Region numeric code"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 0,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "US-WEST-2",
+          "Western region of USA",
+          "US-WEST-2"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "US-EAST-2",
+          "Eastern region of USA",
+          "US-EAST-2"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

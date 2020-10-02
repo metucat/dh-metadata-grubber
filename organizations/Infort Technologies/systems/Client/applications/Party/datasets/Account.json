@@ -1,0 +1,159 @@
+{
+  "identity": {
+    "id": "bb405879-0f34-4e8c-857e-b0045c7fa58c",
+    "name": "Account",
+    "description": "Account entity for party. Party can have multiple accounts. Account must be associated with LegalEntity under which account will operate. Account maintain financial activities executed by party and support invoicing and billing for party."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Resource",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":160,"top":364,"width":0,"height":0}},"style":{"border":{"left":{"color":"#BE569F"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":389,"top":296,"width":333,"height":197}},"style":{"border":{"left":{"color":"#BE569F"}}}}],
+    "history": {
+      "created": "2018-10-08T00:23:19.877",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.473",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:23:51.377",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "2884580c-d58a-4f5c-8fb3-f609d35f1c97",
+          "name": "identity",
+          "description": "Identity for the account. Identity include globally unique Id, Name used for URI of account inside party."
+        },
+        "order": 1,
+        "usage": "Identity",
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity",
+        "optional": false,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "823db169-8651-4fd6-a295-f5c989375c02",
+          "name": "entity",
+          "description": "Account is a resource entity and have API access. Parent for account reference to Client."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Entity/versions/1.1.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/Party/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2e801acc-b9e8-4242-b748-54f27187af55",
+          "name": "type",
+          "description": "Type of account. It is reference to account type enumerator."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/AccountType/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "value": "SERVICE",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ce89a0fb-cfc5-434a-88e6-8ba2c8d58baa",
+          "name": "legalEntity",
+          "description": "Reference to legal entity used for account."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Reference",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/LegalEntity/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ab33df7c-1938-480b-9c9e-999ef30f484b",
+          "name": "country",
+          "description": "Country of the account if different from legal entity"
+        },
+        "order": 5,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/datasets/Country/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4e6c84e8-24e7-4ea5-9d97-2995488a346d",
+          "name": "accountNumber",
+          "description": "Human friendly account number to use on invoices. "
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

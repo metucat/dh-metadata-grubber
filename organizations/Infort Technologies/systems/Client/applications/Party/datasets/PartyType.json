@@ -1,0 +1,135 @@
+{
+  "identity": {
+    "id": "6253c980-c4ca-4154-9be6-68897ca587df",
+    "name": "PartyType",
+    "description": "Type of party participated in the Network. Party can be Person, Medical Clinic or Service Provider."
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":-566,"top":293,"width":0,"height":0}},"style":{"border":{"left":{"color":"#007DC5"}}}},{"identity":{"name":"Martin"},"links":[],"frame":{"position":{"left":2,"top":100,"width":0,"height":0}},"style":{"border":{"left":{"color":"#007DC5"}}}}],
+    "history": {
+      "created": "2018-10-08T00:31:25.15",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.553",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:32:14.96",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": false,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "b06451ce-34c9-4828-ae27-0fbcce0c1d56",
+          "name": "Display",
+          "description": "Name of the party type."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "fbfd656d-a503-4084-a277-d3b6b2724c63",
+          "name": "Definition",
+          "description": "Description for party type."
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "96d64ae8-f97c-4236-94f3-df39bbe51384",
+          "name": "Code",
+          "description": "Code for the party type."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "value": "1",
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "Person",
+          "Party is an individual maintaining his representation in the Network.",
+          "PERSON"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "Clinic",
+          "Medical organization presented as party on the Network.",
+          "CLINIC"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "Provider",
+          "Service provider for other parties on the Network. Provider can supply materials, support financial activities, manage equipment and so on.",
+          "PROVIDER"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

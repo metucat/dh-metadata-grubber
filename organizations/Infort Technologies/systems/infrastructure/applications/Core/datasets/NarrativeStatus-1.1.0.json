@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "id": "d3a84ecc-1288-493e-9f0e-39a520cd1f9f",
+    "name": "NarrativeStatus",
+    "description": "Narrative status enumerator. Include all codes defined in http://hl7.org/fhir/narrative-status"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-07T23:08:11.44",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.717",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-14T21:01:23.613",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T23:08:23.03",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "2678cc69-09c2-4c1c-9dc7-22e677bce861",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2e5efe62-ef23-4106-9831-306482a82a37",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "de1c5f92-27b0-4ef1-88ca-d3e1243be9f7",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "generated",
+          "Generated",
+          "The contents of the narrative are entirely generated from the structured data in the content."
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "extensions",
+          "Extensions",
+          "The contents of the narrative are entirely generated from the structured data in the content and some of the content is generated from extensions."
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "additional ",
+          "Additional",
+          "The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection."
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          " empty",
+          "Empty",
+          "The contents of the narrative are some equivalent of \"No human-readable text provided in this case\"\n "
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

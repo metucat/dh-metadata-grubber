@@ -1,0 +1,115 @@
+{
+  "identity": {
+    "id": "b99ac8c9-e38f-4f6f-a394-503610980952",
+    "name": "Extension",
+    "description": "This exchange specification is based on generally agreed common requirements across healthcare - covering many jurisdictions, domains, and different functional approaches. It is common for specific implementations to have valid requirements that are not part of these agreed common requirements. Incorporating all valid requirements would make this specification very cumbersome and difficult to implement. Instead, this specification expects that additional valid requirements will be implemented as extensions.\n\nAs such, extensibility is a fundamental part of the design of this specification. Every element in a resource can have extension child elements to represent additional information that is not part of the basic definition of the resource. Applications should not reject resources merely because they contain extensions, though they may need to reject resources because of the specific contents of the extensions.\n\nNote that, unlike in many other specifications, there can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions. The use of extensions is what allows the FHIR specification to retain a core simplicity for everyone.\n\nTo make the use of extensions safe and manageable, there is strict governance applied to the definition and use of extensions. Although any implementer can define and use extensions, there is a set of requirements that must be met as part of their use and definition.\n\nhttp://build.fhir.org//extensibility.html#Extension"
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "2749d840-c9dd-4f15-879f-0602337be3c0",
+      "name": "/organizations/Infort Technologies/systems/infrastructure/applications/Core"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-07T22:58:03.843",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-07T23:17:32.56",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-21T20:54:07.307",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-07T22:58:14.037",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-07T23:17:32.277",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Table:Resource/issues/3384/messages/39"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "52537036-82cb-4108-a33c-18a57d492d08",
+          "name": "id",
+          "description": "xml:id (or equivalent in JSON)"
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Guid",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b713760f-c996-437d-8e8b-8bf1047210e2",
+          "name": "url",
+          "description": "identifies the meaning of the extension."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "optional": false,
+        "value": "",
+        "format": "URI",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "4f614c54-499e-4894-b438-120fc8d296c5",
+          "name": "value",
+          "description": "Value of extension."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

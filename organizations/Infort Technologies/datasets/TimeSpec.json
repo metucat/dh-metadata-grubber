@@ -1,0 +1,176 @@
+{
+  "identity": {
+    "id": "3ab1be64-fe2c-4a4d-8eb8-ff52b005d1ca",
+    "name": "TimeSpec",
+    "description": "Time specification defines reacquiring point in time, when some operation can be executed. Time spec validated against date-time of some moment in time. If moment match specification operation can be executed. Validation happens per every component of specification. Factor applied to component before validation. \nFor example: \n1. Month-05 means we execute in first hour of first day of May.\n2. Hour 00 means we execute on first hour of every day.\n3.Minute 3 means we execute every third minutes of the hour\n4. Hour 01, Minute 01 - we execute every day in first hour and first minute.\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 2,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"MC"},"links":[],"frame":{"position":{"left":713,"top":61,"width":233,"height":234.33333206176758}},"style":{"border":{"left":{"color":"#8F70CB"}}}},{"identity":{"name":"default"},"links":[],"frame":{"position":{"left":1035,"top":743,"width":333,"height":232}},"style":{"border":{"left":{"color":"#9BE620"}}}}],
+    "history": {
+      "created": "2019-05-11T08:35:03.04",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2019-05-11T09:12:37.99",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2019-05-07T04:56:07.777",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2019-05-11T09:12:01.507",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/3770/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2019-05-11T09:12:37.867",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/3770/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 2,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "e060d82e-0560-495a-aec9-151e8d84458f",
+          "name": "Month",
+          "description": "Specification of month in which bill need to be produced."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Business Systems/datasets/Month/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "72aca77e-9a47-403b-be1f-2d2a12513943",
+          "name": "Week",
+          "description": "Specification for week."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Business Systems/datasets/Week/versions/1.1.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "575c63d6-e38a-4971-a3b1-1e85d5aa187e",
+          "name": "Day",
+          "description": "Specification for month day bill need to be produced."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Business Systems/datasets/MonthDay/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ee9f143d-0292-431d-9ffe-7a65e38a7755",
+          "name": "WeekDay",
+          "description": "Specification for week day on which bill need to be produced."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Business Systems/datasets/WeekDay/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "09f6c11c-a6cb-4e92-8250-35e0fbcf733d",
+          "name": "Hour",
+          "description": "Specification cat off time of day for bill production."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Business Systems/datasets/Hour/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "ba554c13-4643-4565-8bad-fd515f4ac525",
+          "name": "Minute",
+          "description": "Minute we use to execute. It is number from 0 to 50."
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Small",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "71c09d74-f9fe-4422-9352-e0f963e5cf7a",
+          "name": "Factors",
+          "description": "This is factors used to modify portion of current date for validation with spec.  "
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Apdax/datasets/TimeFactor/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

@@ -1,0 +1,1480 @@
+{
+  "identity": {
+    "id": "c42f3128-dbef-42f2-b7b7-33ec1a14ceab",
+    "name": "SNOMEDCTRouteCodes",
+    "description": "This value set includes all Route codes from SNOMED CT - provided as an exemplar.\nhttp://hl7.org/fhir/ValueSet/route-codes v3.6.0\n"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-05T05:34:52.47",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-05T05:36:51.037",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-10-04T07:00:02.013",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-05T05:36:30.07",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/issues/3380/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-05T05:36:50.967",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/issues/3380/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "bb31a305-11a9-49ea-b1f5-505087be4a43",
+          "name": "Code",
+          "description": "The code (used as the code in the resource instance). If the code is in italics, this indicates that the code is not selectable ('Abstract')\n"
+        },
+        "order": 1,
+        "usage": "Value",
+        "count": 1,
+        "type": "String",
+        "size": 16,
+        "optional": false,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d7a2ad04-70cb-4890-8b58-6d65482a8c2d",
+          "name": "Display",
+          "description": "The display (used in the display element of a Coding). If there is no display, implementers should not simply display the code, but map the concept into their application"
+        },
+        "order": 2,
+        "usage": "Name",
+        "type": "String",
+        "size": 16,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "77e7063c-fdbc-4eb9-bdbe-54eafef574e8",
+          "name": "Definition",
+          "description": "An explanation of the meaning of the concept"
+        },
+        "order": 3,
+        "usage": "Description",
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "174aef8f-29ba-4730-ba37-0bf724809746",
+          "name": "Translations",
+          "description": "Translations of records to other languages."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Translation/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "6064005",
+          "Topical route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "10547007",
+          "Auricular use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "12130007",
+          "Intra-articular route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "16857009",
+          "Vaginal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "26643006",
+          "Oral use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "34206005",
+          "SC use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "37161004",
+          "Rectal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "37737002",
+          "Intraluminal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "37839007",
+          "Sublingual use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "38239002",
+          "Intraperitoneal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "45890007",
+          "Transdermal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "46713006",
+          "Nasal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 13,
+        "values": [
+          "47625008",
+          "Intravenous use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 14,
+        "values": [
+          "54471007",
+          "Buccal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 15,
+        "values": [
+          "54485002",
+          "Ophthalmic use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 16,
+        "values": [
+          "58100008",
+          "Intra-arterial use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 17,
+        "values": [
+          "60213007",
+          "Intramedullary route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 18,
+        "values": [
+          "62226000",
+          "Intrauterine route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 19,
+        "values": [
+          "72607000",
+          "Intrathecal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 20,
+        "values": [
+          "78421000",
+          "Intramuscular use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 21,
+        "values": [
+          "90028008",
+          "Urethral use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 22,
+        "values": [
+          "127490009",
+          "Gastrostomy use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 23,
+        "values": [
+          "127491008",
+          "Jejunostomy use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 24,
+        "values": [
+          "127492001",
+          "Nasogastric use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 25,
+        "values": [
+          "372449004",
+          "Dental use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 26,
+        "values": [
+          "372450004",
+          "Endocervical use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 27,
+        "values": [
+          "372451000",
+          "Endosinusial use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 28,
+        "values": [
+          "372452007",
+          "Endotracheopulmonary use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 29,
+        "values": [
+          "372453002",
+          "Extra-amniotic use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 30,
+        "values": [
+          "372454008",
+          "Gastroenteral use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 31,
+        "values": [
+          "372457001",
+          "Gingival use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 32,
+        "values": [
+          "372458006",
+          "Intraamniotic use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 33,
+        "values": [
+          "372459003",
+          "Intrabursal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 34,
+        "values": [
+          "372460008",
+          "Intracardiac use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 35,
+        "values": [
+          "372461007",
+          "Intracavernous use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 36,
+        "values": [
+          "372463005",
+          "Intracoronary use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 37,
+        "values": [
+          "372464004",
+          "Intradermal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 38,
+        "values": [
+          "372465003",
+          "Intradiscal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 39,
+        "values": [
+          "372466002",
+          "Intralesional use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 40,
+        "values": [
+          "372467006",
+          "Intralymphatic use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 41,
+        "values": [
+          "372468001",
+          "Intraocular use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 42,
+        "values": [
+          "372469009",
+          "Intrapleural use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 43,
+        "values": [
+          "372470005",
+          "Intrasternal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 44,
+        "values": [
+          "372471009",
+          "Intravesical use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 45,
+        "values": [
+          "372473007",
+          "Oromucosal use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 46,
+        "values": [
+          "372474001",
+          "Periarticular use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 47,
+        "values": [
+          "372475000",
+          "Perineural use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 48,
+        "values": [
+          "372476004",
+          "Subconjunctival use",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 49,
+        "values": [
+          "404815008",
+          "Transmucosal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 50,
+        "values": [
+          "404818005",
+          "Intratracheal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 51,
+        "values": [
+          "404819002",
+          "Intrabiliary route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 52,
+        "values": [
+          "404820008",
+          "Epidural route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 53,
+        "values": [
+          "416174007",
+          "Suborbital route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 54,
+        "values": [
+          "417070009",
+          "Caudal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 55,
+        "values": [
+          "417255000",
+          "Intraosseous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 56,
+        "values": [
+          "417950001",
+          "Intrathoracic route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 57,
+        "values": [
+          "417985001",
+          "Enteral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 58,
+        "values": [
+          "417989007",
+          "Intraductal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 59,
+        "values": [
+          "418091004",
+          "Intratympanic route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 60,
+        "values": [
+          "418114005",
+          "Intravenous central route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 61,
+        "values": [
+          "418133000",
+          "Intramyometrial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 62,
+        "values": [
+          "418136008",
+          "Gastro-intestinal stoma route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 63,
+        "values": [
+          "418162004",
+          "Colostomy route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 64,
+        "values": [
+          "418204005",
+          "Periurethral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 65,
+        "values": [
+          "418287000",
+          "Intracoronal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 66,
+        "values": [
+          "418321004",
+          "Retrobulbar route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 67,
+        "values": [
+          "418331006",
+          "Intracartilaginous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 68,
+        "values": [
+          "418401004",
+          "Intravitreal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 69,
+        "values": [
+          "418418000",
+          "Intraspinal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 70,
+        "values": [
+          "418441008",
+          "Orogastric route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 71,
+        "values": [
+          "418511008",
+          "Transurethral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 72,
+        "values": [
+          "418586008",
+          "Intratendinous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 73,
+        "values": [
+          "418608002",
+          "Intracorneal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 74,
+        "values": [
+          "418664002",
+          "Oropharyngeal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 75,
+        "values": [
+          "418722009",
+          "Peribulbar route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 76,
+        "values": [
+          "418730005",
+          "Nasojejunal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 77,
+        "values": [
+          "418743005",
+          "Fistula route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 78,
+        "values": [
+          "418813001",
+          "Surgical drain route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 79,
+        "values": [
+          "418821007",
+          "Intracameral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 80,
+        "values": [
+          "418851001",
+          "Paracervical route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 81,
+        "values": [
+          "418877009",
+          "Intrasynovial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 82,
+        "values": [
+          "418887008",
+          "Intraduodenal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 83,
+        "values": [
+          "418892005",
+          "Intracisternal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 84,
+        "values": [
+          "418947002",
+          "Intratesticular route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 85,
+        "values": [
+          "418987007",
+          "Intracranial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 86,
+        "values": [
+          "419021003",
+          "Tumor cavity route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 87,
+        "values": [
+          "419165009",
+          "Paravertebral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 88,
+        "values": [
+          "419231003",
+          "Intrasinal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 89,
+        "values": [
+          "419243002",
+          "Transcervical route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 90,
+        "values": [
+          "419320008",
+          "Subtendinous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 91,
+        "values": [
+          "419396008",
+          "Intraabdominal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 92,
+        "values": [
+          "419601003",
+          "Subgingival route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 93,
+        "values": [
+          "419631009",
+          "Intraovarian route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 94,
+        "values": [
+          "419684008",
+          "Ureteral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 95,
+        "values": [
+          "419762003",
+          "Peritendinous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 96,
+        "values": [
+          "419778001",
+          "Intrabronchial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 97,
+        "values": [
+          "419810008",
+          "Intraprostatic route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 98,
+        "values": [
+          "419874009",
+          "Submucosal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 99,
+        "values": [
+          "419894000",
+          "Surgical cavity route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 100,
+        "values": [
+          "419954003",
+          "Ileostomy route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 101,
+        "values": [
+          "419993007",
+          "Intravenous peripheral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 102,
+        "values": [
+          "420047004",
+          "Periosteal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 103,
+        "values": [
+          "420163009",
+          "Esophagostomy route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 104,
+        "values": [
+          "420168000",
+          "Urostomy route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 105,
+        "values": [
+          "420185003",
+          "Laryngeal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 106,
+        "values": [
+          "420201002",
+          "Intrapulmonary route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 107,
+        "values": [
+          "420204005",
+          "Mucous fistula route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 108,
+        "values": [
+          "420218003",
+          "Nasoduodenal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 109,
+        "values": [
+          "420254004",
+          "Body cavity route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 110,
+        "values": [
+          "420287000",
+          "Intraventricular route - cardiac",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 111,
+        "values": [
+          "420719007",
+          "Intracerebroventricular route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 112,
+        "values": [
+          "428191002",
+          "Percutaneous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 113,
+        "values": [
+          "429817007",
+          "Interstitial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 114,
+        "values": [
+          "445752009",
+          "Intraesophageal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 115,
+        "values": [
+          "445754005",
+          "Intragingival route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 116,
+        "values": [
+          "445755006",
+          "Intravascular route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 117,
+        "values": [
+          "445756007",
+          "Intradural route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 118,
+        "values": [
+          "445767008",
+          "Intrameningeal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 119,
+        "values": [
+          "445768003",
+          "Intragastric route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 120,
+        "values": [
+          "445769006",
+          "Intracorpus cavernosum route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 121,
+        "values": [
+          "445771006",
+          "Intrapericardial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 122,
+        "values": [
+          "445913005",
+          "Intralingual route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 123,
+        "values": [
+          "445941009",
+          "Intrahepatic route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 124,
+        "values": [
+          "446105004",
+          "Conjunctival route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 125,
+        "values": [
+          "446407004",
+          "Intraepicardial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 126,
+        "values": [
+          "446435000",
+          "Transendocardial route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 127,
+        "values": [
+          "446442000",
+          "Transplacental route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 128,
+        "values": [
+          "446540005",
+          "Intracerebral route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 129,
+        "values": [
+          "447026006",
+          "Intraileal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 130,
+        "values": [
+          "447052000",
+          "Periodontal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 131,
+        "values": [
+          "447080003",
+          "Peridural route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 132,
+        "values": [
+          "447081004",
+          "Lower respiratory tract route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 133,
+        "values": [
+          "447121004",
+          "Intramammary route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 134,
+        "values": [
+          "447122006",
+          "Intratumor route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 135,
+        "values": [
+          "447227007",
+          "Transtympanic route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 136,
+        "values": [
+          "447229005",
+          "Transtracheal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 137,
+        "values": [
+          "447694001",
+          "Respiratory tract route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 138,
+        "values": [
+          "447964005",
+          "Digestive tract route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 139,
+        "values": [
+          "448077001",
+          "Intraepidermal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 140,
+        "values": [
+          "448491004",
+          "Intrajejunal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 141,
+        "values": [
+          "448492006",
+          "Intracolonic route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 142,
+        "values": [
+          "448598008",
+          "Cutaneous route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 143,
+        "values": [
+          "697971008",
+          "Arteriovenous fistula route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 144,
+        "values": [
+          "711360002",
+          "Intraneural route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 145,
+        "values": [
+          "711378007",
+          "Intramural route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 146,
+        "values": [
+          "714743009",
+          "Extracorporeal route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 147,
+        "values": [
+          "718329006",
+          "Infiltration route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 148,
+        "values": [
+          "1611000175109",
+          "Sublesional route",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 149,
+        "values": [
+          "180677251000087104",
+          "Intraventricular",
+          "",
+          ""
+        ]
+      },
+      {
+        "index": 150,
+        "values": [
+          "461657851000087101",
+          "Translingual",
+          "",
+          ""
+        ]
+      }
+    ],
+    "examples": []
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "identity": {
+    "id": "610401c7-3ea9-4a57-a529-4f7e40c922eb",
+    "name": "Party",
+    "description": "Party represents all participants of the Medical Network. Party have multiple types and base on type provide or consume different services across Network."
+  },
+  "version": {
+    "major": 1,
+    "minor": 3,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "48d91403-f74e-44d0-bd1b-8377523b475d",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Party"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Resource",
+    "access": "External",
+    "properties": [],
+    "elements": [{"identity":{"name":"default"},"links":[{"type":"One-To-One","element":{"name":"Account"}},{"type":"One-To-One","element":{"name":"LegalEntity"}},{"type":"One-To-One","element":{"name":"Account/v1"}},{"type":"One-To-One","element":{"name":"LegalEntity/v1"}},{"type":"One-To-One","element":{"name":"Folder/Folder/v1"}},{"type":"One-To-One","element":{"name":"Organization/Organization/v1"}},{"type":"One-To-One","element":{"name":"Product/Service/v1"}}],"frame":{"position":{"left":18,"top":309,"width":0,"height":0}},"style":{"border":{"left":{"color":"#FFC107"}}}}],
+    "history": {
+      "created": "2018-10-08T00:30:42.987",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-08T01:32:24.537",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-16T06:29:16.463",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-08T00:31:07.097",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-08T01:32:24.397",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Party/interfaces/PartyLegalEntities/issues/3385/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 3,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "f7ba6554-2a71-46af-b5d1-7ef65bb42381",
+          "name": "identity",
+          "description": "Party Identity, we will use Guid for globaly unique party id. Name specify name by which party want to be represented in the network and need to be globally unique too."
+        },
+        "order": 1,
+        "usage": "Identity",
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity",
+        "optional": false,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "22677832-8c78-4856-bd71-182418a4f73a",
+          "name": "entity",
+          "description": "Party is a  resource used by API.  Entity maintain most common resource information. Parent for entity of Party must be empty, as party is a root of object hierarchy."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/User/datasets/Entity/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/Party/subscriptions/System/versions/1.0.0",
+        "optional": false,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "c6fd4b2b-d17f-4250-8c14-d7db3ac4f0e5",
+          "name": "type",
+          "description": "Type of the Party. Client can be Person, Clinic or Provider."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/PartyType/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "value": "PERSON",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "7357fd64-fec3-46df-9969-f8d741d655d7",
+          "name": "region",
+          "description": "Main operational region (AWS) for client to make it align with systems in this region for compliance or performance. "
+        },
+        "order": 4,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Party/datasets/Region/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "value": "US-WEST-2",
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "30d17faa-5d30-4dc2-ba26-2c165ca37c52",
+          "name": "PartyCode",
+          "description": "Party code used to identify party in human friendly documents.."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 32,
+        "optional": true,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

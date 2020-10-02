@@ -1,0 +1,156 @@
+{
+  "identity": {
+    "id": "0c642650-de33-4dcc-85ee-2d2e18e76a5e",
+    "name": "Qualification",
+    "description": "Certification, licenses, or training pertaining to the provision of care"
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "28d9d178-9734-43a4-b3a4-852a5d990131",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/Folder"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-09-17T08:17:21.943",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T07:59:32.45",
+      "updatedBy": "sashaberger@hotmail.com",
+      "mirrored": "2018-08-20T02:41:18.457",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T07:58:39.47",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/Qualification/issues/3376/messages/3"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T07:59:32.4",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/Qualification/issues/3376/messages/3"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "4c5e8f8d-8f25-4b20-915c-2eb41f4dafb6",
+          "name": "inherit:id",
+          "description": "Properties will be inherited from BackbondElement structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/BackboneElement/versions/1.1.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Allergy/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d7e3ba1a-f8b1-44de-9cfa-0927403877ca",
+          "name": "identifier ",
+          "description": "An identifier for this qualification for the practitioner"
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Identifier/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Client/applications/Folder/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "abd70dac-f1bb-4b22-ac29-7ead052cc650",
+          "name": "code",
+          "description": "Coded representation of the qualification"
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Client/applications/Folder/datasets/QualificationCode/versions/1.0.0",
+        "subscription": "",
+        "optional": false,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "12640108-5c46-45e1-9436-ff99318e6cba",
+          "name": "Period",
+          "description": "Period during which the qualification is valid"
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "String",
+        "size": 0,
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "dc8e94f9-dea5-4282-8aa3-c001e62ec872",
+          "name": "issuer",
+          "description": "Organization that regulates and issues the qualification"
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/datasets/Identity/versions/1.5.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

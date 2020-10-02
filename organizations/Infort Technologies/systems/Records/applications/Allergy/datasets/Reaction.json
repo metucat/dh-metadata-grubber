@@ -1,0 +1,206 @@
+{
+  "identity": {
+    "id": "be601c76-b6cf-439d-aa43-3b1c9e2d8939",
+    "name": "Reaction",
+    "description": "Adverse Reaction Events linked to exposure to substance."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "bd91cc3e-63e5-463f-b0e0-c8201ffec869",
+      "name": "/organizations/Infort Technologies/systems/Records/applications/Allergy"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {
+        "description": ""
+      },
+      "url": "",
+      "email": ""
+    },
+    "type": "DataSet",
+    "usage": "Structure",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-10-03T06:52:00.21",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2018-10-04T06:59:39.483",
+      "updatedBy": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-04T06:57:47.573",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/issues/3374/messages/15"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-04T06:59:39.32",
+          "completedBy": "sashaberger@hotmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/issues/3374/messages/15"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "6113c980-755a-4f18-bc21-7e1588d0037f",
+          "name": "inherit:id",
+          "description": "Properties will be inherited from BackbondElement structure."
+        },
+        "order": 1,
+        "usage": "Property",
+        "count": 1,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/BackboneElement/versions/1.1.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Allergy/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "44a7db61-15dd-4282-be16-96d8ebf610c8",
+          "name": "substance",
+          "description": "Specific substance or pharmaceutical product considered to be responsible for event."
+        },
+        "order": 2,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SubstanceCode/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "e5b09dd2-97b1-4d42-8d24-894d3f7e0195",
+          "name": "manifestation",
+          "description": "Clinical symptoms/signs associated with the Event."
+        },
+        "order": 3,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SNOMEDCTClinicalFindings/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "0e574807-a928-4904-aa0c-c71d4e830e96",
+          "name": "description",
+          "description": "Description of the event as a whole"
+        },
+        "order": 4,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "cde69951-886d-4db5-b5e7-9e52803e2fe1",
+          "name": "onset",
+          "description": "Date(/time) when manifestations showed."
+        },
+        "order": 5,
+        "usage": "Property",
+        "count": 1,
+        "type": "DateTime",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "b1f30038-871e-44df-9fd9-36fe4b8fcc9b",
+          "name": "severity",
+          "description": "Allergy Intolerance Severity"
+        },
+        "order": 6,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/AllergyIntoleranceSeverity/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "bec7fe21-dbbf-4660-8086-d81f417831d4",
+          "name": "exposureRoute",
+          "description": "How the subject was exposed to the substance"
+        },
+        "order": 7,
+        "usage": "Property",
+        "count": 1,
+        "type": "Enum",
+        "reference": "/organizations/Infort Technologies/systems/Records/applications/Allergy/datasets/SNOMEDCTRouteCodes/versions/1.0.0",
+        "subscription": "",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "dde1f512-8a7e-482b-829f-d51ba6ead310",
+          "name": "note",
+          "description": "Text about event not captured in other fields."
+        },
+        "order": 8,
+        "usage": "Property",
+        "count": 0,
+        "type": "Structure",
+        "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Core/datasets/Annotation/versions/1.0.0",
+        "subscription": "/organizations/Infort Technologies/systems/Records/applications/Allergy/subscriptions/System/versions/1.0.0",
+        "optional": true,
+        "value": "",
+        "format": "",
+        "access": 255,
+        "keys": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [],
+    "examples": []
+  }
+}

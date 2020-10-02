@@ -1,0 +1,213 @@
+{
+  "identity": {
+    "id": "2d963e7f-38d7-4cd8-874d-aade078cfc08",
+    "name": "IdentityDocumentsNew",
+    "description": "View to introduce information about identity documents users have."
+  },
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "tags": [],
+    "documents": [],
+    "type": "view",
+    "properties": [],
+    "history": {
+      "created": "2018-10-20T20:56:34.483",
+      "createdBy": "f.zhukov90@gmail.com",
+      "updated": "2018-10-22T21:54:12.923",
+      "updatedBy": "unknown",
+      "mirrored": "2018-10-22T21:54:09.517",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-10-22T21:53:06.873",
+          "completedBy": "f.zhukov90@gmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/views/IdentityDocumentsNew/issues/3367/messages/25"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-10-22T21:53:24.11",
+          "completedBy": "f.zhukov90@gmail.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/views/IdentityDocumentsNew/issues/3367/messages/25"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 1,
+      "revision": 0
+    }
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "52ad452e-7a5c-4416-aac3-bc2fb6ac5f47",
+            "name": "identifierPeriodEnd",
+            "description": "Field: entity.identifier[$].period.end\nControl: Date Picker"
+          },
+          "order": 4,
+          "parent": {},
+          "text": "Expiration date",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "entity.identifier[$].period.end"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Date Picker"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "3ccd09b2-2d8e-46d3-b749-cfb8ecd89694",
+            "name": "identifierPeriodStart",
+            "description": "Field: entity.identifier[$].period.start\nControl: DatePicker"
+          },
+          "order": 3,
+          "parent": {},
+          "text": "Date of issue",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "entity.identifier[$].period.start"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Date Picker"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "d2e45857-9c5b-4bf6-ae1b-cf8a1f4a354c",
+            "name": "identifierType",
+            "description": "Field: entity.identifier[$].type\nControl: Simple Select"
+          },
+          "order": 1,
+          "parent": {},
+          "text": "Document type",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "entity.identifier[$].type"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Simple Select"
+            }
+          ]
+        },
+        {
+          "identity": {
+            "id": "77b2668b-0193-4627-a2b2-7201a95c0423",
+            "name": "identifierValue",
+            "description": "Field: entity.identifier[$].value\nControl: Text Field"
+          },
+          "order": 2,
+          "parent": {},
+          "text": "Document number",
+          "properties": [
+            {
+              "identity": {
+                "name": "Resource"
+              },
+              "value": "Person"
+            },
+            {
+              "identity": {
+                "name": "Field"
+              },
+              "value": "entity.identifier[$].value"
+            },
+            {
+              "identity": {
+                "name": "Control"
+              },
+              "value": "Text Field"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "locale": "1049",
+      "elements": [
+        {
+          "identity": {
+            "id": "ad18027e-e3e3-445f-bef7-fcd26084869f",
+            "name": "identifierPeriodEnd"
+          },
+          "parent": {},
+          "text": "Дата окончания действия"
+        },
+        {
+          "identity": {
+            "id": "3821542f-3663-4e2e-a38f-941a259afdbc",
+            "name": "identifierPeriodStart"
+          },
+          "parent": {},
+          "text": "Дата выдачи"
+        },
+        {
+          "identity": {
+            "id": "3c9a9c08-c9bf-4f6e-be78-ac2998dfd1f9",
+            "name": "identifierType"
+          },
+          "parent": {},
+          "text": "Тип документа"
+        },
+        {
+          "identity": {
+            "id": "7153f917-6779-4262-977f-1d1771220864",
+            "name": "identifierValue"
+          },
+          "parent": {},
+          "text": "Номер документа"
+        }
+      ]
+    }
+  ],
+  "layouts": []
+}

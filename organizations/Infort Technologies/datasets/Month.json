@@ -1,0 +1,223 @@
+{
+  "identity": {
+    "id": "466a4ed2-cdb5-4040-bcf3-bb74fd12b5c6",
+    "name": "Month",
+    "description": "Enumerator Names of the moths of the year by ISO 8601 and RFC 3339."
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "c5135f7e-f0bf-4063-980f-14dc53e2e0fe",
+      "name": "/organizations/Apdax/systems/DifHub/applications/Organization"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [],
+    "contact": {
+      "identity": {}
+    },
+    "type": "DataSet",
+    "usage": "Enum",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2018-05-07T04:48:19.22",
+      "createdby": "sashaberger@hotmail.com",
+      "updated": "9999-12-30T00:00:00",
+      "updatedby": "sashaberger@hotmail.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2018-05-07T05:19:03.363",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2794/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2018-05-07T05:19:14.463",
+          "completedby": "sashaberger@hotmail.com",
+          "completedbymessage": "/organizations/Apdax/systems/DifHub/applications/Organization/issues/2794/messages/2"
+        }
+      ]
+    },
+    "lastapprovedversion": {
+      "major": 1,
+      "minor": 0,
+      "revision": 0
+    }
+  },
+  "external": true,
+  "structure": {
+    "fields": [
+      {
+        "identity": {
+          "id": "5f1f53ee-28a0-4273-923d-d4f7d718cd67",
+          "name": "Month",
+          "description": "Month name."
+        },
+        "order": 1,
+        "usage": "Name",
+        "type": "String",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "2c144f5a-8e56-4286-b3a1-9d00421fb364",
+          "name": "Description",
+          "description": "Description for the month."
+        },
+        "order": 2,
+        "usage": "Description",
+        "type": "String",
+        "optional": true,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "066bd5e7-ad25-403d-944c-8417605d8976",
+          "name": "Code",
+          "description": "Month order number and numeric code."
+        },
+        "order": 3,
+        "usage": "Value",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "privacy": "low"
+      },
+      {
+        "identity": {
+          "id": "d75b7ca8-eff3-4dd3-a016-861371792181",
+          "name": "Size",
+          "description": "Number of day in month. February can have one more day."
+        },
+        "order": 4,
+        "usage": "Property",
+        "count": 1,
+        "type": "Byte",
+        "optional": false,
+        "privacy": "low"
+      }
+    ],
+    "keys": []
+  },
+  "layouts": [],
+  "data": {
+    "records": [
+      {
+        "index": 1,
+        "values": [
+          "January",
+          "First month of the year by ISO 8601.",
+          "1",
+          "31"
+        ]
+      },
+      {
+        "index": 2,
+        "values": [
+          "February",
+          "Second month of the year by ISO 8601.",
+          "2",
+          "28"
+        ]
+      },
+      {
+        "index": 3,
+        "values": [
+          "March",
+          "Third month of the year by ISO 8601.",
+          "3",
+          "31"
+        ]
+      },
+      {
+        "index": 4,
+        "values": [
+          "April",
+          "Fourth month of the year by ISO 8601.",
+          "4",
+          "30"
+        ]
+      },
+      {
+        "index": 5,
+        "values": [
+          "May",
+          "Fifth month of the year by ISO 8601.",
+          "5",
+          "31"
+        ]
+      },
+      {
+        "index": 6,
+        "values": [
+          "June",
+          "Sixth month of the year by ISO 8601.",
+          "6",
+          "30"
+        ]
+      },
+      {
+        "index": 7,
+        "values": [
+          "July",
+          "Seventh month of the year by ISO 8601.",
+          "7",
+          "31"
+        ]
+      },
+      {
+        "index": 8,
+        "values": [
+          "August",
+          "Eighth month of the year by ISO 8601.",
+          "8",
+          "31"
+        ]
+      },
+      {
+        "index": 9,
+        "values": [
+          "September",
+          "Ninth month of the year by ISO 8601.",
+          "9",
+          "30"
+        ]
+      },
+      {
+        "index": 10,
+        "values": [
+          "October",
+          "Tenth month of the year by ISO 8601.",
+          "10",
+          "31"
+        ]
+      },
+      {
+        "index": 11,
+        "values": [
+          "November",
+          "Eleventh month of the year by ISO 8601.",
+          "11",
+          "30"
+        ]
+      },
+      {
+        "index": 12,
+        "values": [
+          "December",
+          "Twelfth month of the year by ISO 8601.",
+          "12",
+          "31"
+        ]
+      }
+    ],
+    "examples": []
+  }
+}
