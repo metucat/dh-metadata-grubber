@@ -1,0 +1,22 @@
+[
+  {
+    "Access": "Private",
+    "Description": "Access only to architects, developers and analysts of current object.",
+    "Code": "0"
+  },
+  {
+    "Access": "Internal",
+    "Description": "Access only architects, developers and analysts inside parent folder (organization, system or application).",
+    "Code": "1"
+  },
+  {
+    "Access": "External",
+    "Description": "Access to any user of current organization.",
+    "Code": "2"
+  },
+  {
+    "Access": "Public",
+    "Description": "Access for users of other organizations.",
+    "Code": "3"
+  }
+]
