@@ -23,3 +23,13 @@ test('test applicationView', () => {
   const color = getElementMetadata(applicationView, null, '1049');
   expect(color).toStrictEqual(JSON.parse(fs.readFileSync(`./test/getElementMetadata.result.json`)));
 });
+
+
+test('test getElementLabel', () => {
+  const applicationView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
+  const elements = getElementMetadata(applicationView, null, '1049');
+  metadataForm = elements.find((element) => element.control && element.control.reference && element.control.reference.startsWith('/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/FormEditor'));
+  const cardCaption = getElementLabel(metadataForm);
+  expect(cardCaption).toBe('Контактная Информация');
+});
+

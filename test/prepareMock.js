@@ -13,5 +13,5 @@ fs.writeFileSync('./test/getDatasetData.result.json', JSON.stringify(accessData,
 const metadataView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
 fs.writeFileSync('./test/getViewMetadata.result.json', JSON.stringify(metadataView, null, 2));
 
-const color = getElementMetadata(metadataView, null, '1049');
-fs.writeFileSync('./test/getElementMetadata.result.json', JSON.stringify(color, null, 2));
+const elements = getElementMetadata(metadataView, null, '1049');
+fs.writeFileSync('./test/getElementMetadata.result.json', JSON.stringify(elements, null, 2));
