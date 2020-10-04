@@ -1,0 +1,57 @@
+{
+  "name": [
+    {
+      "use": "nickname",
+      "text": null,
+      "family": "Фамилия",
+      "given": null,
+      "prefix": null,
+      "suffix": null,
+      "period": null,
+      "id": "d1ccd159-c142-4f8f-923d-a6d7582d3c78"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "34534",
+      "use": "work",
+      "rank": null,
+      "period": null,
+      "id": "f0358cd3-aad6-4e95-bb56-5aec308ff12f"
+    }
+  ],
+  "gender": "female",
+  "birthDate": null,
+  "address": [
+    {
+      "use": "test use",
+      "type": "test type",
+      "text": null,
+      "district": null,
+      "state": null,
+      "postalCode": null,
+      "country": "US",
+      "period": null,
+      "id": "test-address-id"
+    }
+  ],
+  "identity": {
+    "id": "test-person-id",
+    "name": "test person name",
+    "description": "test person description"
+  },
+  "entity": {
+    "state": "active",
+    "source": "test",
+    "type": "person",
+    "parent": null,
+    "history": {
+      "createdDate": null,
+      "updatedDate": null,
+      "createdBy": "test",
+      "updatedBy": null,
+      "reason": null
+    }
+  }
+}
