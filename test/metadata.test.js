@@ -4,14 +4,14 @@ const path = require('path');
 const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getElementValue, nonCSCompare, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
 
 test('test getDatasetMetadata', () => {
-  const accessDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
-  expect(accessDataset).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, "getDatasetMetadata.result.json"))));
+  const personDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
+  expect(personDataset).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, "getDatasetMetadata.result.json"))));
 });
 
 test('test getDatasetData', () => {
-  const accessDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
-  const accessData = getDatasetData(accessDataset, 'en-us', false)
-  expect(accessData).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getDatasetData.result.json'))));
+  const personDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
+  const personData = getDatasetData(personDataset, 'en-us', false)
+  expect(personData).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getDatasetData.result.json'))));
 });
 
 test('test getViewMetadata', () => {
@@ -55,5 +55,12 @@ test('test nonCSCompare', () => {
   const origin = JSON.stringify(JSON.parse(fs.readFileSync(path.resolve(__dirname, '_dataObject.json'))));
   const isEqual = nonCSCompare(origin, object);
   expect(isEqual).toBe(true);
+});
+
+test('test getFieldMetadata', () => {
+  const metadataDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
+  const metaPath = 'telecom[0].value';
+  const dataField = getFieldMetadata(metadataDataset, metaPath);
+  expect(dataField).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getFieldMetadata.result.json'))));
 });
 

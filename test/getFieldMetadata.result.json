@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "id": "b31c97ea-6278-4804-8f7a-628c4b412aac",
+    "name": "value",
+    "description": "The actual contact point details"
+  },
+  "order": 3,
+  "usage": "Property",
+  "count": 1,
+  "type": "String",
+  "size": 0,
+  "optional": true,
+  "value": "",
+  "format": "",
+  "access": 255,
+  "privacy": "low"
+}
