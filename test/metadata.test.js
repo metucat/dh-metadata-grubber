@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
+const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getElementValue, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
 
 test('test getDatasetMetadata', () => {
   const accessDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
@@ -33,6 +33,14 @@ test('test getElementLabel', () => {
   metadataForm = elements.find((element) => element.control && element.control.reference && element.control.reference.startsWith('/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/FormEditor'));
   const cardCaption = getElementLabel(metadataForm);
   expect(cardCaption).toBe('Контактная Информация');
+});
+
+test('test getElementValue', () => {
+  const applicationView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
+  const elements = getElementMetadata(applicationView, null, '1049');
+  metadataForm = elements.find((element) => element.control && element.control.reference && element.control.reference.startsWith('/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/FormEditor'));
+  const cardList = getElementValue(metadataForm, 'formList');
+  expect(cardList).toBe('telecom');
 });
 
 test('test deepGet', () => {
