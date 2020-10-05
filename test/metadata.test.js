@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getElementValue, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
+const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getElementValue, nonCSCompare, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
 
 test('test getDatasetMetadata', () => {
   const accessDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
@@ -48,5 +48,12 @@ test('test deepGet', () => {
   const dataPath = 'telecom[0].value';
   const dataValue = deepGet(dataObject, dataPath);
   expect(dataValue).toBe('34534');
+});
+
+test('test nonCSCompare', () => {
+  const object = JSON.stringify(JSON.parse(fs.readFileSync(path.resolve(__dirname, '_dataObject.json'))));
+  const origin = JSON.stringify(JSON.parse(fs.readFileSync(path.resolve(__dirname, '_dataObject.json'))));
+  const isEqual = nonCSCompare(origin, object);
+  expect(isEqual).toBe(true);
 });
 
