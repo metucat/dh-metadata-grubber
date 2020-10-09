@@ -438,18 +438,16 @@ function writeMetadata (dir) {
 
 
 if (flags.metadataDir) {
-	console.log('flags.metadataDir');
 	console.log(flags.metadataDir);
 	const dir = path.join(process.cwd(), flags.metadataDir + '/organizations');
-	console.log(flags.metadataDir);
 	writeMetadata(dir);
 	
 }
 if (flags.repo) {
+	cloneRepo();
 	// path to temp repo
 	const dir = path.join(process.cwd(), '.mdtmp/organizations');
 	writeMetadata(dir);
-	cloneRepo();
 }
 
 deleteRepo();
