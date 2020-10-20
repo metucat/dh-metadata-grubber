@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const rawdata = fs.readFileSync(path.resolve(__dirname, 'example_metadata.json'));
-// const rawdata = fs.readFileSync(path.resolve(__dirname, 'mock_metadata.json'));
 const metadata = JSON.parse(rawdata);
 
 function findByPath(path) {
