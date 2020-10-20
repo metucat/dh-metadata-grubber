@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getDatasetData, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getFieldMetadata, getEnumOptions } = require('../lib/metadata');
+const { getDatasetData, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getFieldMetadata, getEnumOptions, findByPath } = require('../lib/metadata');
 
 const personDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
 fs.writeFileSync(path.resolve(__dirname, 'getDatasetMetadata.result.json'), JSON.stringify(personDataset, null, 2));
@@ -25,3 +25,4 @@ fs.writeFileSync(path.resolve(__dirname, 'getElementMetadataTR.result.json'), JS
 const metaPath = 'telecom[0].value';
 dataField = getFieldMetadata(personDataset, metaPath);
 fs.writeFileSync(path.resolve(__dirname, 'getFieldMetadata.result.json'), JSON.stringify(dataField, null, 2));
+

@@ -365,25 +365,23 @@ function scanDirectory (dir, metapath) {
 }
 
 function findByPath(path) {
-    if (!path)
-        return null;
+	if (!path)
+		return null;
 
-    // remove versions from path
-    const clearedPath = path.replace(/\/versions\/\d+\.\d+\.\d+/g, '').replace(/:/g,"%");
+	// remove versions from path
+	const clearedPath = path.replace(/\/versions\/\d+\.\d+\.\d+/g, '').replace(/:/g, '%');
 
-    let splitPath = clearedPath.split('/').map(el => el.toLowerCase());
-    let res;
+	let splitPath = clearedPath.split('/').map(el => el.toLowerCase());
+	let res;
 
-    while (splitPath.length) {
-        var step = splitPath.shift();
+	for (const step of splitPath) {
+		if (!res)
+			res = metadata[step];
+		else
+			res = res[step];
+	}
 
-        if (!res)
-            res = metadata[step];
-        else
-            res = res[step];
-    }
-
-    return res;
+	return res;
 }
 
 const metadata_apdax = require('./metadata_apdax.js').metadata;

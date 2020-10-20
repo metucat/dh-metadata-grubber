@@ -12,10 +12,8 @@ function findByPath(path) {
   
   const splitPath = clearedPath.split('/').map(el => el.toLowerCase());
   let res;
-  
-  while (splitPath.length) {
-    const step = splitPath.shift();
-    
+
+  for (const step of splitPath) {
     if (!res)
       res = metadata[step];
     else
