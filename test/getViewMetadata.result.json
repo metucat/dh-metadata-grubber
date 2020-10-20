@@ -6,7 +6,7 @@
   },
   "version": {
     "major": 1,
-    "minor": 4,
+    "minor": 5,
     "revision": 0
   },
   "object": {
@@ -47,28 +47,28 @@
     "properties": [],
     "elements": [],
     "history": {
-      "created": "2020-09-17T09:06:39.717",
+      "created": "2020-09-17T20:38:55.61",
       "createdBy": "sashaberger@hotmail.com",
-      "updated": "2020-09-17T09:07:27.217",
-      "updatedBy": "sashaberger@hotmail.com",
+      "updated": "2020-10-09T10:28:46.573",
+      "updatedBy": "v.bilous@spd-ukraine.com",
       "completions": [
         {
           "status": "Finalized",
-          "completed": "2020-09-17T09:07:12.467",
-          "completedBy": "sashaberger@hotmail.com",
-          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5333/messages/1"
+          "completed": "2020-10-09T10:25:23.233",
+          "completedBy": "a.oriekhov@spd-ukraine.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5355/messages/2"
         },
         {
           "status": "Approved",
-          "completed": "2020-09-17T09:07:27.02",
-          "completedBy": "sashaberger@hotmail.com",
-          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5333/messages/2"
+          "completed": "2020-10-09T10:28:46.32",
+          "completedBy": "v.bilous@spd-ukraine.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5355/messages/2"
         }
       ]
     },
     "lastApprovedVersion": {
       "major": 1,
-      "minor": 4,
+      "minor": 5,
       "revision": 0
     },
     "alias": ""
@@ -232,97 +232,6 @@
         },
         {
           "identity": {
-            "id": "d4834c36-581d-4026-9862-f067f8d27408",
-            "name": "contactTime",
-            "description": "Preferred time for use of contact"
-          },
-          "order": 6,
-          "parent": {
-            "name": ""
-          },
-          "visibility": "Collapse",
-          "frame": {
-            "position": {
-              "left": 0,
-              "right": 0,
-              "top": 0,
-              "bottom": 0,
-              "width": 0,
-              "height": 0
-            },
-            "margin": {
-              "left": 0,
-              "right": 0,
-              "top": 0,
-              "bottom": 0,
-              "width": 0
-            },
-            "border": {
-              "left": 0,
-              "right": 0,
-              "top": 0,
-              "bottom": 0,
-              "width": 0
-            },
-            "padding": {
-              "left": 0,
-              "right": 0,
-              "top": 0,
-              "bottom": 0,
-              "width": 0
-            },
-            "content": {
-              "left": 0,
-              "right": 0,
-              "top": 0,
-              "bottom": 0,
-              "width": 0
-            }
-          },
-          "style": {
-            "border": {},
-            "background": {},
-            "font": {}
-          },
-          "image": "",
-          "text": "Contact Time",
-          "align": "Left | Middle",
-          "links": [],
-          "control": {
-            "identity": {
-              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
-            },
-            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
-            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
-            "value": {
-              "dataField": "period.start",
-              "editTip": "Enter preferred time to use contact",
-              "dataList": "telecom"
-            }
-          },
-          "properties": [
-            {
-              "identity": {
-                "name": "Resource"
-              },
-              "value": "Person"
-            },
-            {
-              "identity": {
-                "name": "Field"
-              },
-              "value": "telecom[$].period.start"
-            },
-            {
-              "identity": {
-                "name": "Control"
-              },
-              "value": "TimePicker"
-            }
-          ]
-        },
-        {
-          "identity": {
             "id": "49b6e3bb-010d-42ee-8a22-39b714784061",
             "name": "contactUse",
             "description": "Type of contact\n"
@@ -395,13 +304,39 @@
         },
         {
           "identity": {
+            "id": "a2f5666c-52cd-4227-9da3-ec082d58d869",
+            "name": "period"
+          },
+          "order": 9,
+          "parent": {},
+          "text": "Period",
+          "align": "Left | Bottom",
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/PeriodEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "dataList": "telecom",
+              "startField": "period.start",
+              "endField": "period.end",
+              "editFormat": "",
+              "editTipStart": "From",
+              "editTipEnd": "To"
+            }
+          }
+        },
+        {
+          "identity": {
             "id": "4f2756a2-cf60-471f-9e67-d5c73dad5e5d",
             "name": "preferredContact",
             "description": "Most preferred contact for user."
           },
-          "order": 7,
+          "order": 8,
           "parent": {},
           "visibility": "Visible",
+          "text": "Contact",
           "align": "Left | Middle",
           "control": {
             "identity": {
@@ -601,40 +536,6 @@
         },
         {
           "identity": {
-            "id": "5849336b-64cf-4f7b-81e8-05ef90ab13f2",
-            "name": "contactTime",
-            "description": "Предпочтительное время исаользования контакта"
-          },
-          "parent": {},
-          "text": "Время для контакта",
-          "control": {
-            "value": {
-              "editTip": "Введите предпочтителное время для контакта"
-            },
-            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
-            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
-          }
-        },
-        {
-          "identity": {
-            "id": "896fb7d0-d335-46f8-8ae1-57e3623c073e",
-            "name": "contactTimeEnd"
-          },
-          "parent": {},
-          "visibility": "Hidden",
-          "text": "До"
-        },
-        {
-          "identity": {
-            "id": "74bbb3ce-68a1-488d-8291-2b3957a33ef0",
-            "name": "contactTimeStart"
-          },
-          "parent": {},
-          "visibility": "Hidden",
-          "text": "От"
-        },
-        {
-          "identity": {
             "id": "ab1641f2-22ba-40d7-9e0e-7350dfbad19c",
             "name": "contactUse",
             "description": "Тип контакта для пользователя"
@@ -651,12 +552,14 @@
         },
         {
           "identity": {
-            "id": "8735194d-5c45-49e2-bab7-b2a6da110258",
-            "name": "telecomRank"
+            "id": "11148a94-7ebb-4b74-8fa0-069d188beba1",
+            "name": "period"
           },
           "parent": {},
-          "visibility": "Hidden",
-          "text": "Основной контакт"
+          "text": "Период",
+          "control": {
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
         },
         {
           "identity": {

@@ -1,9 +1,9 @@
 [
   {
     "identity": {
-      "id": "6bce55fb-c28a-45a5-8441-8a15bcc865bb",
+      "id": "cf238c18-c1da-48ea-a9c3-09cd1f7493ce",
       "name": "cardName",
-      "description": "Карта ввода контактной информации для профойла пользователя"
+      "description": "Card to introduce and review personal information for user profile."
     },
     "order": 1,
     "parent": {
@@ -61,7 +61,7 @@
       }
     },
     "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Infort Technologies/systems/Client/applications/User/views/PersonalDataNew/cardName",
-    "text": "Контактная Информация",
+    "text": "Personal Information",
     "align": "Left | Bottom",
     "links": [],
     "control": {
@@ -71,7 +71,7 @@
       "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/FormEditor/versions/1.0.0",
       "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
       "value": {
-        "formTip": "Ввод контактной информации",
+        "formTip": "Introduce user personal information",
         "formResource": "Person",
         "formList": "telecom",
         "editView": "Collapse",
@@ -82,9 +82,9 @@
   },
   {
     "identity": {
-      "id": "190a0aab-cf63-4ef6-997e-c259750e70c2",
+      "id": "050a9594-4964-4733-b6af-3b0f3f6eaccd",
       "name": "contactRank",
-      "description": "Уровень предпочтения контакта. 1 - самый предпочтительнй контакт."
+      "description": "Preference rank for contact. 1 - highest  preference."
     },
     "order": 5,
     "parent": {
@@ -146,7 +146,7 @@
       "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
       "value": {
         "dataField": "rank",
-        "editTip": "Введите уровень предпочтения для контакта",
+        "editTip": "Specify contact preference",
         "dataList": "telecom"
       }
     },
@@ -154,9 +154,9 @@
   },
   {
     "identity": {
-      "id": "ab1641f2-22ba-40d7-9e0e-7350dfbad19c",
+      "id": "49b6e3bb-010d-42ee-8a22-39b714784061",
       "name": "contactUse",
-      "description": "Тип контакта для пользователя"
+      "description": "Type of contact\n"
     },
     "order": 4,
     "parent": {
@@ -207,7 +207,7 @@
       "font": {}
     },
     "image": "",
-    "text": "Тип контакта",
+    "text": "Contact type",
     "align": "Left | Middle",
     "links": [],
     "control": {
@@ -218,7 +218,7 @@
       "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
       "value": {
         "dataField": "use",
-        "editTip": "Выберете тип контакта",
+        "editTip": "Select contact type",
         "dataList": "telecom"
       }
     },
@@ -226,12 +226,12 @@
   },
   {
     "identity": {
-      "id": "11148a94-7ebb-4b74-8fa0-069d188beba1",
+      "id": "a2f5666c-52cd-4227-9da3-ec082d58d869",
       "name": "period"
     },
     "order": 9,
     "parent": {},
-    "text": "Период",
+    "text": "Period",
     "align": "Left | Bottom",
     "control": {
       "identity": {
@@ -278,9 +278,9 @@
   },
   {
     "identity": {
-      "id": "f2b368c1-ccca-444c-a538-26e34102bb3f",
+      "id": "695c0b4b-2b2a-4536-bb65-ec5deaf3f40f",
       "name": "telecomSystem",
-      "description": "Тип связи используемый при контакте"
+      "description": "Type of communication to use for contact "
     },
     "order": 2,
     "parent": {
@@ -331,7 +331,7 @@
       "font": {}
     },
     "image": "",
-    "text": "Тип связи",
+    "text": "Communication Type",
     "align": "Left | Middle",
     "links": [],
     "control": {
@@ -342,7 +342,7 @@
       "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
       "value": {
         "dataField": "system",
-        "editTip": "Выбирите тип связи",
+        "editTip": "Select communication type",
         "dataList": "telecom"
       }
     },
@@ -350,9 +350,9 @@
   },
   {
     "identity": {
-      "id": "09a15b43-eabf-4050-ac45-0fb4ab10f906",
+      "id": "71e0ee35-d110-4a19-b900-d53c022300a0",
       "name": "telecomValue",
-      "description": "Номер или адресс для контакта"
+      "description": "Actual number or address to connect\n"
     },
     "order": 3,
     "parent": {
@@ -403,7 +403,7 @@
       "font": {}
     },
     "image": "",
-    "text": "Значение",
+    "text": "Value",
     "align": "Left | Middle",
     "links": [],
     "control": {
@@ -414,7 +414,7 @@
       "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
       "value": {
         "dataField": "value",
-        "editTip": "Введите номер или адресс",
+        "editTip": "Enter number or address to connect",
         "dataList": "telecom"
       }
     },

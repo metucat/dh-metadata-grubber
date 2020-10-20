@@ -18,10 +18,14 @@ function changeLang(newLocale, newLocaleId, newLocaleMap) {
  * @returns {string} locale code.
  */
 function localeIdByCode (localeCode) {
-  const locales = window.localStorage.localeMap;
+  try {
+    const locales = window.localStorage.localeMap;
     if (!locales) return null;
-  let ret = locales.find(cur => cur["Locale Code"] === localeCode);
-  return ret["Locale Id"];
+    let ret = locales.find(cur => cur["Locale Code"] === localeCode);
+    return ret["Locale Id"];
+  } catch (e) {
+    return null;
+  }
 }
 
 /**
@@ -82,7 +86,7 @@ function deepGet (object, path) {
     return elements.reduce(function (obj, property) {return obj[property];}, object);
   } catch (err) {
     return undefined;
-  }   
+  }
 }
 
 /**
@@ -102,7 +106,7 @@ function deepSet (object, path, value) {
 
     for (var element of elements) {
       let isArray = element.charAt(0) === '[';
-      let name = isArray ? element.substring(1) : element; 
+      let name = isArray ? element.substring(1) : element;
 
       if (prev_name !== undefined) {
         // Parent object undefined.
@@ -110,17 +114,17 @@ function deepSet (object, path, value) {
           prev_obj[prev_name] = isArray ? [] : {};
         }
         prev_obj = prev_obj[prev_name];
-      } 
-      prev_name = name; 
+      }
+      prev_name = name;
     }
 
     if (prev_name === undefined) {
-      // Current object can change value 
+      // Current object can change value
       prev_obj = value;
     } else {
-      // Previous object can change value 
+      // Previous object can change value
       prev_obj[prev_name] = value;
-    }    
+    }
     return object;
   } catch (err) {
     return undefined;
@@ -160,7 +164,7 @@ function deepMerge(b, o) {
     return (b ? b : []).concat(o ? o : []);
   }
 
-  if (b !== 'undefined' && b !== null ) { 
+  if (b !== 'undefined' && b !== null ) {
     if (typeof b === 'object') {
       for (k in b) {
         if (o && (o[k] !== undefined && o[k] !== null)) {
@@ -183,7 +187,7 @@ function deepMerge(b, o) {
     }
   }
 
-  if (o) { 
+  if (o) {
     if (typeof o === 'object') {
       for (k in o) {
         if (b && (b[k] !== undefined && b[k] !== null)) {
@@ -236,7 +240,7 @@ function datasetToObjectArray (ds) {
  * @returns {object} object metadata, or null
  */
 const getDatasetMetadata = (path) => {
-  try 
+  try
   {
     if (!path) return null;
     const dspath = path.replace(/:/g,"%");
@@ -258,7 +262,7 @@ const getDatasetMetadata = (path) => {
  * @returns {object} object metadata, or null
  */
 function getViewMetadata (path) {
-  try 
+  try
   {
     if (!path) return null;
     const vipath = path.replace(/:/g,"%");
@@ -278,10 +282,10 @@ function getViewMetadata (path) {
  * Return field of the dataset
  * @param {object} dataset - metadata for dataset
  * @param {string} path - this is path in format a.b.c[0].d or /a/b/c[0]/d
- * @returns {object} object - metadata for field of the dataset or null 
+ * @returns {object} object - metadata for field of the dataset or null
  */
 function getFieldMetadata (dataset, path) {
-  try 
+  try
   {
     if (!dataset || !path || dataset.object.type.toLowerCase() !== 'dataset') return null;
 
@@ -310,14 +314,14 @@ function getFieldMetadata (dataset, path) {
 };
 
 /**
- * Return specified element of the view or all elements of the view for specific locale. 
+ * Return specified element of the view or all elements of the view for specific locale.
  * @param {object} view - metadata for view
  * @param {string} element - name of the element
  * @param {string} locale - locale id in which return element data. When not specified use view default.
  * @returns {object} object - metadata for element of the view
  */
 function getElementMetadata (view, element, locale) {
-  try 
+  try
   {
     if (!view || view.object.type.toLowerCase() !== 'view') return null;
 
@@ -328,38 +332,38 @@ function getElementMetadata (view, element, locale) {
     // Find base definision.
     if (view.local) {
       // We have locale defined in view we expect we have
-      // base defenision match defined local. 
+      // base defenision match defined local.
       base_definision = view.definitions.find(def => (def.locale === view.local));
     } else {
-      // We on default locale of the system and will look base on code and id  
+      // We on default locale of the system and will look base on code and id
       base_definision = view.definitions.find(def => (def.locale === defaultLocaleId || def.locale === defaultLocaleCode));
     }
 
     // Find definision of current locale.
     if (locale) {
       if (base_definision.locale !== locale) {
-        // We on default locale of the system and will look base on code and id  
+        // We on default locale of the system and will look base on code and id
         data_definision = view.definitions.find(def => (def.locale === locale));
 
         // Can be competability problem
         if (!data_definision) {
-          let localeId = localeIdByCode(locale); 
+          let localeId = localeIdByCode(locale);
           if (localeId && base_definision.locale !== localeId) {
-            // We on default locale of the system and will look base on code and id  
+            // We on default locale of the system and will look base on code and id
             data_definision = view.definitions.find(def => (def.locale === localeId));
           }
         }
       }
     } else if (window.localStorage.localeId || window.localStorage.localeCode) {
-      // We use current locale if it not same as base. 
+      // We use current locale if it not same as base.
       if (base_definision.locale !== window.localStorage.localeId && base_definision.locale !== window.localStorage.localeCode ) {
-        // We on default locale of the system and will look base on code and id  
+        // We on default locale of the system and will look base on code and id
         data_definision = view.definitions.find(def => (def.locale === window.localStorage.localeId || def.locale === window.localStorage.localeCode));
       }
     } else {
       // We use system locale as our data locale if it not same as base
       if (base_definision.locale !== defaultLocaleId || base_definision.locale !== defaultLocaleCode) {
-        // We on default locale of the system and will look base on code and id  
+        // We on default locale of the system and will look base on code and id
         data_definision = view.definitions.find(def => (def.locale === defaultLocaleId || def.locale === defaultLocaleCode));
       }
     }
@@ -371,8 +375,8 @@ function getElementMetadata (view, element, locale) {
     }
 
     // When specific element requested
-    if (element) {  
-      // Element by name from base and locale definision. 
+    if (element) {
+      // Element by name from base and locale definision.
       let data_element = (!data_definision) ? null : data_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
       let base_element = (!base_definision) ? null : base_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
 
@@ -395,10 +399,10 @@ function getElementMetadata (view, element, locale) {
         return [];
       } else if (data_definision && !base_definision) {
         // We have elements only for requested locale.
-        return data_definision;
+        return data_definision.elements;
       } else if (!data_definision && base_definision) {
         // We have elements only for view default locale.
-        return base_definision;
+        return base_definision.elements;
       } else {
         // We have both elements and need to merge it.
         let base_elements = base_definision.elements.map(base_element => {
@@ -442,10 +446,10 @@ function getElementProperty (element, name) {
     return '';
 
   let property = element.properties.find(prop => nonCSCompare(prop.identity.name, name));
-  if (!property) 
+  if (!property)
     return '';
 
-  return property.value; 
+  return property.value;
 };
 
 /**
@@ -475,7 +479,7 @@ function getElementValue (element, path) {
 function getDatasetData (dataset, locale, usage) {
   if (!dataset) return [];
   if (!locale) {
-    locale = typeof(window) !== "undefined" && window.localStorage && window.localStorage.locale ? window.localStorage.locale : defaultLocale;  
+    locale = typeof(window) !== "undefined" && window.localStorage && window.localStorage.locale ? window.localStorage.locale : defaultLocale;
   }
 
   let sorted = dataset.data.records.slice();
@@ -483,9 +487,9 @@ function getDatasetData (dataset, locale, usage) {
 
   let ret = sorted.map(row => {
     let obj = {};
-    if (locale) { 
-      let indexTranslations = dataset.structure.fields.findIndex((field) => nonCSCompare(field.identity.name, 'translations') || nonCSCompare(field.usage, 'translations')); 
-      let translation = (indexTranslations < 0 || !row.values[indexTranslations]) ? null : JSON.parse(row.values[indexTranslations]).find((tr) => nonCSCompare(locale, tr.Locale)); 
+    if (locale) {
+      let indexTranslations = dataset.structure.fields.findIndex((field) => nonCSCompare(field.identity.name, 'translations') || nonCSCompare(field.usage, 'translations'));
+      let translation = (indexTranslations < 0 || !row.values[indexTranslations]) ? null : JSON.parse(row.values[indexTranslations]).find((tr) => nonCSCompare(locale, tr.Locale));
       dataset.structure.fields.map((field, index) => {
         if (index != indexTranslations) {
           if (usage) {
@@ -520,7 +524,7 @@ function getEnumOptions (field, locale) {
 
   const dataset = getDatasetMetadata(field.reference);
   if (!dataset) return [];
-    
+  
   return getDatasetData(dataset, locale, true);
 }
 

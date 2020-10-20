@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getElementValue, nonCSCompare, getFieldMetadata, getEnumOptions } = require('../metadataApi.js');
+const { getDatasetData, deepGet, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getElementValue, nonCSCompare, getFieldMetadata, getEnumOptions } = require('../lib/metadata');
 
 test('test getDatasetMetadata', () => {
   const personDataset = getDatasetMetadata('/organizations/Infort Technologies/systems/Client/applications/User/datasets/Person');
@@ -20,10 +20,22 @@ test('test getViewMetadata', () => {
 });
 
 
-test('test applicationView', () => {
+test('test getElementMetadata RU', () => {
   const applicationView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
   const color = getElementMetadata(applicationView, null, '1049');
   expect(color).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getElementMetadata.result.json'))));
+});
+
+test('test getElementMetadata US', () => {
+  const applicationView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
+  const color = getElementMetadata(applicationView, null, '1033');
+  expect(color).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getElementMetadataUS.result.json'))));
+});
+
+test('test getElementMetadata TR returns default locale', () => {
+  const applicationView = getViewMetadata('/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard');
+  const color = getElementMetadata(applicationView, null, '1055');
+  expect(color).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getElementMetadataTR.result.json'))));
 });
 
 
