@@ -1,0 +1,602 @@
+{
+  "identity": {
+    "id": "c6c98fe8-2de8-4588-8f14-f6426448e2b7",
+    "name": "ContactInfoCard",
+    "description": "Contact information for person. This view allows to provide communication information for person of different types."
+  },
+  "version": {
+    "major": 1,
+    "minor": 5,
+    "revision": 0
+  },
+  "object": {
+    "parent": {
+      "id": "277d8d52-77ca-4bac-951d-c08509aa12bf",
+      "name": "/organizations/Infort Technologies/systems/Client/applications/User"
+    },
+    "picture": "",
+    "tags": [],
+    "documents": [
+      {
+        "identity": {
+          "name": "full_1.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_1.png"
+      },
+      {
+        "identity": {
+          "name": "full_2(contact).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_2(contact).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(contact).png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_3(contact).png"
+      },
+      {
+        "identity": {
+          "name": "full_3(contact)_extended.png"
+        },
+        "uri": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfo/full_3(contact)_extended.png"
+      }
+    ],
+    "type": "view",
+    "access": "External",
+    "properties": [],
+    "elements": [],
+    "history": {
+      "created": "2020-09-17T20:38:55.61",
+      "createdBy": "sashaberger@hotmail.com",
+      "updated": "2020-10-09T10:28:46.573",
+      "updatedBy": "v.bilous@spd-ukraine.com",
+      "completions": [
+        {
+          "status": "Finalized",
+          "completed": "2020-10-09T10:25:23.233",
+          "completedBy": "a.oriekhov@spd-ukraine.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5355/messages/2"
+        },
+        {
+          "status": "Approved",
+          "completed": "2020-10-09T10:28:46.32",
+          "completedBy": "v.bilous@spd-ukraine.com",
+          "completedByMessage": "/organizations/Infort Technologies/systems/Client/applications/User/issues/5355/messages/2"
+        }
+      ]
+    },
+    "lastApprovedVersion": {
+      "major": 1,
+      "minor": 5,
+      "revision": 0
+    },
+    "alias": ""
+  },
+  "definitions": [
+    {
+      "locale": "1033",
+      "elements": [
+        {
+          "identity": {
+            "id": "cf238c18-c1da-48ea-a9c3-09cd1f7493ce",
+            "name": "cardName",
+            "description": "Card to introduce and review personal information for user profile."
+          },
+          "order": 1,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Hidden",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {
+              "color": "#E7E0D0"
+            },
+            "font": {
+              "style": "Normal",
+              "color": " #3F3F00",
+              "weight": "500",
+              "size": "24"
+            }
+          },
+          "image": "https://bias-metadata-service.difhub.com/api/resources?uri=/organizations/Infort Technologies/systems/Client/applications/User/views/PersonalDataNew/cardName",
+          "text": "Personal Information",
+          "align": "Left | Bottom",
+          "links": [],
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/FormEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "formTip": "Introduce user personal information",
+              "formResource": "Person",
+              "formList": "telecom",
+              "editView": "Collapse",
+              "editTip": "Introduce user contact information "
+            }
+          },
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "050a9594-4964-4733-b6af-3b0f3f6eaccd",
+            "name": "contactRank",
+            "description": "Preference rank for contact. 1 - highest  preference."
+          },
+          "order": 5,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Collapse",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Contact rank",
+          "align": "Left | Middle",
+          "links": [],
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "dataField": "rank",
+              "editTip": "Specify contact preference",
+              "dataList": "telecom"
+            }
+          },
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "49b6e3bb-010d-42ee-8a22-39b714784061",
+            "name": "contactUse",
+            "description": "Type of contact\n"
+          },
+          "order": 4,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Collapse",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Contact type",
+          "align": "Left | Middle",
+          "links": [],
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "dataField": "use",
+              "editTip": "Select contact type",
+              "dataList": "telecom"
+            }
+          },
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "a2f5666c-52cd-4227-9da3-ec082d58d869",
+            "name": "period"
+          },
+          "order": 9,
+          "parent": {},
+          "text": "Period",
+          "align": "Left | Bottom",
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/PeriodEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "dataList": "telecom",
+              "startField": "period.start",
+              "endField": "period.end",
+              "editFormat": "",
+              "editTipStart": "From",
+              "editTipEnd": "To"
+            }
+          }
+        },
+        {
+          "identity": {
+            "id": "4f2756a2-cf60-471f-9e67-d5c73dad5e5d",
+            "name": "preferredContact",
+            "description": "Most preferred contact for user."
+          },
+          "order": 8,
+          "parent": {},
+          "visibility": "Visible",
+          "text": "Contact",
+          "align": "Left | Middle",
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/GroupEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "typeField": "use",
+              "nameField": "system",
+              "dataField": "value",
+              "rankField": "rank",
+              "editTip": "Enter number or address for contact",
+              "dataList": "telecom"
+            }
+          }
+        },
+        {
+          "identity": {
+            "id": "695c0b4b-2b2a-4536-bb65-ec5deaf3f40f",
+            "name": "telecomSystem",
+            "description": "Type of communication to use for contact "
+          },
+          "order": 2,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Collapse",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Communication Type",
+          "align": "Left | Middle",
+          "links": [],
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "dataField": "system",
+              "editTip": "Select communication type",
+              "dataList": "telecom"
+            }
+          },
+          "properties": []
+        },
+        {
+          "identity": {
+            "id": "71e0ee35-d110-4a19-b900-d53c022300a0",
+            "name": "telecomValue",
+            "description": "Actual number or address to connect\n"
+          },
+          "order": 3,
+          "parent": {
+            "name": ""
+          },
+          "visibility": "Collapse",
+          "frame": {
+            "position": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "margin": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "border": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "padding": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            },
+            "content": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0
+            }
+          },
+          "style": {
+            "border": {},
+            "background": {},
+            "font": {}
+          },
+          "image": "",
+          "text": "Value",
+          "align": "Left | Middle",
+          "links": [],
+          "control": {
+            "identity": {
+              "description": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0",
+            "value": {
+              "dataField": "value",
+              "editTip": "Enter number or address to connect",
+              "dataList": "telecom"
+            }
+          },
+          "properties": []
+        }
+      ]
+    },
+    {
+      "locale": "1049",
+      "elements": [
+        {
+          "identity": {
+            "id": "6bce55fb-c28a-45a5-8441-8a15bcc865bb",
+            "name": "cardName",
+            "description": "Карта ввода контактной информации для профойла пользователя"
+          },
+          "parent": {},
+          "text": "Контактная Информация",
+          "control": {
+            "value": {
+              "formTip": "Ввод контактной информации"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/FormEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
+        },
+        {
+          "identity": {
+            "id": "190a0aab-cf63-4ef6-997e-c259750e70c2",
+            "name": "contactRank",
+            "description": "Уровень предпочтения контакта. 1 - самый предпочтительнй контакт."
+          },
+          "parent": {},
+          "control": {
+            "value": {
+              "editTip": "Введите уровень предпочтения для контакта"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
+        },
+        {
+          "identity": {
+            "id": "ab1641f2-22ba-40d7-9e0e-7350dfbad19c",
+            "name": "contactUse",
+            "description": "Тип контакта для пользователя"
+          },
+          "parent": {},
+          "text": "Тип контакта",
+          "control": {
+            "value": {
+              "editTip": "Выберете тип контакта"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
+        },
+        {
+          "identity": {
+            "id": "11148a94-7ebb-4b74-8fa0-069d188beba1",
+            "name": "period"
+          },
+          "parent": {},
+          "text": "Период",
+          "control": {
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
+        },
+        {
+          "identity": {
+            "id": "f2b368c1-ccca-444c-a538-26e34102bb3f",
+            "name": "telecomSystem",
+            "description": "Тип связи используемый при контакте"
+          },
+          "parent": {},
+          "text": "Тип связи",
+          "control": {
+            "value": {
+              "editTip": "Выбирите тип связи"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
+        },
+        {
+          "identity": {
+            "id": "09a15b43-eabf-4050-ac45-0fb4ab10f906",
+            "name": "telecomValue",
+            "description": "Номер или адресс для контакта"
+          },
+          "parent": {},
+          "text": "Значение",
+          "control": {
+            "value": {
+              "editTip": "Введите номер или адресс"
+            },
+            "reference": "/organizations/Infort Technologies/systems/infrastructure/applications/Control/datasets/ElementEditor/versions/1.0.0",
+            "subscription": "/organizations/Infort Technologies/systems/Client/applications/User/subscriptions/Control/versions/1.0.0"
+          }
+        }
+      ]
+    }
+  ],
+  "layouts": [],
+  "_path": "/organizations/Infort Technologies/systems/Client/applications/User/views/ContactInfoCard",
+  "_status": "approved"
+}

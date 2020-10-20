@@ -1,4 +1,3 @@
-const { metadata, findByPath } = require('./example_metadata.js');
 const { getDatasetData, getDatasetMetadata, getViewMetadata, getElementMetadata, getElementLabel, getFieldMetadata, getEnumOptions } = require('./metadataApi.js');
 
 const accessDataset = getDatasetMetadata('/organizations/Apdax/systems/Difhub/applications/System/datasets/Access');
@@ -9,7 +8,6 @@ console.log("Example of loading dataset data and metadata from metadata.js");
 console.log(accessDataset);
 
 console.log(accessData);
-
 
 const applicationView = getViewMetadata('/Apdax/systems/Difhub/applications/Interface/views/Application color');
 

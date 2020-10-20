@@ -1,14 +1,11 @@
-//const { metadata, findByPath } = require('./example_metadata.js');
+const { metadata, findByPath } = require('./example_metadata.js');
 //const { metadata_apdax } = require('./metadata_apdax.js');
 
 const defaultLocale = { "Locale Name": "English - United States", "Locale id": "en-us", "Locale Code": "1033", "Language Code": "en" };
 const defaultLocaleId = 'en-us';
 const defaultLocaleCode = '1033';
-exports.defaultLocale = defaultLocale;
-exports.defaultLocaleId = defaultLocaleId;
-exports.defaultLocaleCode = defaultLocaleCode;
 
-exports.changeLang = function (newLocale, newLocaleId, newLocaleMap) {
+function changeLang(newLocale, newLocaleId, newLocaleMap) {
   window.localStorage.localeCode = newLocale;
   window.localStorage.localeMap = newLocaleMap ? datasetToObjectArray(newLocaleMap) : null;
   window.localStorage.localeId = newLocaleId;
@@ -20,11 +17,15 @@ exports.changeLang = function (newLocale, newLocaleId, newLocaleMap) {
  * @param {string} localeCode - code of locale w need id for
  * @returns {string} locale code.
  */
-exports.localeIdByCode = (localeCode) => {
-  const locales = window.localStorage.localeMap;
+function localeIdByCode (localeCode) {
+  try {
+    const locales = window.localStorage.localeMap;
     if (!locales) return null;
-  let ret = locales.find(cur => cur["Locale Code"] === localeCode);
-  return ret["Locale Id"];
+    let ret = locales.find(cur => cur["Locale Code"] === localeCode);
+    return ret["Locale Id"];
+  } catch (e) {
+    return null;
+  }
 }
 
 /**
@@ -32,7 +33,7 @@ exports.localeIdByCode = (localeCode) => {
  * @param {String} str1
  * @param {String} str2
  */
-const strCompare = function (str1, str2) {
+function strCompare (str1, str2) {
   if (!str1 && !str2) {
     // This is two empty strings case, we consider it equal
     return true;
@@ -48,14 +49,13 @@ const strCompare = function (str1, str2) {
     return window.localStorage.localeCollator ? window.localStorage.localeCollator.compare(str1, str2) : str1.toLowerCase() === str2.toLowerCase();
   }
 }
-exports.strCompare = strCompare;
 
 /**
  * Non case sensitive string compare
  * @param {String} str1
  * @param {String} str2
  */
-const nonCSCompare = function (str1, str2) {
+function nonCSCompare (str1, str2) {
   if (!str1 && !str2) {
     // This is two empty strings case, we consider it equal
     return true;
@@ -71,7 +71,6 @@ const nonCSCompare = function (str1, str2) {
     return str1.toLowerCase() === str2.toLowerCase();
   }
 }
-exports.nonCSCompare = nonCSCompare;
 
 /**
  * Get value from object by path
@@ -79,7 +78,7 @@ exports.nonCSCompare = nonCSCompare;
  * @param path - this is path in format a.b.c[0].d
  * @returns - object found in the location.
  */
-exports.deepGet = function (object, path) {
+function deepGet (object, path) {
   try {
     const elements = path.charAt(0) === '/' ? path.substring(1).replace(/\[/g,"/").replace(/\]/g,'').split('/')
                                             : path.replace(/\[/g,".").replace(/\]/g,'').split('.');
@@ -87,7 +86,7 @@ exports.deepGet = function (object, path) {
     return elements.reduce(function (obj, property) {return obj[property];}, object);
   } catch (err) {
     return undefined;
-  }   
+  }
 }
 
 /**
@@ -97,7 +96,7 @@ exports.deepGet = function (object, path) {
  * @param value - this is value to set
  * @returns - object new state.
  */
-exports.deepSet = function (object, path, value) {
+function deepSet (object, path, value) {
   try {
     const elements = path.charAt(0) === '/' ? path.substring(1).replace(/\[/g,"/[").replace(/\]/g,'').split('/')
                                             : path.replace(/\[/g,".[").replace(/\]/g,'').split('.');
@@ -107,7 +106,7 @@ exports.deepSet = function (object, path, value) {
 
     for (var element of elements) {
       let isArray = element.charAt(0) === '[';
-      let name = isArray ? element.substring(1) : element; 
+      let name = isArray ? element.substring(1) : element;
 
       if (prev_name !== undefined) {
         // Parent object undefined.
@@ -115,17 +114,17 @@ exports.deepSet = function (object, path, value) {
           prev_obj[prev_name] = isArray ? [] : {};
         }
         prev_obj = prev_obj[prev_name];
-      } 
-      prev_name = name; 
+      }
+      prev_name = name;
     }
 
     if (prev_name === undefined) {
-      // Current object can change value 
+      // Current object can change value
       prev_obj = value;
     } else {
-      // Previous object can change value 
+      // Previous object can change value
       prev_obj[prev_name] = value;
-    }    
+    }
     return object;
   } catch (err) {
     return undefined;
@@ -137,7 +136,7 @@ exports.deepSet = function (object, path, value) {
  * @param o - this is actual object to copy
  * @returns - complete copy of the object.
  */
-exports.deepCopy = function (o, nonEmpty = false) {
+function deepCopy(o, nonEmpty = false) {
   var copy = o, k;
   if (o && typeof o === 'object') {
     copy = Object.prototype.toString.call(o) === '[object Array]' ? [] : {};
@@ -156,7 +155,7 @@ exports.deepCopy = function (o, nonEmpty = false) {
  * @param o - object to copy data from
  * @returns - complete merge of base object with source object.
  */
-exports.deepMerge = function (b, o) {
+function deepMerge(b, o) {
   var copy = {}, k;
   
   // Merge of two arrays complex. For now we add one to another
@@ -165,7 +164,7 @@ exports.deepMerge = function (b, o) {
     return (b ? b : []).concat(o ? o : []);
   }
 
-  if (b !== 'undefined' && b !== null ) { 
+  if (b !== 'undefined' && b !== null ) {
     if (typeof b === 'object') {
       for (k in b) {
         if (o && (o[k] !== undefined && o[k] !== null)) {
@@ -188,7 +187,7 @@ exports.deepMerge = function (b, o) {
     }
   }
 
-  if (o) { 
+  if (o) {
     if (typeof o === 'object') {
       for (k in o) {
         if (b && (b[k] !== undefined && b[k] !== null)) {
@@ -208,7 +207,7 @@ exports.deepMerge = function (b, o) {
   return copy;
 }
 
-exports.datasetToObjectArray = (ds) => {
+function datasetToObjectArray (ds) {
 
   let sorted = ds.data.records.slice();
   sorted.sort((a,b)=>a.index > b.index ? 1 : (a.index < b.index ? -1 : 0));
@@ -241,7 +240,7 @@ exports.datasetToObjectArray = (ds) => {
  * @returns {object} object metadata, or null
  */
 const getDatasetMetadata = (path) => {
-  try 
+  try
   {
     if (!path) return null;
     const dspath = path.replace(/:/g,"%");
@@ -256,15 +255,14 @@ const getDatasetMetadata = (path) => {
   }
   return null;
 };
-exports.getDatasetMetadata = getDatasetMetadata;
 
 /**
  * Return veiw metadata by path of the view
  * @param {string} path to the object
  * @returns {object} object metadata, or null
  */
-exports.getViewMetadata = (path) => {
-  try 
+function getViewMetadata (path) {
+  try
   {
     if (!path) return null;
     const vipath = path.replace(/:/g,"%");
@@ -284,10 +282,10 @@ exports.getViewMetadata = (path) => {
  * Return field of the dataset
  * @param {object} dataset - metadata for dataset
  * @param {string} path - this is path in format a.b.c[0].d or /a/b/c[0]/d
- * @returns {object} object - metadata for field of the dataset or null 
+ * @returns {object} object - metadata for field of the dataset or null
  */
-exports.getFieldMetadata = (dataset, path) => {
-  try 
+function getFieldMetadata (dataset, path) {
+  try
   {
     if (!dataset || !path || dataset.object.type.toLowerCase() !== 'dataset') return null;
 
@@ -316,14 +314,14 @@ exports.getFieldMetadata = (dataset, path) => {
 };
 
 /**
- * Return specified element of the view or all elements of the view for specific locale. 
+ * Return specified element of the view or all elements of the view for specific locale.
  * @param {object} view - metadata for view
  * @param {string} element - name of the element
  * @param {string} locale - locale id in which return element data. When not specified use view default.
  * @returns {object} object - metadata for element of the view
  */
-exports.getElementMetadata = (view, element, locale) => {
-  try 
+function getElementMetadata (view, element, locale) {
+  try
   {
     if (!view || view.object.type.toLowerCase() !== 'view') return null;
 
@@ -334,38 +332,38 @@ exports.getElementMetadata = (view, element, locale) => {
     // Find base definision.
     if (view.local) {
       // We have locale defined in view we expect we have
-      // base defenision match defined local. 
+      // base defenision match defined local.
       base_definision = view.definitions.find(def => (def.locale === view.local));
     } else {
-      // We on default locale of the system and will look base on code and id  
+      // We on default locale of the system and will look base on code and id
       base_definision = view.definitions.find(def => (def.locale === defaultLocaleId || def.locale === defaultLocaleCode));
     }
 
     // Find definision of current locale.
     if (locale) {
       if (base_definision.locale !== locale) {
-        // We on default locale of the system and will look base on code and id  
+        // We on default locale of the system and will look base on code and id
         data_definision = view.definitions.find(def => (def.locale === locale));
 
         // Can be competability problem
         if (!data_definision) {
-          let localeId = localeIdByCode(locale); 
+          let localeId = localeIdByCode(locale);
           if (localeId && base_definision.locale !== localeId) {
-            // We on default locale of the system and will look base on code and id  
+            // We on default locale of the system and will look base on code and id
             data_definision = view.definitions.find(def => (def.locale === localeId));
           }
         }
       }
     } else if (window.localStorage.localeId || window.localStorage.localeCode) {
-      // We use current locale if it not same as base. 
+      // We use current locale if it not same as base.
       if (base_definision.locale !== window.localStorage.localeId && base_definision.locale !== window.localStorage.localeCode ) {
-        // We on default locale of the system and will look base on code and id  
+        // We on default locale of the system and will look base on code and id
         data_definision = view.definitions.find(def => (def.locale === window.localStorage.localeId || def.locale === window.localStorage.localeCode));
       }
     } else {
       // We use system locale as our data locale if it not same as base
       if (base_definision.locale !== defaultLocaleId || base_definision.locale !== defaultLocaleCode) {
-        // We on default locale of the system and will look base on code and id  
+        // We on default locale of the system and will look base on code and id
         data_definision = view.definitions.find(def => (def.locale === defaultLocaleId || def.locale === defaultLocaleCode));
       }
     }
@@ -377,8 +375,8 @@ exports.getElementMetadata = (view, element, locale) => {
     }
 
     // When specific element requested
-    if (element) {  
-      // Element by name from base and locale definision. 
+    if (element) {
+      // Element by name from base and locale definision.
       let data_element = (!data_definision) ? null : data_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
       let base_element = (!base_definision) ? null : base_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
 
@@ -401,10 +399,10 @@ exports.getElementMetadata = (view, element, locale) => {
         return [];
       } else if (data_definision && !base_definision) {
         // We have elements only for requested locale.
-        return data_definision;
+        return data_definision.elements;
       } else if (!data_definision && base_definision) {
         // We have elements only for view default locale.
-        return base_definision;
+        return base_definision.elements;
       } else {
         // We have both elements and need to merge it.
         let base_elements = base_definision.elements.map(base_element => {
@@ -433,7 +431,7 @@ exports.getElementMetadata = (view, element, locale) => {
  * @param {object} element - metadata for element
  * @returns {string} label text
  */
-exports.getElementLabel = (element) => {
+function getElementLabel (element) {
   return !element || !element.text ? '' : element.text;
 };
 
@@ -443,15 +441,15 @@ exports.getElementLabel = (element) => {
  * @param {string} name of the property
  * @returns {string} property value
  */
-exports.getElementProperty = (element, name) => {
+function getElementProperty (element, name) {
   if (!element || !element.properties)
     return '';
 
   let property = element.properties.find(prop => nonCSCompare(prop.identity.name, name));
-  if (!property) 
+  if (!property)
     return '';
 
-  return property.value; 
+  return property.value;
 };
 
 /**
@@ -460,7 +458,7 @@ exports.getElementProperty = (element, name) => {
  * @param {string} path - dot delimeted or slash delimeted path to value in element control
  * @returns {string} value from element control.
  */
-exports.getElementValue = (element, path) => {
+function getElementValue (element, path) {
   if (!element || !element.control || !element.control.value)
     return null;
 
@@ -478,10 +476,10 @@ exports.getElementValue = (element, path) => {
  * @param {string} usage - return value by unique usage without translations
  * @returns {array} array of records
  */
-exports.getDatasetData = (dataset, locale, usage) => {
+function getDatasetData (dataset, locale, usage) {
   if (!dataset) return [];
   if (!locale) {
-    locale = typeof(window) !== "undefined" && window.localStorage && window.localStorage.locale ? window.localStorage.locale : defaultLocale;  
+    locale = typeof(window) !== "undefined" && window.localStorage && window.localStorage.locale ? window.localStorage.locale : defaultLocale;
   }
 
   let sorted = dataset.data.records.slice();
@@ -489,9 +487,9 @@ exports.getDatasetData = (dataset, locale, usage) => {
 
   let ret = sorted.map(row => {
     let obj = {};
-    if (locale) { 
-      let indexTranslations = dataset.structure.fields.findIndex((field) => nonCSCompare(field.identity.name, 'translations') || nonCSCompare(field.usage, 'translations')); 
-      let translation = (indexTranslations < 0 || !row.values[indexTranslations]) ? null : JSON.parse(row.values[indexTranslations]).find((tr) => nonCSCompare(locale, tr.Locale)); 
+    if (locale) {
+      let indexTranslations = dataset.structure.fields.findIndex((field) => nonCSCompare(field.identity.name, 'translations') || nonCSCompare(field.usage, 'translations'));
+      let translation = (indexTranslations < 0 || !row.values[indexTranslations]) ? null : JSON.parse(row.values[indexTranslations]).find((tr) => nonCSCompare(locale, tr.Locale));
       dataset.structure.fields.map((field, index) => {
         if (index != indexTranslations) {
           if (usage) {
@@ -521,23 +519,37 @@ exports.getDatasetData = (dataset, locale, usage) => {
  * @param {string} locale - locale in which to return options if translation exist.
  * @returns {array} array of enumerator options
  */
-exports.getEnumOptions = (field, locale) => {
+function getEnumOptions (field, locale) {
   if (!field || !nonCSCompare(field.type,'Enum') || !field.reference)  return [];
 
   const dataset = getDatasetMetadata(field.reference);
   if (!dataset) return [];
-    
+  
   return getDatasetData(dataset, locale, true);
+}
+
+
+module.exports = {
+  defaultLocale,
+  defaultLocaleId,
+  defaultLocaleCode,
+
+  getEnumOptions,
+  deepMerge,
+  getDatasetMetadata,
+  getDatasetData,
+  getViewMetadata,
+  getElementMetadata,
+  deepCopy,
+  changeLang,
+  localeIdByCode,
+  strCompare,
+  nonCSCompare,
+  deepGet,
+  deepSet,
+  datasetToObjectArray,
+  getElementProperty,
+  getFieldMetadata,
+  getElementLabel,
+  getElementValue
 };
-
-
-
-
-
-
-
-
-
-
-
-

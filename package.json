@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "size": "size-limit 10KB index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/DifHub/dh-metadata-grubber#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "jest": "^26.4.2",
     "size-limit": "^0.11.6"
   },
   "size-limit": {

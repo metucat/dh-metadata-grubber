@@ -8,6 +8,7 @@ var request = require('sync-request');
 const versionedObjectTypes = ['datasets','interfaces','pipelines','publications','subscriptions','views'];
 
 args.option('repo', 'Absolute path to local repository with project metadata', '');
+args.option('metadataDir', 'Absolute path to local metadata dir', '');
 args.option('targetDir', 'Relative path to directory where resulting js file should be put', '');
 args.option('include', 'Relative path to file describing subset of metadata to be included in result (optional)', '');
 args.option('includeOrg', 'Organization to be included in result (optional)', '');
@@ -18,9 +19,6 @@ args.option('skipresources', 'Skip downloading of resources from views', false);
 
 var flags = args.parse(process.argv);
 
-if (!flags.repo) {
-    throw "Provide path to local metadata repository";
-}
 if (flags.json && flags.repo == flags.targetDir) {
 	throw "Target directory should be different from source directory";
 }
@@ -35,8 +33,8 @@ var metadata = {};
 function cloneRepo () {
 
     try {
-        childProcess.execSync('git clone --local ' + flags.repo + ' .mdtmp');
-		childProcess.execSync('cd .mdtmp && git checkout master && cd ..');
+    	  childProcess.execSync('git clone --local ' + flags.repo + ' .mdtmp');
+    	  childProcess.execSync('cd .mdtmp && git checkout -b test && cd ..');
         return true;
     } catch (err) {
         return false;
@@ -126,7 +124,7 @@ function getVersionStatus(version) {
   return status;
 }
 
-function refToFileName(ref) { 
+function refToFileName(ref) {
 //const clearedPath = path.replace(/\/versions\/\d\.\d\.\d/g, '').replace(/:/g,"%");
 	var version = "";
 	if (ref.indexOf('/versions/') != -1)
@@ -264,7 +262,16 @@ function scanDirectory (dir, metapath) {
 		
 		if (type == "pipelines")
 		{
-            let p = path.join(process.cwd(), '.mdtmp');
+			if (flags.metadataDir) {
+				console.log('flags.metadataDir');
+				// var p = flags.metadataDir;
+				var p =  path.join(process.cwd(), flags.metadataDir);
+			}
+			if (flags.repo) {
+				// path to temp repo
+				console.log('flags.repo');
+				var p = path.join(process.cwd(), '.mdtmp');
+			}
 
             console.log("pipeline", object._path);
 			console.log(object.activities);
@@ -279,6 +286,9 @@ function scanDirectory (dir, metapath) {
 								var ref = input.component.reference;
 								var fileName = refToFileName(ref);
                                 console.log("Graner:Pipeline:Input", path.join(p, fileName), p, process.cwd());
+								console.log('require');
+								console.log(p);
+								console.log(flags.metadataDir);
 								var dataset = require(path.join(p, fileName));
 								input._dataset = dataset;
 							}
@@ -299,7 +309,7 @@ function scanDirectory (dir, metapath) {
 				});
 			}
 		}
-				
+		
 		
 		if (type == "views" && object.definitions &&!flags.skipresources)
 		{
@@ -321,7 +331,7 @@ function scanDirectory (dir, metapath) {
 								fs.mkdirSync(path.join((flags.targetDir ? flags.targetDir : ''), 'resources'), { recursive: true });
 								fs.writeFileSync(path.join((flags.targetDir ? flags.targetDir : ''), 'resources', imageUrl), imageData);
 							}
-						}						
+						}
 					});
 				}
 			});
@@ -332,7 +342,7 @@ function scanDirectory (dir, metapath) {
 			const filePath = path.join((flags.targetDir ? flags.targetDir : ''), object._path) + '.json';
 			fs.mkdirSync(path.dirname(filePath), { recursive: true });
 			fs.writeFile(filePath, (flags.pretty !== false ? JSON.stringify(object, null, 2) :JSON.stringify(object)), () => {
-				
+			
 			});
 		}
 		
@@ -398,38 +408,46 @@ exportsString += "}; ";
 
 
 
-
-if (cloneRepo()) {
-    // path to temp repo
-    var p = path.join(process.cwd(), '.mdtmp/organizations');
-
-	if (flags.include)
-	{
+function writeMetadata (dir) {
+	if (flags.include) {
 		var include_str = fs.readFileSync(flags.include, "utf-8");
 		metadataPathFilter = include_str.split("\n").map(s => s.trim());
 	}
-	if (flags.includeOrg)
-	{
+	if (flags.includeOrg) {
 		metadataPathFilter = "/organizations/" + flags.includeOrg;
 	}
-
-    console.log("Graber:SCAN", p, flags);
-    var obj = scanDirectory(p, '');
+	
+	console.log("Graber:SCAN", dir, flags);
+	var obj = scanDirectory(dir, '');
 	
 	var outputFilename = path.join((flags.targetDir ? flags.targetDir : ''), 'metadata.js');
 	
 	if (!flags.json)
 		fs.writeFile(
 			outputFilename,
-//			"var metadata_apdax = " + JSON.stringify(metadata_apdax, null, 2) + ";" + 
-			"var metadata = " + (flags.pretty !== false ? JSON.stringify(obj, null, 2) :JSON.stringify(obj)) + "\n" +
+//			"var metadata_apdax = " + JSON.stringify(metadata_apdax, null, 2) + ";" +
+			"var metadata = " + (flags.pretty !== false ? JSON.stringify(obj, null, 2) : JSON.stringify(obj)) + "\n" +
 			findByPath.toString() +
-			metadataApiString + 
+			metadataApiString +
 			exportsString,		//"module.exports = {metadata: metadata, findByPath: findByPath};",
 			() => {
 				console.log("Metadata saved to", outputFilename);
 			}
 		);
+}
+
+
+if (flags.metadataDir) {
+	console.log(flags.metadataDir);
+	const dir = path.join(process.cwd(), flags.metadataDir + '/organizations');
+	writeMetadata(dir);
+	
+}
+if (flags.repo) {
+	cloneRepo();
+	// path to temp repo
+	const dir = path.join(process.cwd(), '.mdtmp/organizations');
+	writeMetadata(dir);
 }
 
 deleteRepo();
