@@ -2,30 +2,36 @@ const { metadata, findByPath } = require('./example_metadata.js');
 //const { metadata_apdax } = require('./metadata_apdax.js');
 
 const defaultLocale = { "Locale Name": "English - United States", "Locale id": "en-us", "Locale Code": "1033", "Language Code": "en" };
-const defaultLocaleId = 'en-us';
-const defaultLocaleCode = '1033';
+const defaultLocaleId = "en-us";
+const defaultLocaleCode = "1033";
+let localeMap = null;
+let localeCollator = {};
 
-function changeLang(newLocale, newLocaleId, newLocaleMap) {
-  window.localStorage.localeCode = newLocale;
-  window.localStorage.localeMap = newLocaleMap ? datasetToObjectArray(newLocaleMap) : null;
-  window.localStorage.localeId = newLocaleId;
-  window.localStorage.localeCollator = new Intl.Collator(newLocale, { sensitivity: 'base', numeric: true });
+function changeLang (newLocale, newLocaleMap) {
+  if (newLocaleMap) {
+    localeMap = datasetToObjectArray(newLocaleMap);
+  }
+
+	if (newLocale) {
+    let locale = findLocale(newLocale);
+    if (locale) {
+      window.localStorage.localeCode = locale["Locale Code"];
+      window.localStorage.localeId = locale["Locale id"];
+      localeCollator = new Intl.Collator(window.localStorage.localeId, { sensitivity: 'base', numeric: true });
+    }
+  }
+  return window.localStorage.localeCode;
 }
 
-/**
- * Find locale id by locale code. Use enumerator of locales from organization.
- * @param {string} localeCode - code of locale w need id for
- * @returns {string} locale code.
- */
-function localeIdByCode (localeCode) {
-  try {
-    const locales = window.localStorage.localeMap;
-    if (!locales) return null;
-    let ret = locales.find(cur => cur["Locale Code"] === localeCode);
-    return ret["Locale Id"];
-  } catch (e) {
-    return null;
+function findLocale (locale) {
+  if (!localeMap) return null;
+
+  let localeCode = locale.toString().toLowerCase();
+  let localeData = localeMap.find(cur => cur["Locale Code"] === localeCode);
+  if (!localeData) {
+    localeData = localeMap.find(cur => cur["Locale id"] === localeCode);
   }
+  return localeData;
 }
 
 /**
@@ -320,52 +326,56 @@ function getFieldMetadata (dataset, path) {
  * @param {string} locale - locale id in which return element data. When not specified use view default.
  * @returns {object} object - metadata for element of the view
  */
+
 function getElementMetadata (view, element, locale) {
-  try
-  {
+  try {
     if (!view || view.object.type.toLowerCase() !== 'view') return null;
 
     // Let's find definision for view local.
     let base_definision = null;
     let data_definision = null;
 
+    // We on default locale of the system and will look base on code and id
+    let baseLocaleCode = defaultLocaleCode;
+    let baseLocaleId = defaultLocaleId;
+
     // Find base definision.
     if (view.local) {
       // We have locale defined in view we expect we have
       // base defenision match defined local.
-      base_definision = view.definitions.find(def => (def.locale === view.local));
-    } else {
-      // We on default locale of the system and will look base on code and id
-      base_definision = view.definitions.find(def => (def.locale === defaultLocaleId || def.locale === defaultLocaleCode));
+      let viewLocale = findLocale(view.local);
+      if (viewLocale) {
+        baseLocaleCode = viewLocale["Locale Code"];
+        baseLocaleId = viewLocale["Locale id"];
+      }
     }
 
-    // Find definision of current locale.
-    if (locale) {
-      if (base_definision.locale !== locale) {
-        // We on default locale of the system and will look base on code and id
-        data_definision = view.definitions.find(def => (def.locale === locale));
+    base_definision = view.definitions.find(def => (def.locale.toString().toLowerCase() === baseLocaleId || def.locale.toString() === baseLocaleCode));
 
-        // Can be competability problem
-        if (!data_definision) {
-          let localeId = localeIdByCode(locale);
-          if (localeId && base_definision.locale !== localeId) {
-            // We on default locale of the system and will look base on code and id
-            data_definision = view.definitions.find(def => (def.locale === localeId));
-          }
+    // We on default locale of the system and will look base on code and id
+    let dataLocaleCode = defaultLocaleCode;
+    let dataLocaleId = defaultLocaleId;
+
+    // Find data definision.
+    if (locale) {
+      // We have locale defined in call we expect we have
+      // datq defenision match defined local.
+      if (locale.toString().toLowerCase() !== baseLocaleId && locale.toString() === baseLocaleCode) {
+        let dataLocale = findLocale(locale);
+        if (dataLocale) {
+          dataLocaleCode = dataLocale["Locale Code"];
+          dataLocaleId = dataLocale["Locale id"];
         }
       }
     } else if (window.localStorage.localeId || window.localStorage.localeCode) {
       // We use current locale if it not same as base.
-      if (base_definision.locale !== window.localStorage.localeId && base_definision.locale !== window.localStorage.localeCode ) {
-        // We on default locale of the system and will look base on code and id
-        data_definision = view.definitions.find(def => (def.locale === window.localStorage.localeId || def.locale === window.localStorage.localeCode));
-      }
-    } else {
-      // We use system locale as our data locale if it not same as base
-      if (base_definision.locale !== defaultLocaleId || base_definision.locale !== defaultLocaleCode) {
-        // We on default locale of the system and will look base on code and id
-        data_definision = view.definitions.find(def => (def.locale === defaultLocaleId || def.locale === defaultLocaleCode));
-      }
+      dataLocaleCode = window.localStorage.localeCode;
+      dataLocaleId = window.localStorage.localeId;
+    }
+
+    if (dataLocaleId !== baseLocaleId || dataLocaleCode !== baseLocaleCode) {
+      // We on default locale of the system and will look base on code and id
+      data_definision = view.definitions.find(def => (def.locale.toString().toLowerCase() === dataLocaleId || def.locale.toString() === dataLocaleCode));
     }
 
     // We don't find or we have it same.
@@ -530,7 +540,9 @@ function getEnumOptions (field, locale) {
 
 
 module.exports = {
+  localeMap,
   defaultLocale,
+  localeCollator,
   defaultLocaleId,
   defaultLocaleCode,
 
@@ -542,7 +554,7 @@ module.exports = {
   getElementMetadata,
   deepCopy,
   changeLang,
-  localeIdByCode,
+  findLocale,
   strCompare,
   nonCSCompare,
   deepGet,
