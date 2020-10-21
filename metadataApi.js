@@ -2,30 +2,36 @@ const { metadata, findByPath } = require('./example_metadata.js');
 //const { metadata_apdax } = require('./metadata_apdax.js');
 
 const defaultLocale = { "Locale Name": "English - United States", "Locale id": "en-us", "Locale Code": "1033", "Language Code": "en" };
-const defaultLocaleId = 'en-us';
-const defaultLocaleCode = '1033';
+const defaultLocaleId = "en-us";
+const defaultLocaleCode = "1033";
+let localeMap = null;
+let localeCollator = {};
 
-function changeLang(newLocale, newLocaleId, newLocaleMap) {
-  window.localStorage.localeCode = newLocale;
-  window.localStorage.localeMap = newLocaleMap ? datasetToObjectArray(newLocaleMap) : null;
-  window.localStorage.localeId = newLocaleId;
-  window.localStorage.localeCollator = new Intl.Collator(newLocale, { sensitivity: 'base', numeric: true });
+function changeLang (newLocale, newLocaleMap) {
+  if (newLocaleMap) {
+    localeMap = datasetToObjectArray(newLocaleMap);
+  }
+
+	if (newLocale) {
+    let locale = findLocale(newLocale);
+    if (locale) {
+      window.localStorage.localeCode = locale["Locale Code"];
+      window.localStorage.localeId = locale["Locale id"];
+      localeCollator = new Intl.Collator(window.localStorage.localeId, { sensitivity: 'base', numeric: true });
+    }
+  }
+  return window.localStorage.localeCode;
 }
 
-/**
- * Find locale id by locale code. Use enumerator of locales from organization.
- * @param {string} localeCode - code of locale w need id for
- * @returns {string} locale code.
- */
-function localeIdByCode (localeCode) {
-  try {
-    const locales = window.localStorage.localeMap;
-    if (!locales) return null;
-    let ret = locales.find(cur => cur["Locale Code"] === localeCode);
-    return ret["Locale Id"];
-  } catch (e) {
-    return null;
+function findLocale (locale) {
+  if (!localeMap) return null;
+
+  let localeCode = locale.toString().toLowerCase();
+  let localeData = localeMap.find(cur => cur["Locale Code"] === localeCode);
+  if (!localeData) {
+    localeData = localeMap.find(cur => cur["Locale id"] === localeCode);
   }
+  return localeData;
 }
 
 /**
