@@ -540,7 +540,9 @@ function getEnumOptions (field, locale) {
 
 
 module.exports = {
+  localeMap,
   defaultLocale,
+  localeCollator
   defaultLocaleId,
   defaultLocaleCode,
 
