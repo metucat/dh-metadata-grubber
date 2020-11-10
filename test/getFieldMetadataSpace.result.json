@@ -1,0 +1,18 @@
+{
+  "identity": {
+    "id": "4bd2a0b7-4332-4e2b-a21c-f1777418888a",
+    "name": "relationship ",
+    "description": "The kind of relationship"
+  },
+  "order": 4,
+  "usage": "Value",
+  "count": 1,
+  "type": "Enum",
+  "reference": "/organizations/Infort Technologies/systems/Healthcare/applications/Register/datasets/PatientContactRelationship/versions/1.0.0",
+  "subscription": "",
+  "optional": true,
+  "value": "",
+  "format": "",
+  "access": 255,
+  "privacy": "low"
+}

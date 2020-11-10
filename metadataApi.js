@@ -302,7 +302,7 @@ function getFieldMetadata (dataset, path) {
 
     // Iterate path and find field we looking for.
     for (var i = 0; i < elements.length; i++) {
-      let field = ds.structure.fields.find(f => nonCSCompare(f.identity.name, elements[i]));
+      let field = ds.structure.fields.find(f => nonCSCompare(f.identity.name.trim(), elements[i]));
       if (i + 1 === elements.length ) {
         return field;
       } else if (!field || field.type.toLowerCase() !== 'structure') {

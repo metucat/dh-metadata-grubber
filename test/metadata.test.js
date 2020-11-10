@@ -76,3 +76,9 @@ test('test getFieldMetadata', () => {
   expect(dataField).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getFieldMetadata.result.json'))));
 });
 
+test('test getFieldMetadata spaces', () => {
+  const PatientContact = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'mock/PatientContact.json')));
+  const relationshipField =getFieldMetadata(PatientContact, 'relationship')
+  expect(relationshipField).toStrictEqual(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'getFieldMetadataSpace.result.json'))));
+});
+
