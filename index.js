@@ -392,7 +392,7 @@ const metadataApi = require('./metadataApi.js');
 
 let metadataApiString = "";
 //
-let exportsString = "module.exports = {metadata: metadata, findByPath: findByPath";
+let exportsString = "export {metadata, findByPath";
 for (let item in metadataApi)
 {
 	//console.log("item", item, metadataApi[item]);
@@ -400,7 +400,7 @@ for (let item in metadataApi)
 		metadataApiString += "var " + item + " = " + (metadataApi[item].toString()) + "; \n";
 	else
 		metadataApiString += "var " + item + " = " + JSON.stringify(metadataApi[item]) + "; \n";
-	exportsString += ", " + item + ":" + item;
+	exportsString += ", " + item;
 }
 exportsString += "}; ";
 
