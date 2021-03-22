@@ -1,5 +1,5 @@
 const { metadata, findByPath } = require('./example_metadata.js');
-//const { metadata_apdax } = require('./metadata_apdax.js');
+// const { metadata_apdax } = require('./metadata_apdax.js');
 
 const defaultLocale = { "Locale Name": "English - United States", "Locale id": "en-us", "Locale Code": "1033", "Language Code": "en" };
 const defaultLocaleId = "en-us";
@@ -13,7 +13,7 @@ function changeLang (newLocale, newLocaleMap) {
   }
 
 	if (newLocale) {
-    let locale = findLocale(newLocale);
+    const locale = findLocale(newLocale);
     if (locale) {
       window.localStorage.localeCode = locale["Locale Code"];
       window.localStorage.localeId = locale["Locale id"];
@@ -26,7 +26,7 @@ function changeLang (newLocale, newLocaleMap) {
 function findLocale (locale) {
   if (!localeMap) return null;
 
-  let localeCode = locale.toString().toLowerCase();
+  const localeCode = locale.toString().toLowerCase();
   let localeData = localeMap.find(cur => cur["Locale Code"] === localeCode);
   if (!localeData) {
     localeData = localeMap.find(cur => cur["Locale id"] === localeCode);
@@ -43,17 +43,17 @@ function strCompare (str1, str2) {
   if (!str1 && !str2) {
     // This is two empty strings case, we consider it equal
     return true;
-  } else if (!str1 || !str2) {
+  } if (!str1 || !str2) {
     // We are compare null with string
     return false;
-  } else if ( !(typeof str1 === 'string') || !(typeof str2 === 'string')) {
+  } if ( !(typeof str1 === 'string') || !(typeof str2 === 'string')) {
     // One of compares not string
     console.warn("nonCSCompare one of arguments is not a string", str1, str2);
     return false;
-  } else {
+  } 
     // Let's compare strings
     return window.localStorage.localeCollator ? window.localStorage.localeCollator.compare(str1, str2) : str1.toLowerCase() === str2.toLowerCase();
-  }
+  
 }
 
 /**
@@ -65,17 +65,17 @@ function nonCSCompare (str1, str2) {
   if (!str1 && !str2) {
     // This is two empty strings case, we consider it equal
     return true;
-  } else if ( (str1 && !(typeof str1 === 'string')) || (str2  && !(typeof str2 === 'string'))) {
+  } if ( (str1 && !(typeof str1 === 'string')) || (str2  && !(typeof str2 === 'string'))) {
     // We compare null or different types
     console.warn("nonCSCompare one of arguments is falsy", str1, str2);
     return false;
-  } else if (!str1 || !str2) {
+  } if (!str1 || !str2) {
     // We are compare null with string
     return false;
-  } else {
+  } 
     // Let's compare strings
     return str1.toLowerCase() === str2.toLowerCase();
-  }
+  
 }
 
 /**
@@ -89,7 +89,7 @@ function deepGet (object, path) {
     const elements = path.charAt(0) === '/' ? path.substring(1).replace(/\[/g,"/").replace(/\]/g,'').split('/')
                                             : path.replace(/\[/g,".").replace(/\]/g,'').split('.');
     
-    return elements.reduce(function (obj, property) {return obj[property];}, object);
+    return elements.reduce((obj, property) => obj[property], object);
   } catch (err) {
     return undefined;
   }
@@ -108,11 +108,11 @@ function deepSet (object, path, value) {
                                             : path.replace(/\[/g,".[").replace(/\]/g,'').split('.');
 
     let prev_obj = object;
-    let prev_name = undefined;
+    let prev_name;
 
-    for (var element of elements) {
-      let isArray = element.charAt(0) === '[';
-      let name = isArray ? element.substring(1) : element;
+    for (const element of elements) {
+      const isArray = element.charAt(0) === '[';
+      const name = isArray ? element.substring(1) : element;
 
       if (prev_name !== undefined) {
         // Parent object undefined.
@@ -143,7 +143,7 @@ function deepSet (object, path, value) {
  * @returns - complete copy of the object.
  */
 function deepCopy(o, nonEmpty = false) {
-  var copy = o, k;
+  let copy = o; let k;
   if (o && typeof o === 'object') {
     copy = Object.prototype.toString.call(o) === '[object Array]' ? [] : {};
     for (k in o) {
@@ -162,12 +162,12 @@ function deepCopy(o, nonEmpty = false) {
  * @returns - complete merge of base object with source object.
  */
 function deepMerge(b, o) {
-  var copy = {}, k;
+  let copy = {}; let k;
   
   // Merge of two arrays complex. For now we add one to another
   if ((b && Object.prototype.toString.call(b) === '[object Array]') ||
       (o && Object.prototype.toString.call(o) === '[object Array]' )) {
-    return (b ? b : []).concat(o ? o : []);
+    return (b || []).concat(o || []);
   }
 
   if (b !== 'undefined' && b !== null ) {
@@ -184,13 +184,11 @@ function deepMerge(b, o) {
           copy[k] = deepCopy(b[k]);
         }
       }
-    } else {
-      if (o) {
+    } else if (o) {
         copy = deepCopy(o);
       } else {
         copy = b;
       }
-    }
   }
 
   if (o) {
@@ -202,27 +200,25 @@ function deepMerge(b, o) {
           copy[k] = deepCopy(o[k]);
         }
       }
-    } else {
-      if (b !== undefined && b !== null) {
+    } else if (b !== undefined && b !== null) {
         // This case must be already processed in b branch.
       } else {
         copy = o;
       }
-    }
   }
   return copy;
 }
 
 function datasetToObjectArray (ds) {
 
-  let sorted = ds.data.records.slice();
+  const sorted = ds.data.records.slice();
   sorted.sort((a,b)=>a.index > b.index ? 1 : (a.index < b.index ? -1 : 0));
 
-  //console.log("datasetToObjectArray s", sorted);
+  // console.log("datasetToObjectArray s", sorted);
 
-  let ret = sorted.map( row => {
+  const ret = sorted.map( row => {
 
-    let obj = {};
+    const obj = {};
 
 //    console.log("datasetToObjectArray r", row);
 
@@ -233,7 +229,7 @@ function datasetToObjectArray (ds) {
     return obj;
 
   });
-  //console.log("datasetToObjectArray", ds, ret);
+  // console.log("datasetToObjectArray", ds, ret);
 
   return ret;
 
@@ -251,13 +247,13 @@ const getDatasetMetadata = (path) => {
     if (!path) return null;
     const dspath = path.replace(/:/g,"%");
 
-    let ds = findByPath(dspath);
+    const ds = findByPath(dspath);
     if (!ds || ds.object.type.toLowerCase() !== 'dataset') return null;
 
     return ds;
   }
   catch (e) {
-    console.warn("Error in getDatasetMetadata: " + path);
+    console.warn(`Error in getDatasetMetadata: ${  path}`);
   }
   return null;
 };
@@ -273,13 +269,13 @@ function getViewMetadata (path) {
     if (!path) return null;
     const vipath = path.replace(/:/g,"%");
 
-    let view = findByPath(vipath);
+    const view = findByPath(vipath);
     if (!view || view.object.type.toLowerCase() !== 'view') return null;
 
     return view;
   }
   catch (e) {
-    console.warn("Error in getViewMetadata: " + path);
+    console.warn(`Error in getViewMetadata: ${  path}`);
   }
   return null;
 };
@@ -302,19 +298,19 @@ function getFieldMetadata (dataset, path) {
 
     // Iterate path and find field we looking for.
     for (var i = 0; i < elements.length; i++) {
-      let field = ds.structure.fields.find(f => nonCSCompare(f.identity.name.trim(), elements[i]));
+      const field = ds.structure.fields.find(f => nonCSCompare(f.identity.name.trim(), elements[i]));
       if (i + 1 === elements.length ) {
         return field;
-      } else if (!field || field.type.toLowerCase() !== 'structure') {
+      } if (!field || field.type.toLowerCase() !== 'structure') {
         return null;
-      } else {
+      } 
         ds = getDatasetMetadata(field.reference);
         if (!ds) return null
-      }
+      
     }
   }
   catch (e) {
-    console.warn("Error in getFieldMetadata: " + path, dataset);
+    console.warn(`Error in getFieldMetadata: ${  path}`, dataset);
   }
   return null;
 };
@@ -343,7 +339,7 @@ function getElementMetadata (view, element, locale) {
     if (view.local) {
       // We have locale defined in view we expect we have
       // base defenision match defined local.
-      let viewLocale = findLocale(view.local);
+      const viewLocale = findLocale(view.local);
       if (viewLocale) {
         baseLocaleCode = viewLocale["Locale Code"];
         baseLocaleId = viewLocale["Locale id"];
@@ -361,7 +357,7 @@ function getElementMetadata (view, element, locale) {
       // We have locale defined in call we expect we have
       // datq defenision match defined local.
       if (locale.toString().toLowerCase() !== baseLocaleId && locale.toString() === baseLocaleCode) {
-        let dataLocale = findLocale(locale);
+        const dataLocale = findLocale(locale);
         if (dataLocale) {
           dataLocaleCode = dataLocale["Locale Code"];
           dataLocaleId = dataLocale["Locale id"];
@@ -387,51 +383,51 @@ function getElementMetadata (view, element, locale) {
     // When specific element requested
     if (element) {
       // Element by name from base and locale definision.
-      let data_element = (!data_definision) ? null : data_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
-      let base_element = (!base_definision) ? null : base_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
+      const data_element = (!data_definision) ? null : data_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
+      const base_element = (!base_definision) ? null : base_definision.elements.find(elem => nonCSCompare(elem.identity.name, element));
 
       if (!data_element && !base_definision) {
         // We don't find element with provided name.
         return null;
-      } else if (data_element && !base_element) {
+      } if (data_element && !base_element) {
         // We have element only for requested locale.
         return data_element;
-      } else if (!data_element && base_element) {
+      } if (!data_element && base_element) {
         // We have element only for view default locale.
         return base_element;
-      } else {
+      } 
         // We have both elements and need to merge it.
         return deepMerge(base_element, data_element);
-      }
-    } else {
+      
+    } 
       if (!data_definision && !base_definision) {
         // We don't find definisions for locale we have.
         return [];
-      } else if (data_definision && !base_definision) {
+      } if (data_definision && !base_definision) {
         // We have elements only for requested locale.
         return data_definision.elements;
-      } else if (!data_definision && base_definision) {
+      } if (!data_definision && base_definision) {
         // We have elements only for view default locale.
         return base_definision.elements;
-      } else {
+      } 
         // We have both elements and need to merge it.
-        let base_elements = base_definision.elements.map(base_element => {
-          let data_element = data_definision.elements.find(elem => nonCSCompare(elem.identity.name, base_element.identity.name));
+        const base_elements = base_definision.elements.map(base_element => {
+          const data_element = data_definision.elements.find(elem => nonCSCompare(elem.identity.name, base_element.identity.name));
           return data_element ? deepMerge(base_element, data_element) : base_element;
         });
 
         // Lets merge with elements, which exist only for requested locale.
-        let data_elements = data_definision.elements.filter(data_element => {
-          let base_element = base_definision.elements.find(elem => nonCSCompare(elem.identity.name, data_element.identity.name));
+        const data_elements = data_definision.elements.filter(data_element => {
+          const base_element = base_definision.elements.find(elem => nonCSCompare(elem.identity.name, data_element.identity.name));
           return !base_element;
         });
 
         return base_elements.concat(data_elements);
-      }
-    }
+      
+    
   }
   catch (e) {
-    console.warn("Error in getElementMetadata: " + element + 'for locale:' + locale, view, e);
+    console.warn(`Error in getElementMetadata: ${  element  }for locale:${  locale}`, view, e);
   }
   return null;
 };
@@ -455,7 +451,7 @@ function getElementProperty (element, name) {
   if (!element || !element.properties)
     return '';
 
-  let property = element.properties.find(prop => nonCSCompare(prop.identity.name, name));
+  const property = element.properties.find(prop => nonCSCompare(prop.identity.name, name));
   if (!property)
     return '';
 
@@ -472,7 +468,7 @@ function getElementValue (element, path) {
   if (!element || !element.control || !element.control.value)
     return null;
 
-  let value = deepGet(element.control.value, path);
+  const value = deepGet(element.control.value, path);
   if (!value)
     return null;
 
@@ -492,14 +488,14 @@ function getDatasetData (dataset, locale, usage) {
     locale = typeof(window) !== "undefined" && window.localStorage && window.localStorage.locale ? window.localStorage.locale : defaultLocale;
   }
 
-  let sorted = dataset.data.records.slice();
+  const sorted = dataset.data.records.slice();
   sorted.sort((a, b) => a.index > b.index ? 1 : (a.index < b.index ? -1 : 0));
 
-  let ret = sorted.map(row => {
-    let obj = {};
+  const ret = sorted.map(row => {
+    const obj = {};
     if (locale) {
-      let indexTranslations = dataset.structure.fields.findIndex((field) => nonCSCompare(field.identity.name, 'translations') || nonCSCompare(field.usage, 'translations'));
-      let translation = (indexTranslations < 0 || !row.values[indexTranslations]) ? null : JSON.parse(row.values[indexTranslations]).find((tr) => nonCSCompare(locale, tr.Locale));
+      const indexTranslations = dataset.structure.fields.findIndex((field) => nonCSCompare(field.identity.name, 'translations') || nonCSCompare(field.usage, 'translations'));
+      const translation = (indexTranslations < 0 || !row.values[indexTranslations]) ? null : JSON.parse(row.values[indexTranslations]).find((tr) => nonCSCompare(locale, tr.Locale));
       dataset.structure.fields.map((field, index) => {
         if (index != indexTranslations) {
           if (usage) {
