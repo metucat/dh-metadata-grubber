@@ -16,6 +16,7 @@ args.option('pretty', 'Pretty-print output json (bigger file but human readable)
 args.option('json', 'Generate json files instead of metadata.js', false);
 args.option('servicetoken', 'Get metadata from backend service (not git) using specified access token', '');
 args.option('skipresources', 'Skip downloading of resources from views', false);
+args.option('noEmbed', 'Skip downloading of resources from views', false);
 
 var flags = args.parse(process.argv);
 
@@ -405,33 +406,53 @@ for (let item in metadataApi)
 exportsString += "}; ";
 
 
-
-function writeMetadata (dir) {
+function writeMetadata(dir) {
 	if (flags.include) {
-		var include_str = fs.readFileSync(flags.include, "utf-8");
-		metadataPathFilter = include_str.split("\n").map(s => s.trim());
+		var include_str = fs.readFileSync(flags.include, 'utf-8');
+		metadataPathFilter = include_str.split('\n').map(s => s.trim());
 	}
 	if (flags.includeOrg) {
-		metadataPathFilter = "/organizations/" + flags.includeOrg;
+		metadataPathFilter = '/organizations/' + flags.includeOrg;
 	}
-	
-	console.log("Graber:SCAN", dir, flags);
+
+	console.log('Graber:SCAN', dir, flags);
 	var obj = scanDirectory(dir, '');
-	
+
 	var outputFilename = path.join((flags.targetDir ? flags.targetDir : ''), 'metadata.js');
-	
-	if (!flags.json)
-		fs.writeFile(
-			outputFilename,
+	var outputJSONFilename = path.join((flags.targetDir ? flags.targetDir : ''), 'metadata.json');
+	const json = flags.pretty !== false ? JSON.stringify(obj, null, 2) : JSON.stringify(obj);
+
+	console.log(flags.noEmbed);
+	console.log(typeof flags.noEmbed);
+	console.log(flags);
+
+	if (!flags.json) {
+		if (!flags.noEmbed) {
+			fs.writeFile(
+				outputFilename,
 //			"var metadata_apdax = " + JSON.stringify(metadata_apdax, null, 2) + ";" +
-			"var metadata = " + (flags.pretty !== false ? JSON.stringify(obj, null, 2) : JSON.stringify(obj)) + "\n" +
-			findByPath.toString() +
-			metadataApiString +
-			exportsString,		//"module.exports = {metadata: metadata, findByPath: findByPath};",
-			() => {
-				console.log("Metadata saved to", outputFilename);
-			}
-		);
+				"var metadata = " + json + "\n" +
+				findByPath.toString() +
+				metadataApiString +
+				exportsString,		//"module.exports = {metadata: metadata, findByPath: findByPath};",
+				() => {
+					console.log('Metadata saved to', outputFilename);
+				}
+			);
+		} else {
+			fs.writeFileSync(outputJSONFilename, json);
+			fs.writeFile(
+				outputFilename,
+				'const metadata = require(\'./metadata.json\'); \n' +
+				findByPath.toString() +
+				metadataApiString +
+				exportsString,		//"module.exports = {metadata: metadata, findByPath: findByPath};",
+				() => {
+					console.log('Metadata saved to', outputFilename);
+				}
+			);
+		}
+	}
 }
 
 
